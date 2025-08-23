@@ -648,5 +648,12 @@
                 "rscadd": "New chalk rune and ritual for leyline attunement a.k.a. mana baptism."
             }
         ]
+    },
+    "2025-08-23": {
+        "PotatoTomahto": [
+            {
+                "bugfix": "fixes advclass rolls"
+            }
+        ]
     }
 }
