@@ -1012,6 +1012,7 @@
 
 
 /datum/status_effect/buff/guidinglight/on_remove()
+	. = ..()
 	playsound(owner, 'sound/items/firesnuff.ogg', 75, FALSE)
 	to_chat(owner, span_notice("The miraculous light surrounding me has fled..."))
 	owner.remove_filter(BLESSINGOFSUN_FILTER)
@@ -1083,6 +1084,7 @@
 */
 
 /datum/status_effect/buff/leechqueenstriage/on_remove()
+	. = ..()
 	to_chat(owner,span_userdanger("It's finally over..."))
 
 /atom/movable/screen/alert/status_effect/buff/undermaidenbargain
