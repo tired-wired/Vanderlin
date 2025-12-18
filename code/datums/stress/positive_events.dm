@@ -103,6 +103,10 @@
 	stress_change = -5
 	desc = span_green("Down with the tyranny!")
 
+/datum/stressevent/pacified
+	timer = 30 MINUTES
+	stressadd = -5
+	desc = span_green("All my problems have washed away!")
 
 //Hygiene
 

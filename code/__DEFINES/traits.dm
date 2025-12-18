@@ -344,6 +344,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_BLACKBAGGER "Apprehension Techniques" // Capable of using Garrotes and Blackbags. Apprehension techniques.
 #define TRAIT_LYCANRESILENCE "Werewolf Resilence"
 #define TRAIT_EVASIVE		"Evasive"
+#define TRAIT_DEATHBARGAIN "Death Bargain" // Used by UNDERMAIDEN'S BARGAIN
+#define TRAIT_RITUALIST "Ritualist"  // Allows use of ritual chalk
 
 #define TRAIT_WEBWALK 					"Webwalker"
 #define TRAIT_BRUSHWALK					"Brushwalker"
