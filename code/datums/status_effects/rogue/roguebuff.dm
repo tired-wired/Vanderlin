@@ -1024,7 +1024,7 @@
 	effectedstats = list("intelligence" = 2)
 	duration = 15 MINUTES
 
-	/atom/movable/screen/alert/status_effect/buff/moonlightdance
+/atom/movable/screen/alert/status_effect/buff/moonlightdance
 	name = "Moonlight Dance"
 	desc = "Noc's stony touch lay upon my mind, bringing me wisdom."
 	icon_state = "moonlightdance"
@@ -1194,7 +1194,7 @@
 /datum/status_effect/buff/pacify/on_apply()
 	. = ..()
 	to_chat(owner, span_green("Everything feels great!"))
-	owner.add_stress(/datum/stressevent/pacified)
+	owner.add_stress(/datum/stress_event/pacified)
 	ADD_TRAIT(owner, TRAIT_PACIFISM, TRAIT_GENERIC)
 //	playsound(owner, 'sound/misc/peacefulwake.ogg', 100, FALSE, -1)
 

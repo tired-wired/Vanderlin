@@ -8,7 +8,7 @@
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
-/obj/structure/ritualcircle/attack_right(mob/living/carbon/human/user)
+/obj/structure/ritualcircle/attack_hand_secondary(mob/living/carbon/human/user)
 	user.visible_message(span_warning("[user] begins wiping away the rune"))
 	if(do_after(user, 15))
 		playsound(loc, 'sound/foley/cloth_wipe (1).ogg', 100, TRUE)
@@ -135,7 +135,7 @@
 							user.say("By Pestra's will, your pain fades!")
 							to_chat(user,span_cultsmall("My flesh writhes, my wounds knit shut! GROSS!!	"))
 							loc.visible_message(span_warning("[user] opens their mouth, disgorging a leech!"))
-                            new /obj/item/natural/worms/leech(get_turf(C))
+                            //new /obj/item/natural/worms/leech(get_turf(C))
 							leechqueenstriage(src)
 							user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
 							spawn(120)
@@ -152,7 +152,7 @@
 		to_chat(target, span_userdanger("UNIMAGINABLE PAIN!"))
 		target.apply_status_effect(/datum/status_effect/buff/leechqueenstriage)
 
-        /obj/structure/ritualcircle/dendor
+/obj/structure/ritualcircle/dendor
 	name = "Rune of Beasts"
 	desc = "A Holy Rune of Dendor"
 	icon_state = "dendor_chalky"
