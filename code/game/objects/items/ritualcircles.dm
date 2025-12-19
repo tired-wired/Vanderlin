@@ -37,6 +37,7 @@
 			if(!do_after(user, 50)) // just flavor stuff before activation
 				return
 			user.say("I beseech the Sun, Astrata!!")
+			icon_state = "astrata_active"
 			if(!do_after(user, 50))
 				return
 			user.say("To bring Order to a world of naught!!")
@@ -44,7 +45,6 @@
 				return
 			user.say("Place your gaze upon me, oh Radiant one!!")
 			to_chat(user,span_danger("You feel the eye of Astrata turned upon you. Her warmth dances upon your cheek. You feel yourself warming up...")) // A bunch of flavor stuff, slow incanting.
-			icon_state = "astrata_active"
 			loc.visible_message(span_warning("[user]'s bursts to flames! Embraced by Her Warmth wholly!"))
 			playsound(loc, 'sound/combat/hits/burn (1).ogg', 100, FALSE, -1)
 			user.adjust_fire_stacks(10)
@@ -84,13 +84,13 @@
 		if("Moonlight Dance")
 			if(!do_after(user, 50))
 				return
-			user.say("I beseech the God of Dreams!!")
+			user.say("I beseech the God of Dreams!")
 			if(!do_after(user, 50))
 				return
-			user.say("To bring Wisdom to a world of naught!!")
+			user.say("To bring Wisdom to a world of naught!")
 			if(!do_after(user, 50))
 				return
-			user.say("Place your gaze upon me, oh wise one!!")
+			user.say("Place your gaze upon me, oh wise one!")
 			to_chat(user,span_cultsmall("Noc bestows gifts only upon the worthy. With some effort, He may hear you."))
 			playsound(loc, 'sound/magic/holyshield.ogg', 80, FALSE, -1)
 			moonlightdance()
@@ -131,19 +131,19 @@
 			if(!do_after(user, 50))
 				return
 			user.say("Well, you've gotten yourself in a bit of a scrape.")
+			icon_state = "pestra_active"
 			if(!do_after(user, 50))
 				return
 			user.say("Don't worry, we'll fix you right up.")
 			if(!do_after(user, 50))
 				return
 			user.say("This might pinch a little, hold still...")
-			to_chat(user,span_danger("You feel something crawling up your throat, wriggling and slimy..."))
+			//to_chat(user,span_danger("You feel something crawling up your throat, wriggling and slimy..."))
 			if(!do_after(user, 30))
 				return
-			icon_state = "pestra_active"
 			user.say("By Pestra's will, your pain fades!")
-			to_chat(user,span_cultsmall("My flesh writhes, my wounds knit shut! GROSS!!	"))
-			loc.visible_message(span_warning("[user] opens their mouth, disgorging a leech!"))
+			to_chat(user,span_cultsmall("Their flesh writhes, their wounds knit shut! Beautiful!!"))
+			//loc.visible_message(span_warning("[user] opens their mouth, disgorging a leech!"))
             //new /obj/item/natural/worms/leech(get_turf(C))
 			leechqueenstriage()
 			user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
@@ -182,6 +182,7 @@
 			if(!do_after(user, 50))
 				return
 			user.say("RRRGH GRRRHHHG GRRRRRHH!!")
+			icon_state = "dendor_active"
 			playsound(loc, 'sound/vo/mobs/vw/idle (1).ogg', 100, FALSE, -1)
 			if(!do_after(user, 50))
 				return
@@ -193,7 +194,6 @@
 			playsound(loc, 'sound/vo/mobs/vw/bark (1).ogg', 100, FALSE, -1)
 			if(!do_after(user, 30))
 				return
-			icon_state = "dendor_active"
 			loc.visible_message(span_warning("[user] snaps their head upward, they let out a howl!"))
 			playsound(loc, 'sound/vo/mobs/wwolf/howl (2).ogg', 100, FALSE, -1)
 			lesserwolf()
@@ -234,6 +234,7 @@
 	switch(riteselection) // put ur rite selection here
 		if("Undermaiden's Bargain")
 			loc.visible_message(span_warning("[user] sways before the rune, they open their mouth, though no words come out..."))
+			icon_state = "necra_active"
 			playsound(user, 'sound/vo/mobs/ghost/whisper (3).ogg', 100, FALSE, -1)
 			if(!do_after(user, 60))
 				return
@@ -246,7 +247,6 @@
 			playsound(user, 'sound/vo/mobs/ghost/death.ogg', 100, FALSE, -1)
 			if(!do_after(user, 20))
 				return
-			icon_state = "necra_active"
 			user.say("Forgive me, the bargain is intoned!!")
 			to_chat(user,span_cultsmall("My devotion to the Undermaiden has allowed me to strike a bargain for these souls...."))
 			playsound(loc, 'sound/vo/mobs/ghost/moan (1).ogg', 100, FALSE, -1)
@@ -283,6 +283,7 @@
 			if(!do_after(user, 50))
 				return
 			user.say("#Blessed be your weary head...")
+			icon_state = "eora_active"
 			if(!do_after(user, 50))
 				return
 			user.say("#Full of strife and pain...")
@@ -291,7 +292,6 @@
 			user.say("#Let Her ease your fear...")
 			if(!do_after(user, 50))
 				return
-			icon_state = "eora_active"
 			pacify()
 			user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
 			icon_state = "eora_chalky"
