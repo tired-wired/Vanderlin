@@ -49,10 +49,12 @@
 	belt = /obj/item/storage/belt/leather/rope
 	armor = /obj/item/clothing/shirt/robe/priest
 	backl = /obj/item/storage/backpack/satchel
-	backpack_contents = list(/obj/item/needle = 1, /obj/item/storage/belt/pouch/coins/rich = 1, /obj/item/ritechalk = 1)
-
-	var/obj/item/weapon/polearm/woodstaff/aries/P = new()
-	H.put_in_hands(P, forced = TRUE)
+	backpack_contents = list(
+		/obj/item/needle = 1,
+		/obj/item/storage/belt/pouch/coins/rich = 1,
+		/obj/item/ritechalk = 1
+	)
+	l_hand = /obj/item/weapon/polearm/woodstaff/aries
 
 	if(H.patron != /datum/patron/divine/astrata) // For some stupid reason this was checking for Dendor before.
 		H.set_patron(/datum/patron/divine/astrata)
