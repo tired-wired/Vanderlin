@@ -85,6 +85,7 @@
 			if(!do_after(user, 50))
 				return
 			user.say("I beseech the God of Dreams!")
+			icon_state = "noc_active"
 			if(!do_after(user, 50))
 				return
 			user.say("To bring Wisdom to a world of naught!")
