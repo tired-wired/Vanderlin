@@ -56,38 +56,6 @@
 	)
 	l_hand = /obj/item/weapon/polearm/woodstaff/aries
 
-	if(H.patron != /datum/patron/divine/astrata) // For some stupid reason this was checking for Dendor before.
-		H.set_patron(/datum/patron/divine/astrata)
-
-	H.adjust_skillrank(/datum/skill/misc/reading, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/holy, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE) // Privilege of being the SECOND biggest target in the game, and arguably the worse of the two targets to lose
-	H.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/labor/mathematics, 3, TRUE)
-	ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
-	if(H.age == AGE_OLD)
-		H.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
-		H.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
-	H.change_stat(STATKEY_STR, 1) // One slot and a VERY important role, it deserves a half-decent statline
-	H.change_stat(STATKEY_INT, 2)
-	H.change_stat(STATKEY_END, 2)
-	H.change_stat(STATKEY_SPD, 1)
-	if(!H.has_language(/datum/language/celestial)) // For discussing church matters with the other Clergy
-		H.grant_language(/datum/language/celestial)
-		to_chat(H, "<span class='info'>I can speak Celestial with ,c before my speech.</span>")
-	var/holder = H.patron?.devotion_holder
-	if(holder)
-		var/datum/devotion/devotion = new holder()
-		devotion.make_priest()
-		devotion.grant_to(H)
-	H.update_icons()
-
 /datum/job/priest/demoted //just used to change the priest title
 	title = "Ex-Priest"
 	f_title = "Ex-Priestess"
