@@ -31,8 +31,6 @@
 		EXP_TYPE_CHURCH = 900,
 	)
 
-
-
 /datum/outfit/priest/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.virginity = TRUE
