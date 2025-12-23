@@ -31,13 +31,50 @@
 		EXP_TYPE_CHURCH = 900,
 	)
 
-/datum/outfit/priest/pre_equip(mob/living/carbon/human/H)
-	..()
-	H.virginity = TRUE
-	H.verbs |= /mob/living/carbon/human/proc/coronate_lord
-	H.verbs |= /mob/living/carbon/human/proc/churchexcommunicate
-	H.verbs |= /mob/living/carbon/human/proc/churchcurse
-	H.verbs |= /mob/living/carbon/human/proc/churchannouncement
+		jobstats = list(
+		STATKEY_STR = 1,
+		STATKEY_INT = 2,
+		STATKEY_END = 2,
+		STATKEY_SPD = 1
+	)
+
+	skills = list(
+		/datum/skill/misc/reading = 5,
+		/datum/skill/magic/holy = 4,
+		/datum/skill/combat/unarmed = 3,
+		/datum/skill/combat/wrestling = 3,
+		/datum/skill/combat/polearms = 3,
+		/datum/skill/combat/axesmaces = 2,
+		/datum/skill/misc/athletics = 3,
+		/datum/skill/misc/sewing = 3,
+		/datum/skill/misc/medicine = 3,
+		/datum/skill/craft/cooking = 1,
+		/datum/skill/labor/mathematics = 3
+	)
+
+	languages = list(/datum/language/celestial)
+
+/datum/job/priest/after_spawn(mob/living/carbon/human/spawned, client/player_client)
+	. = ..()
+	if(spawned.age == AGE_OLD)
+		spawned.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
+		spawned.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
+
+	spawned.verbs |= /mob/living/carbon/human/proc/coronate_lord
+	spawned.verbs |= /mob/living/carbon/human/proc/churchexcommunicate
+	spawned.verbs |= /mob/living/carbon/human/proc/churchcurse
+	spawned.verbs |= /mob/living/carbon/human/proc/churchannouncement
+
+	spawned.virginity = TRUE
+
+	var/holder = spawned.patron?.devotion_holder
+	if(holder)
+		var/datum/devotion/devotion = new holder()
+		devotion.make_priest()
+		devotion.grant_to(spawned)
+
+/datum/outfit/priest
+	name = "Priest"
 	neck = /obj/item/clothing/neck/psycross/silver/astrata
 	head = /obj/item/clothing/head/priestmask
 	shirt = /obj/item/clothing/shirt/undershirt/priest
