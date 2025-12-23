@@ -16,6 +16,7 @@
 	cmode_music = 'sound/music/cmode/church/CombatAstrata.ogg'
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	blacklisted_species = list(SPEC_ID_HALFLING)
+	allowed_patrons = list(/datum/patron/divine/astrata)
 
 	outfit = /datum/outfit/priest
 	spells = list(
@@ -91,7 +92,7 @@
 	)
 	l_hand = /obj/item/weapon/polearm/woodstaff/aries
 
-/datum/job/priest/demoted //just used to change the priest title
+/datum/job/priest/demoted
 	title = "Ex-Priest"
 	f_title = "Ex-Priestess"
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_EQUIP_RANK)
@@ -100,7 +101,7 @@
 	total_positions = 0
 	spawn_positions = 0
 
-/datum/job/priest/vice //just used to change the priest title
+/datum/job/priest/vice
 	title = "Vice Priest"
 	f_title = "Vice Priestess"
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_EQUIP_RANK)
@@ -139,11 +140,9 @@
 	var/datum/job/lord_job = SSjob.GetJobType(/datum/job/lord)
 	var/datum/job/consort_job = SSjob.GetJobType(/datum/job/consort)
 	for(var/mob/living/carbon/human/HL in GLOB.human_list)
-		//this sucks ass. refactor to locate the current ruler/consort
 		if(HL.mind)
 			if(is_lord_job(HL.mind.assigned_role) || is_consort_job(HL.mind.assigned_role))
 				HL.mind.set_assigned_role(SSjob.GetJobType(/datum/job/villager))
-		//would be better to change their title directly, but that's not possible since the title comes from the job datum
 		if(HL.job == "Monarch")
 			HL.job = "Ex-Monarch"
 			lord_job?.remove_spells(HL)
@@ -154,7 +153,7 @@
 	var/new_title = (coronated.gender == MALE) ? SSmapping.config.monarch_title : SSmapping.config.monarch_title_f
 	coronated.mind.set_assigned_role(/datum/job/lord)
 	lord_job?.get_informed_title(coronated, TRUE, new_title)
-	coronated.job = "Monarch" //Monarch is used when checking if the ruler is alive, not "King" or "Queen". Can also pass it on and have the title change properly later.
+	coronated.job = "Monarch"
 	lord_job?.add_spells(coronated)
 	SSticker.rulermob = coronated
 	GLOB.badomens -= OMEN_NOLORD
@@ -222,7 +221,6 @@
 				GLOB.heretical_players += inputty
 				priority_announce("[real_name] has put Xylix's curse of woe on [inputty] for offending the church!", title = "SHAME", sound = 'sound/misc/excomm.ogg')
 				break
-
 
 /mob/living/carbon/human/proc/churchannouncement()
 	set name = "Announcement"
