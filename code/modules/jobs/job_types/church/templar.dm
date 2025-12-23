@@ -43,9 +43,7 @@
 	pants = /obj/item/clothing/pants/chainlegs
 	shoes = /obj/item/clothing/shoes/boots/armor/light
 	backl = /obj/item/storage/backpack/satchel
-	//neck = /obj/item/clothing/neck/chaincoif //requested by Tyger
 	backpack_contents = list(/obj/item/storage/keyring/priest = 1, /obj/item/storage/belt/pouch/coins/poor = 1, /obj/item/ritechalk = 1)
-	backr = /obj/item/weapon/shield/tower/metal
 	belt = /obj/item/storage/belt/leather/black
 	beltl = /obj/item/storage/belt/pouch/coins/poor
 	ring = /obj/item/clothing/ring/silver
