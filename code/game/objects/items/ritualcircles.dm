@@ -218,7 +218,7 @@
 	name = "Rune of Death"
 	desc = "A Holy Rune of Necra"
 	icon_state = "necra_chalky"
-	var/deathrites = list("Undermaiden's Bargain")
+	//var/deathrites = list("Undermaiden's Bargain") commenting out until i ask for some advice
 
 /obj/structure/ritualcircle/necra/attack_hand(mob/living/user)
 	if((user.patron?.type) != /datum/patron/divine/necra)
@@ -255,7 +255,7 @@
 			icon_state = "necra_chalky"
 
 /obj/structure/ritualcircle/necra/proc/undermaidenbargain()
-	var/ritualtargets = view(7, loc)
+	var/ritualtargets = view(0, loc)
 	for(var/mob/living/carbon/human/target in ritualtargets)
 		target.apply_status_effect(/datum/status_effect/buff/undermaidenbargain)
 

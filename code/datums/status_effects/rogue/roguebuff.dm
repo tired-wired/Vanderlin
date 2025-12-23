@@ -1057,8 +1057,6 @@
 
 /datum/status_effect/buff/leechqueenstriage/tick()
 	//playsound(owner, 'sound/misc/fliesloop.ogg', 100, FALSE, -1)
-	owner.flash_fullscreen("redflash3")
-	owner.emote("agony")
 	//new /obj/effect/temp_visual/flies(get_turf(owner))
 	var/list/wCount = owner.get_wounds()
 	if(owner.blood_volume < BLOOD_VOLUME_NORMAL)
