@@ -219,7 +219,7 @@
 	name = "Rune of Death"
 	desc = "A Holy Rune of Necra"
 	icon_state = "necra_chalky"
-	//var/deathrites = list("Undermaiden's Bargain") commenting out until i ask for some advice
+	var/deathrites = list("Undermaiden's Bargain")
 
 /obj/structure/ritualcircle/necra/attack_hand(mob/living/user)
 	if((user.patron?.type) != /datum/patron/divine/necra)
