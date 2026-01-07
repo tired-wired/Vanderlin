@@ -45,6 +45,14 @@
 	spawned.adjust_skillrank(/datum/skill/misc/sewing, pick(0,1), TRUE)
 	spawned.adjust_skillrank(/datum/skill/misc/athletics, pick(0,1), TRUE)
 
+	if(prob(5))
+		//bonuses from legendary pilgrim
+		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_PER, 1)
+
+		spawned.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
+		spawned.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
+		spawned.adjust_skillrank(/datum/skill/labor/fishing, 1, TRUE)
+
 /datum/outfit/fisher
 	name = "Fisher"
 	neck = /obj/item/storage/belt/pouch/coins/poor

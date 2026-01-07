@@ -2738,6 +2738,7 @@
 #include "code\modules\jobs\job_types\adventurer\types\pilgrim\physicker.dm"
 #include "code\modules\jobs\job_types\adventurer\types\pilgrim\wanderer.dm"
 #include "code\modules\jobs\job_types\adventurer\types\pilgrim\rare\grenzelhoft.dm"
+#include "code\modules\jobs\job_types\adventurer\types\pilgrim\rare\Lsmith.dm"
 #include "code\modules\jobs\job_types\adventurer\types\pilgrim\rare\merchant.dm"
 #include "code\modules\jobs\job_types\adventurer\types\pilgrim\rare\preacher.dm"
 #include "code\modules\jobs\job_types\adventurer\types\pilgrim\rare\zalad.dm"
