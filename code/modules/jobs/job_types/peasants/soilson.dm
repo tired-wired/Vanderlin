@@ -63,7 +63,6 @@
 		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_END, 1)
 
 		// Bonus skills
-		spawned.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 		spawned.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
 		spawned.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
 		spawned.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)

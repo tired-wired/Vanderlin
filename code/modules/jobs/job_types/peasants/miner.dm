@@ -37,7 +37,7 @@
 		/datum/skill/misc/medicine = 1,
 		/datum/skill/misc/athletics = 3,
 		/datum/skill/craft/traps = 1,
-		/datum/skill/craft/engineering = 2,
+		/datum/skill/craft/masonry = 2, //why did they have engineering but not masonry?
 		/datum/skill/craft/blacksmithing = 1,
 		/datum/skill/craft/smelting = 2,
 		/datum/skill/misc/reading = 1
@@ -53,7 +53,14 @@
 		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_PER, 1)
 
 		//skill boosts
-		test
+		spawned.adjust_skillrank(/datum/skill/labor/mining, 1, TRUE)
+		spawned.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
+		spawned.adjust_skillrank(/datum/skill/craft/smelting, 2, TRUE)
+
+	if(spawned.age == AGE_OLD)
+		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_END, -1)
+		spawned.adjust_skillrank(/datum/skill/craft/traps, 1, TRUE)
+		spawned.adjust_skillrank(/datum/skill/craft/engineering, 1, TRUE)
 
 /datum/outfit/miner
 	name = "Miner"
