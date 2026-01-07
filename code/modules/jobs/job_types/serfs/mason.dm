@@ -46,10 +46,17 @@
 	if(spawned.dna.species.id == SPEC_ID_DWARF)
 		spawned.cmode_music = 'sound/music/cmode/combat_dwarf.ogg'
 	if(prob(5))
+		//bonus stats from legendary pilgrim
+		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_END, 1)
+		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_CON, 1)
+		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_SPD, 1)
+
 		spawned.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
+		spawned.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 		spawned.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
 		spawned.adjust_skillrank(/datum/skill/labor/mining, 1, TRUE)
 		spawned.adjust_skillrank(/datum/skill/craft/masonry, 1, TRUE)
+		spawned.adjust_skillrank(/datum/skill/misc/lockpicking, 1, TRUE)
 
 /datum/outfit/mason
 	name = "Mason"

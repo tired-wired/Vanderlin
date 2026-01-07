@@ -41,6 +41,16 @@
 	if(spawned.age == AGE_OLD)
 		spawned.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 
+	if(prob(5))
+		//get boost like legendary chef
+		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_INT, 2)
+
+		//skills boost
+		spawned.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
+		spawned.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
+		spawned.adjust_skillrank(/datum/skill/labor/butchering, 1, TRUE)
+		spawned.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
+
 /datum/outfit/cook
 	name = "Cook"
 	belt = /obj/item/storage/belt/leather/rope

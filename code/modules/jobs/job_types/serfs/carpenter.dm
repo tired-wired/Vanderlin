@@ -32,7 +32,7 @@
 		/datum/skill/combat/unarmed = 1,
 		/datum/skill/craft/crafting = 3,
 		/datum/skill/craft/cooking = 1,
-		/datum/skill/craft/carpentry = 5,
+		/datum/skill/craft/carpentry = 4, //lowered to on par with mason
 		/datum/skill/misc/swimming = 1,
 		/datum/skill/misc/climbing = 2,
 		/datum/skill/misc/sewing = 1,
@@ -48,8 +48,16 @@
 	spawned.adjust_skillrank(/datum/skill/misc/athletics, pick(0,1), TRUE)
 
 	if(prob(5))
+		//bonus stats from legendary variant
+		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_STR, 1)
+		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_END, 1)
+		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_SPD, 1)
+
+		//bonus skills from legendary variant
 		spawned.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
+		spawned.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 		spawned.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
+		spawned.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 		spawned.adjust_skillrank(/datum/skill/labor/lumberjacking, 1, TRUE)
 		spawned.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
 
