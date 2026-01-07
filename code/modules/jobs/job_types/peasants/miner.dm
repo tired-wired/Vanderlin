@@ -46,6 +46,14 @@
 /datum/job/miner/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	spawned.adjust_skillrank(/datum/skill/craft/smelting, pick(0,1,1,2), TRUE)
+	if(prob(5))
+		//bonus stats from pilgrim rare variant
+		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_STR, 1)
+		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_INT, 1)
+		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_PER, 1)
+
+		//skill boosts
+		test
 
 /datum/outfit/miner
 	name = "Miner"
