@@ -56,12 +56,6 @@
 		spawned.adjust_skillrank(/datum/skill/craft/blacksmithing, pick(1,2), TRUE)
 		spawned.adjust_skillrank(/datum/skill/craft/armorsmithing, pick(1,2), TRUE)
 
-	if(prob(5))
-		//bonuses from legendary pilgrim
-		spawned.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
-		spawned.adjust_skillrank(/datum/skill/craft/armorsmithing, 1, TRUE)
-		spawned.adjust_skillrank(/datum/skill/craft/smelting, 1, TRUE)
-
 
 /datum/outfit/armorsmith
 	name = "Armorsmith"
@@ -150,11 +144,7 @@
 	if(spawned.age == AGE_OLD)
 		spawned.adjust_skillrank(/datum/skill/craft/blacksmithing, pick(1,2), TRUE)
 		spawned.adjust_skillrank(/datum/skill/craft/weaponsmithing, pick(1,2), TRUE)
-	if(prob(5))
-		//bonuses from legendary
-		spawned.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
-		spawned.adjust_skillrank(/datum/skill/craft/weaponsmithing, 1, TRUE)
-		spawned.adjust_skillrank(/datum/skill/craft/smelting, 1, TRUE)
+
 
 /datum/outfit/weaponsmith
 	name = "Weaponsmith"
