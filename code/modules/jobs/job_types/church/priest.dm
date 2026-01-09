@@ -53,6 +53,10 @@
 		/datum/skill/labor/mathematics = 3
 	)
 
+	traits = list(
+		TRAIT_RITUALIST
+	)
+
 	languages = list(/datum/language/celestial)
 
 /datum/job/priest/after_spawn(mob/living/carbon/human/spawned, client/player_client)

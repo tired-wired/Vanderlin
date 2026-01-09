@@ -40,6 +40,10 @@
 		/datum/skill/craft/cooking = 2
 	)
 
+	traits = list(
+		TRAIT_RITUALIST
+	)
+
 	languages = list(/datum/language/celestial)
 
 /datum/job/monk/after_spawn(mob/living/carbon/human/spawned, client/player_client)

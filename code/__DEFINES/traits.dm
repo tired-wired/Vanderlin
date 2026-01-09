@@ -427,6 +427,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_SEED_FINDER				"Seed Finder"
 #define TRAIT_COIN_ILLITERATE "Barterer"
 #define TRAIT_LUCKY_COOK "Lucky Cook"
+#define TRAIT_RITUALIST "Ritualist" //able to draw deity ritual circles
 
 /// applied to orphans
 #define TRAIT_ORPHAN 					"Orphan"

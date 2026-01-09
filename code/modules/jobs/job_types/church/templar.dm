@@ -48,7 +48,8 @@
 	traits = list(
 		TRAIT_HEAVYARMOR,
 		TRAIT_STEELHEARTED,
-		TRAIT_KNOWBANDITS
+		TRAIT_KNOWBANDITS,
+		TRAIT_RITUALIST
 	)
 
 	languages = list(/datum/language/celestial)
