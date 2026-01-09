@@ -3367,6 +3367,7 @@
 #include "code\modules\reagents\reagent_containers\bottles\_bottle.dm"
 #include "code\modules\reagents\reagent_containers\bottles\alchemy.dm"
 #include "code\modules\reagents\reagent_containers\bottles\beverages.dm"
+#include "code\modules\ritualsvanderlin\godrituals.dm"
 #include "code\modules\ritualsvanderlin\ritualchalk.dm"
 #include "code\modules\ritualsvanderlin\ritualcircles.dm"
 #include "code\modules\screen_alerts\blurb.dm"

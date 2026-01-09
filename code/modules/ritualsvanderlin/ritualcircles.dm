@@ -7,17 +7,25 @@
 	density = FALSE
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
-	var/godrites = list() //empty list to assign one per rune
+	var/godrites = list() //empty list to assign one per rune. might be unnecessary
 	var/patron_type_for_ritual = /datum/patron/divine/astrata
 
-/obj/structure/ritualcircle/attack_hand_secondary(mob/living/carbon/human/user)
+/obj/structure/ritualcircle/attack_hand_secondary(mob/living/user)
 	user.visible_message(span_warning("[user] begins wiping away the rune."))
 	if(do_after(user, 15))
 		playsound(loc, 'sound/foley/cloth_wipe (1).ogg', 100, TRUE)
 		qdel(src)
 
-/obj/structure/ritualcircle/attack_hand(mob/living/carbon/human/user)
-	//basic framework goes here
+/obj/structure/ritualcircle/attack_hand(mob/living/user)
+	if(user.patron?.type != patron_type_for_ritual)
+		user.visible_message(span_warning("I don't know this god's rites."))
+		return
+	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
+		user.visible_message(span_warning("This is beyond my knowledge."))
+		return
+	var/riteselection = input(user, "Rituals of the Gods", src) as null|anything in godrites
+	//get a list of the rituals for that rune somehow? manually assign it per rune type?
+	//do we put the fluff HERE or in the proc for the ritual itself?
 
 /obj/structure/ritualcircle/astrata
 	name = "rune of the sun"
@@ -76,7 +84,7 @@
 	patron_type_for_ritual = /datum/patron/divine/necra
 
 /obj/structure/ritualcircle/pestra
-	name = "rune of medicine"
+	name = "rune of medicine" //open to change
 	desc = ""
 	icon_state = "pestra_chalky"
 	patron_type_for_ritual = /datum/patron/divine/pestra

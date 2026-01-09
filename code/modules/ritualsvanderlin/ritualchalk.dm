@@ -1,7 +1,7 @@
 /obj/item/ritualchalk
 	name = "Ritual Chalk"
 	icon_state = "chalk"
-	desc = "Simple white chalk. A useful tool for rites."
+	desc = "Simple white blessed chalk. A useful tool for rites."
 	icon = 'icons/roguetown/misc/rituals.dmi'
 	w_class = WEIGHT_CLASS_TINY
 
@@ -10,86 +10,68 @@
 		to_chat(user, span_smallred("I don't know what I'm doing with this..."))
 		return
 
-	var/ritechoices = list()
-	switch (user.patron?.type)
-/*		if(/datum/patron/inhumen/zizo)
-			ritechoices+="Rune of ZIZO" */
-		if(/datum/patron/divine/astrata)
-			ritechoices+="Rune of the Sun"
-		if(/datum/patron/divine/noc)
-			ritechoices+="Rune of the Moon"
-		if(/datum/patron/divine/dendor)
-			ritechoices+="Rune of the Wilds"
-		if(/datum/patron/divine/malum)
-			ritechoices+="Rune of Creation"
-		if(/datum/patron/divine/xylix)
-			ritechoices+="Rune of Trickery"
-		if(/datum/patron/divine/necra)
-			ritechoices+="Rune of the Underworld"
-		if(/datum/patron/divine/pestra)
-			ritechoices+="Rune of Medicine"
-		if(/datum/patron/divine/eora)
-			ritechoices+="Rune of the Heart"
-		if(/datum/patron/divine/ravox)
-			ritechoices+="Rune of the Valiant"
-		if(/datum/patron/divine/abyssor)
-			ritechoices+="Rune of the Storm"
-
-	var/runeselection = input(user, "Which rune shall I inscribe?", src) as null|anything in ritechoices
 	var/turf/step_turf = get_step(get_turf(user), user.dir)
-	switch(runeselection)
-		if("Rune of the Sun")
+	switch(user.patron?.type)
+		if(/datum/patron/divine/astrata)
 			to_chat(user,span_cultsmall("I begin inscribing the rune of Her radiance..."))
-			if(do_after(user, 30, src))
-				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/astrata(step_turf)
-		if("Rune of the Moon")
-			to_chat(user, span_cultsmall("I begin inscribing the rune of His wisdom"))
-			if(do_after(user, 30, src))
-				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/noc(step_turf)
-		if("Rune of the Wilds")
+		if(/datum/patron/divine/noc)
+			to_chat(user, span_cultsmall("I begin inscribing the rune of His wisdom..."))
+		if(/datum/patron/divine/dendor)
 			to_chat(user,span_cultsmall("I begin inscribing the rune of His madness"))
-			if(do_after(user, 30, src))
-				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/dendor(step_turf)
-		if("Rune of Creation")
+		if(/datum/patron/divine/malum)
 			to_chat(user,span_cultsmall("I begin inscribing the rune of His craft..."))
-			if(do_after(user, 30, src))
-				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/malum(step_turf)
-		if("Rune of Trickery")
+		if(/datum/patron/divine/xylix)
 			to_chat(user,span_cultsmall("I begin inscribing the rune of Their trickery..."))
-			if(do_after(user, 30, src))
-				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/xylix(step_turf)
-		if("Rune of the Underworld")
+		if(/datum/patron/divine/necra)
 			to_chat(user,span_cultsmall("I begin inscribing the rune of Her embrace..."))
-			if(do_after(user, 30, src))
-				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/necra(step_turf)
-		if("Rune of Medicine")
+		if(/datum/patron/divine/pestra)
 			to_chat(user,span_cultsmall("I begin inscribing the rune of Her medicine..."))
-			if(do_after(user, 30, src))
-				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/pestra(step_turf)
-		if("Rune of the Heart")
+		if(/datum/patron/divine/eora)
 			to_chat(user,span_cultsmall("I begin inscribing the rune of Her love..."))
-			if(do_after(user, 30, src))
-				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/eora(step_turf)
-		if("Rune of the Valiant")
+		if(/datum/patron/divine/ravox)
 			to_chat(user,span_cultsmall("I begin inscribing the rune of His prowess..."))
-			if(do_after(user, 30, src))
-				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/ravox(step_turf)
-		if("Rune of the Storm")
+		if(/datum/patron/divine/abyssor)
 			to_chat(user,span_cultsmall("I begin inscribing the rune of His fury..."))
-			if(do_after(user, 30, src))
-				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
+		/*
+		if(/datum/patron/inhumen/zizo)
+			to_chat(user,span_cultsmall("I begin inscribing the rune of Her power..."))
+		if(/datum/patron/inhumen/baotha)
+			to_chat(user,span_cultsmall("I begin inscribing the rune of Her joy..."))
+		if(/datum/patron/inhumen/matthios)
+			to_chat(user,span_cultsmall("I begin inscribing the rune of His thievery..."))
+		if(/datum/patron/inhumen/graggar)
+			to_chat(user,span_cultsmall("I begin inscribing the rune of His cruelty..."))
+		*/
+	if(do_after(user, 30, src))
+		playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
+		switch(user.patron?.type)
+			if(/datum/patron/divine/astrata)
+				new /obj/structure/ritualcircle/astrata(step_turf)
+			if(/datum/patron/divine/noc)
+				new /obj/structure/ritualcircle/noc(step_turf)
+			if(/datum/patron/divine/dendor)
+				new /obj/structure/ritualcircle/dendor(step_turf)
+			if(/datum/patron/divine/malum)
+				new /obj/structure/ritualcircle/malum(step_turf)
+			if(/datum/patron/divine/xylix)
+				new /obj/structure/ritualcircle/xylix(step_turf)
+			if(/datum/patron/divine/necra)
+				new /obj/structure/ritualcircle/necra(step_turf)
+			if(/datum/patron/divine/pestra)
+				new /obj/structure/ritualcircle/pestra(step_turf)
+			if(/datum/patron/divine/eora)
+				new /obj/structure/ritualcircle/eora(step_turf)
+			if(/datum/patron/divine/ravox)
+				new /obj/structure/ritualcircle/ravox(step_turf)
+			if(/datum/patron/divine/abyssor)
 				new /obj/structure/ritualcircle/abyssor(step_turf)
-	/*	if("Rune of ZIZO")
-			to_chat(user,span_cultsmall("I begin inscribing the rune of Her Knowledge..."))
-			if(do_after(user, 30, src))
-				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/zizo(step_turf) */
+			/*
+			if(/datum/patron/inhumen/zizo)
+				new /obj/structure/ritualcircle/zizo(step_turf)
+			if(/datum/patron/inhumen/baotha)
+				new /obj/structure/ritualcircle/baotha(step_turf)
+			if(/datum/patron/inhumen/matthios)
+				new /obj/structure/ritualcircle/matthios(step_turf)
+			if(/datum/patron/inhumen/graggar)
+				new /obj/structure/ritualcircle/graggar(step_turf)
+			*/
