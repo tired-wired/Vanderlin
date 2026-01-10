@@ -76,35 +76,35 @@
 
 /obj/structure/ritual_circle/astrata
 	name = "rune of the sun"
-	desc = "A sigil of Astrata's radiance."
+	desc = "This sigil is hot to the touch. It's almost too much to bear."
 	icon_state = "astrata_chalky"
 	base_icon_state = "astrata"
 	required_patron = /datum/patron/divine/astrata
 
 /obj/structure/ritual_circle/noc
 	name = "rune of the moon"
-	desc = "A sigil of Noc's wisdom."
+	desc = "This sigil is cool to the touch, and shimmers silver in the corner of your eye."
 	icon_state = "noc_chalky"
 	base_icon_state = "noc"
 	required_patron = /datum/patron/divine/noc
 
 /obj/structure/ritual_circle/abyssor
 	name = "rune of the storm"
-	desc = "A sigil of Abyssor's fury."
+	desc = "This sigil is drawn best with fury in your blood."
 	//icon_state = "abyssor_chalky"
 	//base_icon_state = "abyssor"
 	required_patron = /datum/patron/divine/abyssor
 
 /obj/structure/ritual_circle/dendor
 	name = "rune of the wilds"
-	desc = ""
+	desc = "Use your instinct to draw the lines of this sigil."
 	icon_state = "dendor_chalky"
 	base_icon_state = "dendor"
 	required_patron = /datum/patron/divine/dendor
 
 /obj/structure/ritual_circle/malum
-	name = "rune of creation" // or rune of the forge, maybe
-	desc = ""
+	name = "rune of industry"
+	desc = "The sigil is drawn with machine-precision."
 	icon_state = "malum_chalky"
 	base_icon_state = "malum"
 	required_patron = /datum/patron/divine/malum
@@ -118,15 +118,15 @@
 
 /obj/structure/ritual_circle/eora
 	name = "rune of the heart"
-	desc = "A sigil of Eora's love."
+	desc = "This sigil soothes the eyes. The ritualist has done a beautiful job."
 	icon_state = "eora_chalky"
 	base_icon_state = "eora"
 	required_patron = /datum/patron/divine/eora
 
 
 /obj/structure/ritual_circle/xylix
-	name = "rune of the trickster" //or rune of the free?
-	desc = ""
+	name = "rune of the trickster"
+	desc = "This sigil is to be drawn with a laugh on your lips and freedom in your heart."
 	//icon_state = "xylix_chalky"
 	//base_icon_state = "xylix"
 	required_patron = /datum/patron/divine/xylix
@@ -134,13 +134,13 @@
 
 /obj/structure/ritual_circle/necra
 	name = "rune of the underworld"
-	desc = "A sigil of Necra's respite."
+	desc = ""
 	icon_state = "necra_chalky"
 	base_icon_state = "necra"
 	required_patron = /datum/patron/divine/necra
 
 /obj/structure/ritual_circle/pestra
-	name = "rune of medicine" //open to change
+	name = "rune of medicine" //placeholder
 	desc = ""
 	icon_state = "pestra_chalky"
 	base_icon_state = "pestra"
