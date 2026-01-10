@@ -31,21 +31,30 @@
 		god_rites[initial(ritual_type.name)] = rite
 
 /obj/structure/ritual_circle/attack_hand_secondary(mob/living/user)
+	//check to make sure no one is channeling to prevent dick behaviour
+	if(active)
+		user.visible_message(span_warning("Someone is using this rune!"))
+		return
+	//otherwise wipe it up
 	user.visible_message(span_warning("[user] begins wiping away the rune."))
-	if(do_after(user, src, 1.5 SECONDS))
+	if(do_after(user, 1.5 SECONDS))
 		playsound(loc, 'sound/foley/cloth_wipe (1).ogg', 100, TRUE)
 		qdel(src)
 
 /obj/structure/ritual_circle/attack_hand(mob/living/user)
+	//ensure they CAN do rituals
+	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
+		user.visible_message(span_warning("This is beyond my knowledge."))
+		return
+	//get your own rune, nerd
 	if(active)
+		user.visible_message(span_warning("Someone is already using this rune."))
 		return
-	if(!length(god_rites))
-		return
+	//...gotta be your god, too
 	if(!ispath(required_patron, user.patron))
 		user.visible_message(span_warning("I don't know this god's rites."))
 		return
-	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
-		user.visible_message(span_warning("This is beyond my knowledge."))
+	if(!length(god_rites))
 		return
 	var/choice = browser_input_list(user, "Rituals of [user.patron.name]", "THE GODS", god_rites)
 	if(!choice || QDELETED(src) || QDELETED(user))
@@ -53,8 +62,9 @@
 	var/ritual_type = god_rites[choice]
 	var/datum/god_ritual/ritual = new ritual_type(user, src)
 	active = TRUE
-	ritual.start_ritual()
 	update_appearance(UPDATE_ICON_STATE)
+	ritual.start_ritual()
+
 
 
 /obj/structure/ritual_circle/update_icon_state()
@@ -66,24 +76,24 @@
 
 /obj/structure/ritual_circle/astrata
 	name = "rune of the sun"
-	desc = ""
+	desc = "A sigil of Astrata's radiance."
 	icon_state = "astrata_chalky"
 	base_icon_state = "astrata"
 	required_patron = /datum/patron/divine/astrata
 
 /obj/structure/ritual_circle/noc
 	name = "rune of the moon"
-	desc = ""
+	desc = "A sigil of Noc's wisdom."
 	icon_state = "noc_chalky"
 	base_icon_state = "noc"
 	required_patron = /datum/patron/divine/noc
 
 /obj/structure/ritual_circle/abyssor
-	name = "rune of the storm" //or seas, or blood, or tides
-	desc = ""
-	required_patron = /datum/patron/divine/abyssor
+	name = "rune of the storm"
+	desc = "A sigil of Abyssor's fury."
 	//icon_state = "abyssor_chalky"
 	//base_icon_state = "abyssor"
+	required_patron = /datum/patron/divine/abyssor
 
 /obj/structure/ritual_circle/dendor
 	name = "rune of the wilds"
@@ -108,7 +118,7 @@
 
 /obj/structure/ritual_circle/eora
 	name = "rune of the heart"
-	desc = ""
+	desc = "A sigil of Eora's love."
 	icon_state = "eora_chalky"
 	base_icon_state = "eora"
 	required_patron = /datum/patron/divine/eora
@@ -124,7 +134,7 @@
 
 /obj/structure/ritual_circle/necra
 	name = "rune of the underworld"
-	desc = ""
+	desc = "A sigil of Necra's respite."
 	icon_state = "necra_chalky"
 	base_icon_state = "necra"
 	required_patron = /datum/patron/divine/necra
@@ -152,7 +162,7 @@
 	required_patron = /datum/patron/inhumen/baotha
 
 /obj/structure/ritual_circle/matthios
-	name = "rune of thieves"
+	name = "rune of thieves"//or greed?
 	desc = ""
 	icon_state = "matthios_chalky"
 	base_icon_state = "matthios"
