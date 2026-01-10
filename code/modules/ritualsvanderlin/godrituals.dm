@@ -1,9 +1,10 @@
 /datum/godritual
-	name = "name of ritual"
+	var/required_rune_type = /obj/structure/ritualcircle
 
-//ASTRATAN RITUALS
+//ASTRATA
 
 /datum/godritual/astrata
+	required_rune_type = /obj/structure/ritualcircle/astrata
 
-/datum/godritual/astrata/ritualplaceholder
-	user.visible_message(span_warning("I AM WORKING, BE JOYFUL!!!!!!!!"))
+/datum/godritual/astrata/ritualexample
+	//bleh
