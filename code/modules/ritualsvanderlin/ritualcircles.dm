@@ -7,7 +7,6 @@
 	density = FALSE
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
-	var/godrites = list() //empty list to assign one per rune. might be unnecessary
 	var/patron_type_for_ritual = /datum/patron/divine/astrata
 
 /obj/structure/ritualcircle/attack_hand_secondary(mob/living/user)
@@ -23,9 +22,7 @@
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
 		user.visible_message(span_warning("This is beyond my knowledge."))
 		return
-	var/riteselection = input(user, "Rituals of the Gods", src) as null|anything in godrites
-	//get a list of the rituals for that rune somehow? manually assign it per rune type?
-	//do we put the fluff HERE or in the proc for the ritual itself?
+
 
 /obj/structure/ritualcircle/astrata
 	name = "rune of the sun"
@@ -43,7 +40,7 @@
 	name = "rune of the storm" //or seas, or blood, or tides
 	desc = ""
 	patron_type_for_ritual = /datum/patron/divine/abyssor
-	//no icon available
+	//icon_state = "abyssor_chalky"
 
 /obj/structure/ritualcircle/dendor
 	name = "rune of the wilds"
@@ -60,7 +57,7 @@
 /obj/structure/ritualcircle/ravox
 	name = "rune of the valiant" //placeholder
 	desc = ""
-	//no icon available
+	//icon_state = "ravox_chalky"
 	patron_type_for_ritual = /datum/patron/divine/ravox
 
 /obj/structure/ritualcircle/eora
@@ -73,7 +70,7 @@
 /obj/structure/ritualcircle/xylix
 	name = "rune of the trickster" //or rune of the free?
 	desc = ""
-	//no icon available
+	//icon_state = "xylix_chalky"
 	patron_type_for_ritual = /datum/patron/divine/xylix
 
 
@@ -99,7 +96,7 @@
 /obj/structure/ritualcircle/baotha
 	name = "rune of joy"
 	desc = ""
-	//no icon available
+	//icon_state = "baotha_chalky"
 	patron_type_for_ritual = /datum/patron/inhumen/baotha
 
 /obj/structure/ritualcircle/matthios
@@ -111,6 +108,6 @@
 /obj/structure/ritualcircle/graggar
 	name = "rune of the warlord"
 	desc = ""
-	//no icon available
+	//icon_state = "graggar_chalky"
 	patron_type_for_ritual = /datum/patron/inhumen/graggar
 */
