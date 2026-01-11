@@ -43,6 +43,9 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 		qdel(src)
 		return FALSE
 	var/success = perform_ritual()
+	if(success)
+		var/datum/status_effect/debuff/ritual_exhaustion/ritual_exhaustion_status = /datum/status_effect/debuff/ritual_exhaustion
+		caster.apply_status_effect(ritual_exhaustion_status, initial(ritual_exhaustion_status.duration))
 	on_completion(success)
 	qdel(src)
 	return success
@@ -56,6 +59,7 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 		if(!do_after(caster, incantations[incantation], sigil, display_over_user = TRUE))
 			return FALSE
 		recite_incantation(incantation, index)
+	return TRUE
 
 /datum/god_ritual/proc/recite_incantation(message, index)
 	switch(invocation_type)

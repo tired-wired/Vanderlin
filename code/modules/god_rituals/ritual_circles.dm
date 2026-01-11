@@ -78,6 +78,10 @@
 	if(!ispath(required_patron, user.patron))
 		user.visible_message(span_warning("I don't know this god's rites."))
 		return
+	//cooldown check. FIX THIS.
+	if(user.has_status_effect(/datum/status_effect/debuff/ritual_exhaustion) == "ritual_exhaustion")
+		user.visible_message(span_warning("I've done a ritual too recently, I must rest."))
+		return
 	if(!length(god_rites))
 		return
 	var/choice = browser_input_list(user, "Rituals of [user.patron.name]", "THE GODS", god_rites)
