@@ -1,6 +1,30 @@
+
+/obj/item/ritual_chalk
+	name = "ritual chalk"
+	icon_state = "chalk"
+	desc = "Simple white blessed chalk. A useful tool for rites."
+	icon = 'icons/roguetown/misc/rituals.dmi'
+	w_class = WEIGHT_CLASS_TINY
+
+/obj/item/ritual_chalk/attack_self(mob/living/user)
+	if(!ispath(user.patron?.ritual_circle, /obj/structure/ritual_circle))
+		return
+	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
+		to_chat(user, span_warning("I don't know what I'm doing with this..."))
+		return
+	if(!isfloorturf(user.loc))
+		return
+	var/sigil_type = user.patron.ritual_circle
+	to_chat(user, span_notice("I begin inscribing the rune..."), )
+	if(do_after(user, 3 SECONDS, src))
+		playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
+		new sigil_type(get_turf(user))
+
+///// Ritual circles ////
+
 /obj/structure/ritual_circle
 	name = "ritual circle"
-	desc = ""
+	desc = "Did someone draw a pintle here? Childish."
 	icon = 'icons/roguetown/misc/rituals.dmi'
 	icon_state = "ritual_base"
 	layer = BELOW_OBJ_LAYER
@@ -14,7 +38,7 @@
 	var/list/god_rites = list()
 
 	/// if this circle is active, other people can't use it and the icon state changes
-	var/active = FALSE
+	var/datum/ritual/active = null
 
 	base_icon_state = ""
 	var/inactive_suffix = "_chalky"
@@ -57,20 +81,20 @@
 	if(!length(god_rites))
 		return
 	var/choice = browser_input_list(user, "Rituals of [user.patron.name]", "THE GODS", god_rites)
-	if(!choice || QDELETED(src) || QDELETED(user))
+	if(!choice || QDELETED(src) || QDELETED(user) || active || !user.CanReach(src))
 		return
 	var/ritual_type = god_rites[choice]
-	var/datum/god_ritual/ritual = new ritual_type(user, src)
-	active = TRUE
+	active = new ritual_type(user, src)
+	INVOKE_ASYNC(active, TYPE_PROC_REF(/datum/god_ritual, start_ritual))
 	update_appearance(UPDATE_ICON_STATE)
-	ritual.start_ritual()
-
 
 
 /obj/structure/ritual_circle/update_icon_state()
 	. = ..()
 	if(base_icon_state)
 		icon_state = "[base_icon_state][active ? active_suffix : inactive_suffix]"
+	else
+		icon_state = initial(icon_state)
 
 //Circle structures below
 
@@ -110,8 +134,8 @@
 	required_patron = /datum/patron/divine/malum
 
 /obj/structure/ritual_circle/ravox
-	name = "rune of the valiant" //placeholder
-	desc = ""
+	name = "rune of the valiant"
+	desc = "The lines are sharp and straight. Did they trace them off a blade?"
 	//icon_state = "ravox_chalky"
 	//base_icon_state = "ravox"
 	required_patron = /datum/patron/divine/ravox
@@ -134,7 +158,7 @@
 
 /obj/structure/ritual_circle/necra
 	name = "rune of the underworld"
-	desc = ""
+	desc = "This sigil is understated, asking no attention."
 	icon_state = "necra_chalky"
 	base_icon_state = "necra"
 	required_patron = /datum/patron/divine/necra
@@ -148,7 +172,7 @@
 
 
 /obj/structure/ritual_circle/zizo
-	name = "rune of the lich" //placeholder
+	name = "rune of the lich"
 	desc = ""
 	icon_state = "zizo_chalky"
 	base_icon_state = "zizo"
@@ -162,7 +186,7 @@
 	required_patron = /datum/patron/inhumen/baotha
 
 /obj/structure/ritual_circle/matthios
-	name = "rune of thieves"//or greed?
+	name = "rune of greed"
 	desc = ""
 	icon_state = "matthios_chalky"
 	base_icon_state = "matthios"

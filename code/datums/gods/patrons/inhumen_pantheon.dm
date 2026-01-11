@@ -29,6 +29,7 @@
 	boons = "You may perform fleshcrafting. Access to roles with magic."
 	//added_traits = list(TRAIT_CABAL)	No need for this. They have fleshcrafting now.
 	devotion_holder = /datum/devotion/inhumen/zizo
+	ritual_circle = /obj/structure/ritual_circle/zizo
 	confess_lines = list(
 		"I FOLLOW THE PATH OF ZIZO!",
 		"LONG LIVE QUEEN ZIZO!",
@@ -50,6 +51,7 @@
 	boons = "You are drawn to the flavour of raw flesh and organs, and may consume without worry."
 	added_traits = list(TRAIT_ORGAN_EATER)
 	devotion_holder = /datum/devotion/inhumen/graggar
+	ritual_circle = /obj/structure/ritual_circle/graggar
 	confess_lines = list(
 		"GRAGGAR IS THE BEAST I WORSHIP!",
 		"GRAGGAR WILL RAVAGE YOU!",
@@ -67,6 +69,7 @@
 	boons = "You can see the most expensive item someone is carrying."
 	added_traits = list(TRAIT_MATTHIOS_EYES)
 	devotion_holder = /datum/devotion/inhumen/matthios
+	ritual_circle = /obj/structure/ritual_circle/matthios
 	confess_lines = list(
 		"MATTHIOS STEALS FROM THE WORTHLESS!",
 		"MATTHIOS IS JUSTICE FOR THE COMMON MAN!",
@@ -84,6 +87,7 @@
 	boons = "You will never overdose on drugs."
 	added_traits = list(TRAIT_CRACKHEAD)
 	devotion_holder = /datum/devotion/inhumen/baotha
+	ritual_circle = /obj/structure/ritual_circle/baotha
 	confess_lines = list(
 		"LIVE, LAUGH, LOVE! IN BAOTHA'S NAME!",
 		"JOY AT ALL COSTS! BAOTHA'S TEACHINGS REIGN!",

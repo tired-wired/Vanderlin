@@ -2679,7 +2679,6 @@
 #include "code\modules\food_and_drinks\food.dm"
 #include "code\modules\food_and_drinks\food\snacks.dm"
 #include "code\modules\god_rituals\ritual_circles.dm"
-#include "code\modules\god_rituals\ritualchalk.dm"
 #include "code\modules\god_rituals\rituals\_god_ritual.dm"
 #include "code\modules\god_rituals\rituals\abyssor_rituals.dm"
 #include "code\modules\god_rituals\rituals\astrata_rituals.dm"

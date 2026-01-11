@@ -48,6 +48,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	boons = "Your stamina regeneration delay is lowered during daytime."
 	added_traits = list(TRAIT_APRICITY)
 	devotion_holder = /datum/devotion/divine/astrata
+	ritual_circle = /obj/structure/ritual_circle/astrata
 	confess_lines = list(
 		"ASTRATA IS MY LIGHT!",
 		"ASTRATA BRINGS LAW!",
@@ -66,6 +67,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	boons = "You learn, dream, and teach apprentices slightly better. Access to roles with magic."
 	added_traits = list(TRAIT_TUTELAGE)
 	devotion_holder = /datum/devotion/divine/noc
+	ritual_circle = /obj/structure/ritual_circle/noc
 	confess_lines = list(
 		"NOC IS NIGHT!",
 		"NOC SEES THE TRUTH!",
@@ -84,6 +86,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	boons = "You are immune to kneestingers."
 	added_traits = list(TRAIT_KNEESTINGER_IMMUNITY)
 	devotion_holder = /datum/devotion/divine/dendor
+	ritual_circle = /obj/structure/ritual_circle/dendor
 	confess_lines = list(
 		"DENDOR PROVIDES!",
 		"THE TREEFATHER BRINGS BOUNTY!",
@@ -102,6 +105,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	boons = "Leeches will drain very little of your blood."
 	added_traits = list(TRAIT_LEECHIMMUNE)
 	devotion_holder = /datum/devotion/divine/abyssor
+	ritual_circle = /obj/structure/ritual_circle/abyssor
 	confess_lines = list(
 		"ABYSSOR COMMANDS THE WAVES!",
 		"THE OCEAN'S FURY IS ABYSSOR'S WILL!",
@@ -120,6 +124,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	boons = "You may see the presence of a soul in a body."
 	added_traits = list(TRAIT_SOUL_EXAMINE)
 	devotion_holder = /datum/devotion/divine/necra
+	ritual_circle = /obj/structure/ritual_circle/necra
 	confess_lines = list(
 		"ALL SOULS FIND THEIR WAY TO NECRA!",
 		"THE UNDERMAIDEN IS OUR FINAL REPOSE!",
@@ -138,6 +143,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	boons = "Your used weapons dull slower."
 	added_traits = list(TRAIT_SHARPER_BLADES)
 	devotion_holder = /datum/devotion/divine/ravox
+	ritual_circle = /obj/structure/ritual_circle/ravox
 	confess_lines = list(
 		"RAVOX IS JUSTICE!",
 		"THROUGH STRIFE, GRACE!",
@@ -156,6 +162,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	boons = "You can rig different forms of gambling in your favor."
 	added_traits = list(TRAIT_BLACKLEG)
 	devotion_holder = /datum/devotion/divine/xylix
+	ritual_circle = /obj/structure/ritual_circle/xylix
 	confess_lines = list(
 		"ASTRATA IS MY LIGHT!",
 		"NOC IS NIGHT!",
@@ -181,6 +188,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	boons = "You may consume rotten food without being sick."
 	added_traits = list(TRAIT_ROT_EATER)
 	devotion_holder = /datum/devotion/divine/pestra
+	ritual_circle = /obj/structure/ritual_circle/pestra
 	confess_lines = list(
 		"PESTRA SOOTHES ALL ILLS!",
 		"DECAY IS A CONTINUATION OF LIFE!",
@@ -199,6 +207,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	boons = "You recover more energy when sleeping."
 	added_traits = list(TRAIT_BETTER_SLEEP)
 	devotion_holder = /datum/devotion/divine/malum
+	ritual_circle = /obj/structure/ritual_circle/malum
 	confess_lines = list(
 		"MALUM IS MY FORGE!",
 		"TRUE VALUE IS IN THE TOIL!",
@@ -217,6 +226,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 	boons = "You can understand others' needs better."
 	added_traits = list(TRAIT_EXTEROCEPTION)
 	devotion_holder = /datum/devotion/divine/eora
+	ritual_circle = /obj/structure/ritual_circle/eora
 	confess_lines = list(
 		"EORA BRINGS US TOGETHER!",
 		"HER BEAUTY IS EVEN IN THIS TORMENT!",

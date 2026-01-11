@@ -32,6 +32,9 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 
 /datum/god_ritual/Destroy(force, ...)
 	. = ..()
+	if(sigil.active == src)
+		sigil.active = null
+		sigil.update_appearance(UPDATE_ICON_STATE)
 	caster = null
 	sigil = null
 

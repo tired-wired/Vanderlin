@@ -33,6 +33,9 @@ GLOBAL_LIST_EMPTY(prayers)
 	/// Devotion datum type associated with this god
 	var/datum/devotion/devotion_holder = null
 
+	/// The type of the ritual circle this god uses. /obj/structure/ritual_circle
+	var/ritual_circle
+
 	/// List of words that this god considers profane.
 	var/list/profane_words = list("zizo","cock","dick","fuck","shit","pussy","cuck","cunt","asshole")
 
