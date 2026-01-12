@@ -2,6 +2,11 @@
 /datum/god_ritual/valiant_sacrifice
 	name = "Valiant Sacrifice"
 	ritual_patron = /datum/patron/divine/ravox
+	incantations = list(
+		"Ravox, hear this soul's cry." = 3 SECONDS,
+		"An injustice must be made right." = 3 SECONDS,
+		"Grant this soul your valor!" = 3 SECONDS,
+	)
 
 /datum/god_ritual/valiant_sacrifice/on_completion(success)
 	. = ..()
@@ -13,8 +18,8 @@
 			target.add_spell(sacrifice_spell)
 
 //LAST STAND - trade [something] to avoid hardcrit.
-/datum/god_ritual/last_stand
+/*/datum/god_ritual/last_stand
 	name = "Last Stand"
 	ritual_patron = /datum/patron/divine/ravox
-
+*/
 //antag check?

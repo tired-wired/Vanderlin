@@ -2,8 +2,13 @@
 /datum/god_ritual/eora_peace
 	name = "Eora's Peace"
 	ritual_patron = /datum/patron/divine/eora
+	incantations = list(
+		"There's no need to be so worked up." = 3 SECONDS,
+		"Just relax a while." = 3 SECONDS,
+		"Let's talk it out." = 3 SECONDS,
+	)
 
-/datum/god_ritual/mood_boost_eora/on_completion(success)
+/datum/god_ritual/eora_peace/on_completion(success)
 	. = ..()
 	if(success)
 		var/ritualtargets = view(0, sigil.loc)

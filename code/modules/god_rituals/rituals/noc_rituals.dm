@@ -11,7 +11,7 @@
 /datum/god_ritual/moonlight_visions/on_completion(success)
 	. = ..()
 	if(success)
-		var/ritualtargets = view(0, sigil.loc)
+		var/ritualtargets = view(3, sigil.loc)
 		var/datum/status_effect/buff/moonlight_visions/moonlight_visions_status = /datum/status_effect/buff/moonlight_visions
 		for(var/mob/living/carbon/human/target in ritualtargets)
 			target.apply_status_effect(moonlight_visions_status, initial(moonlight_visions_status.duration))
@@ -28,4 +28,4 @@
 		var/ritualtargets = view(0, sigil.loc)
 		for(var/mob/living/carbon/human/target in ritualtargets)
 			target.apply_status_effect(/datum/status_effect/invisibility, 3 MINUTES)
-
+*/
