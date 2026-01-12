@@ -24,7 +24,7 @@
 
 /obj/structure/ritual_circle
 	name = "ritual circle"
-	desc = "Did someone draw a pintle here? Childish."
+	desc = //"Did someone draw a pintle here? Childish."
 	icon = 'icons/roguetown/misc/rituals.dmi'
 	icon_state = "ritual_base"
 	layer = BELOW_OBJ_LAYER
