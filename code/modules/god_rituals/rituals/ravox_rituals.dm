@@ -15,6 +15,7 @@
 		var/datum/action/cooldown/spell/undirected/list_target/ultimate_sacrifice/sacrifice_spell = /datum/action/cooldown/spell/undirected/list_target/ultimate_sacrifice
 		for(var/mob/living/carbon/human/target in ritualtargets)
 			to_chat(target,span_noticesmall("Ravox acknowledges your earnest plea. Your soul braces itself."))
+			target.loc.visible_message(span_warning("[target] stands straighter and squares their shoulders."))
 			target.add_spell(sacrifice_spell)
 
 //LAST STAND - trade [something] to avoid hardcrit.
