@@ -1,4 +1,4 @@
-//MOONLIGHT VISIONS - grants darkvision? and +2 int. figure out source restrictions.
+//MOONLIGHT VISIONS - grants darkvision and +2 int. figure out source restrictions.
 /datum/god_ritual/moonlight_visions
 	name = "Moonlight Visions"
 	ritual_patron = /datum/patron/divine/noc
@@ -8,7 +8,7 @@
 		"Aid us to discover the mysteries of Your weave!" = 3 SECONDS,
 	)
 
-/datum/god_ritual/in_boost/on_completion(success)
+/datum/god_ritual/moonlight_visions/on_completion(success)
 	. = ..()
 	if(success)
 		var/ritualtargets = view(0, sigil.loc)
@@ -16,4 +16,16 @@
 		for(var/mob/living/carbon/human/target in ritualtargets)
 			target.apply_status_effect(moonlight_visions_status, initial(moonlight_visions_status.duration))
 
-//maybe a "make target invisible" ritual
+//NOC'S MERCY - turns the target invisible
+/*
+/datum/god_ritual/noc_mercy
+	name = "Noc's Mercy"
+	ritual_patron = /datum/patron/divine/noc
+
+/datum/god_ritual/noc_mercy/on_completion(success)
+	. = ..()
+	if(success)
+		var/ritualtargets = view(0, sigil.loc)
+		for(var/mob/living/carbon/human/target in ritualtargets)
+			target.apply_status_effect(/datum/status_effect/invisibility, 3 MINUTES)
+

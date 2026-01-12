@@ -145,7 +145,8 @@
 	beltl = /obj/item/key/church
 	backl = /obj/item/weapon/polearm/woodstaff/quarterstaff
 	backpack_contents = list(
-		/obj/item/needle = 1
+		/obj/item/needle = 1,
+		/obj/item/ritual_chalk
 	)
 
 /datum/outfit/monk/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)

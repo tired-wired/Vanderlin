@@ -92,7 +92,8 @@
 	backl = /obj/item/storage/backpack/satchel
 	backpack_contents = list(
 		/obj/item/needle = 1,
-		/obj/item/storage/belt/pouch/coins/rich = 1
+		/obj/item/storage/belt/pouch/coins/rich = 1,
+		/obj/item/ritual_chalk
 	)
 	l_hand = /obj/item/weapon/polearm/woodstaff/aries
 

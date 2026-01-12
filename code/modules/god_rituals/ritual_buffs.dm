@@ -6,15 +6,19 @@
 /atom/movable/screen/alert/status_effect/debuff/ritual_exhaustion
 	name = "Ritual Exhaustion"
 	desc = "I've done a ritual too recently, I must rest."
+	icon_state = "debuff"
 
 //rite buffs for effects
 
 //astrata
 /datum/status_effect/buff/guiding_light
-	//unfinished
 	id = "guiding_light"
 	effectedstats = list("perception" = 2)
 	duration = 5 MINUTES
+
+/atom/movable/screen/alert/status_effect/buff/guiding_light
+	name = "Guiding Light"
+	desc = "Astrata's light shows me the path."
 
 //noc
 /datum/status_effect/buff/moonlight_visions
@@ -37,3 +41,30 @@
 	. = ..()
 	to_chat(owner, span_warning("Noc's silver leaves me."))
 	REMOVE_TRAIT(owner, TRAIT_DARKVISION, MAGIC_TRAIT)
+
+//eora
+/datum/status_effect/buff/eora_peace
+	id = "eora_peace"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/eora_peace
+	duration = 5 MINUTES
+
+/atom/movable/screen/alert/status_effect/buff/eora_peace
+	name = "Eora's Peace"
+	desc = "I feel my heart as light as feathers. All my worries have washed away."
+	icon_state = "buff"
+
+/datum/status_effect/buff/eora_peace/on_apply()
+	. = ..()
+	to_chat(owner, span_green("Everything feels great!"))
+	owner.add_stress(/datum/stress_event/pacified)
+	ADD_TRAIT(owner, TRAIT_PACIFISM, TRAIT_GENERIC)
+
+/datum/status_effect/buff/pacify/on_remove()
+	. = ..()
+	to_chat(owner, span_warning("My mind is my own again, no longer awash with foggy peace!"))
+	REMOVE_TRAIT(owner, TRAIT_PACIFISM, TRAIT_GENERIC)
+
+/datum/stress_event/pacified
+	timer = 30 MINUTES
+	stress_change = -5
+	desc = span_green("All my problems have washed away!")
