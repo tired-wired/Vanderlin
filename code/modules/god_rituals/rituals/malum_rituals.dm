@@ -16,7 +16,7 @@
 			if(counter == 2)
 				return
 			counter++
-			target.loc.visible_message(span_warning("[target] glows with a forge's heat for a moment."))
-			target.update_integrity(target.max_integrity, TRUE, null) //repair the actual integrity
+			target?.visible_message(span_warning("[target] glows with a forge's heat for a moment."))
+			target?.update_integrity(target.max_integrity, TRUE, null) //repair the actual integrity
 
 //refill fatigue/stamina
