@@ -12,10 +12,9 @@
 	. = ..()
 	if(success)
 		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
-		var/datum/action/cooldown/spell/undirected/list_target/ultimate_sacrifice/sacrifice_spell = /datum/action/cooldown/spell/undirected/list_target/ultimate_sacrifice
 		to_chat(target,span_noticesmall("Ravox acknowledges your earnest plea. Your soul braces itself."))
-		target.loc.visible_message(span_warning("[target] stands straighter and squares their shoulders."))
-		target.add_spell(sacrifice_spell)
+		target?.visible_message(span_warning("[target] stands straighter and squares their shoulders."))
+		target?.add_spell(/datum/action/cooldown/spell/undirected/list_target/ultimate_sacrifice)
 
 //LAST STAND - trade [something] to avoid hardcrit.
 /*/datum/god_ritual/last_stand
