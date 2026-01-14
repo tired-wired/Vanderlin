@@ -11,5 +11,6 @@
 		if(!target)
 			return
 */
-//leper upon ye. with an upside
+//PESTRA'S FAVOUR - leper upon ye. with an upside
+
 //grant the paintaker spell
