@@ -18,24 +18,25 @@
 		playsound(sigil, 'sound/magic/holyshield.ogg', 80, FALSE, -1) // Cool sound!
 
 
-//PHEONIX RITE - punishment/repentence, burns the target alive and heals them
-/*
+//PHEONIX CLEANSING - punishment/repentence, burns the target alive
 /datum/god_ritual/pheonix_cleanse
-	name = "Phoenix Rite"
+	name = "Phoenix Cleansing"
 	ritual_patron = /datum/patron/divine/astrata
 	incantations = list(
-		"I am a placeholder!!" = 3 SECONDS,
+		"SINNER." = 3 SECONDS,
+		"Astrata's fire will purge the evil from your soul." = 3 SECONDS,
+		"Pray for Her mercy." = 3 SECONDS,
 	)
 
 /datum/god_ritual/pheonix_cleanse/on_completion(success)
 	. = ..()
 	if(success)
 		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)//only the person ON the sigil
+		if(!target)
+			return
 		playsound(sigil.loc, 'sound/combat/hits/burn (1).ogg', 100, FALSE, -1)
-		for(var/mob/living/carbon/human/target in ritualtargets)
-			to_chat(target,span_danger("You feel the eye of Astrata turned upon you. Your soul shall be cleansed."))
-			target.adjust_divine_fire_stacks(10)
-			target.IgniteMob()
-			target.loc.visible_message(span_warning("[target] bursts into flames, cleansed by Astrata!"))
-			target.emote("firescream")
-*/
+		to_chat(target,span_danger("You feel the eye of Astrata turned upon you. Your soul shall be cleansed."))
+		target.adjust_divine_fire_stacks(30)
+		target.IgniteMob()
+		target.loc.visible_message(span_warning("[target] bursts into flames, cleansed by Astrata!"))
+		target.emote("firescream")

@@ -19,4 +19,13 @@
 			target?.visible_message(span_warning("[target] glows with a forge's heat for a moment."))
 			target?.update_integrity(target.max_integrity, TRUE, null) //repair the actual integrity
 
-//refill fatigue/stamina
+//REVITALISE - refill fatigue/stamina
+/*
+/datum/god_ritual/revitalize_malum
+	name = "Revitalise"
+	ritual_patron = /datum/patron/divine/malum
+
+/datum/god_ritual/revitalize_malum/on_completion(success)
+	. = ..()
+	if(success)
+*/

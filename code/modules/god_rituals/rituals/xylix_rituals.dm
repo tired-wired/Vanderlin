@@ -2,8 +2,11 @@
 /datum/god_ritual/freed_soul
 	name = "Freed Soul"
 	ritual_patron = /datum/patron/divine/xylix
+	invocation_type = INVOCATION_WHISPER
 	incantations = list(
-		"I am a placeholder" = 3 SECONDS,
+		"Locked up and away?" = 3 SECONDS,
+		"Not for long, not for long." = 3 SECONDS,
+		"Be free, run wild! Make mischief!" = 3 SECONDS,
 	)
 
 /datum/god_ritual/freed_soul/on_completion(success)

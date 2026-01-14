@@ -12,7 +12,9 @@
 	. = ..()
 	if(success)
 		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
+		if(!target)
+			return
 		var/datum/status_effect/buff/eora_peace/pacify = /datum/status_effect/buff/eora_peace
-		target?.visible_message(span_warning("[target] sways like windchimes in the wind..."))
-		target?.visible_message(span_green("I feel the burdens of my heart lifting. Something feels very wrong... I don't mind at all..."))
-		target?.apply_status_effect(pacify, initial(pacify.duration))
+		target.visible_message(span_warning("[target] sways like windchimes in the wind..."))
+		target.visible_message(span_green("I feel the burdens of my heart lifting. Something feels very wrong... I don't mind at all..."))
+		target.apply_status_effect(pacify, initial(pacify.duration))

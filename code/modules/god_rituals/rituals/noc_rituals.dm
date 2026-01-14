@@ -2,7 +2,7 @@
 /datum/god_ritual/moonlight_visions
 	name = "Moonlight Visions"
 	ritual_patron = /datum/patron/divine/noc
-	incantations = list (
+	incantations = list(
 		"Noc, bestow upon us Your wisdom." = 3 SECONDS,
 		"Turn Your gaze to us!" = 3 SECONDS,
 		"Aid us to discover the mysteries of Your weave!" = 3 SECONDS,
@@ -15,3 +15,23 @@
 			target.apply_status_effect(/datum/status_effect/buff/moonlight_visions)
 
 //NOC'S LULLABY - makes you tired again
+/datum/god_ritual/noc_lullaby
+	name = "Noc's Lullaby"
+	ritual_patron = /datum/patron/divine/noc
+	incantations = list(
+		"Noc, bless this soul with dreams." = 3 SECONDS,
+		"Grant them Your holy rest." = 3 SECONDS,
+		"Let them learn anew." = 3 SECONDS,
+	)
+
+/datum/god_ritual/noc_lullaby/on_completion(success)
+	. = ..()
+	if(success)
+		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
+		if(!target)
+			return
+		target.apply_status_effect(/datum/status_effect/debuff/dreamytime)
+		target.apply_status_effect(/datum/status_effect/debuff/sleepytime)
+		target.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, 30 MINUTES)//make sure this overrides the basic one
+
+//two-way scrying. phone call?
