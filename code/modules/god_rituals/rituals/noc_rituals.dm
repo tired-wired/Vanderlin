@@ -18,6 +18,7 @@
 /datum/god_ritual/noc_lullaby
 	name = "Noc's Lullaby"
 	ritual_patron = /datum/patron/divine/noc
+	cooldown = 30 MINUTES
 	incantations = list(
 		"Noc, bless this soul with dreams." = 3 SECONDS,
 		"Grant them Your holy rest." = 3 SECONDS,
