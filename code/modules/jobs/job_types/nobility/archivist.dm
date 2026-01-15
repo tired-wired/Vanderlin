@@ -135,7 +135,8 @@
 
 	traits = list(
 		TRAIT_DREAM_WATCHER,
-		TRAIT_EMPATH
+		TRAIT_EMPATH,
+		TRAIT_RITUALIST
 	)
 
 /datum/job/advclass/archivist/dreamwatcher/after_spawn(mob/living/carbon/human/spawned, client/player_client)
@@ -159,4 +160,5 @@
 	backl = /obj/item/storage/backpack/satchel
 	backpack_contents = list(
 		/obj/item/storage/belt/pouch/coins/poor = 1,
+		/obj/item/ritual_chalk
 	)
