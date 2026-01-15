@@ -21,3 +21,5 @@
 			var/obj/item/clothing/neck/gorget/explosive/friendship_necklace = target.wear_neck
 			friendship_necklace.collar_unlocked = TRUE
 			target.dropItemToGround(friendship_necklace, TRUE, FALSE)
+
+//MASQUERADE - temporarily copy the appearance of someone

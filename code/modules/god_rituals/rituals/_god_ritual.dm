@@ -8,7 +8,6 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 		LAZYADDASSOCLIST(all_god_rituals, initial(ritual_type.ritual_patron), ritual)
 	return all_god_rituals
 
-
 /datum/god_ritual
 	abstract_type = /datum/god_ritual
 	var/name = "Get Killed"
@@ -21,9 +20,17 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 		"GO FUCK YOURSELF!!" = 3 SECONDS,
 	)
 	var/invocation_type = INVOCATION_SHOUT
+	var/resistance_flag = MAGIC_RESISTANCE_HOLY
+	/// This is the radius of the effect. 0 means only the tile it's on.
+	var/cast_radius = 0
+	var/ignore_caster = FALSE
+	var/cooldown = 5 MINUTES
+	// what types in the radius are targetted? leave null for override targetting.
+	var/affected_type = /mob/living
 
 	var/mob/living/caster
 	var/obj/structure/ritual_circle/sigil
+
 
 /datum/god_ritual/New(mob/living/_caster, obj/structure/ritual_circle/_sigil)
 	. = ..()
@@ -43,11 +50,11 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 		qdel(src)
 		return FALSE
 	var/success = perform_ritual()
-	if(success)
-		var/datum/status_effect/debuff/ritual_exhaustion/ritual_exhaustion_status = /datum/status_effect/debuff/ritual_exhaustion
-		caster.apply_status_effect(ritual_exhaustion_status, initial(ritual_exhaustion_status.duration))
-	on_completion(success)
-	qdel(src)
+	if(success && !QDELETED(caster))
+		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, cooldown)
+	if(!QDELETED(sigil))
+		on_completion(success/*, get_targets(success)*/)
+		qdel(src)
 	return success
 
 //TODO: make sure these stop if you can't speak or whatever
@@ -73,5 +80,12 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 				capitalize(replace_pronouns(replacetext(message[2], "%CASTER", caster.name), caster)),
 			)
 
-/datum/god_ritual/proc/on_completion(success)
+/datum/god_ritual/proc/on_completion(success/*, list/targets*/)
 	return
+/*
+/datum/god_ritual/proc/get_targets(success)
+	var/list/targets = affected_type in view(cast_radius, sigil)
+	if(ignore_caster)
+		targets -= caster
+	return targets
+*/

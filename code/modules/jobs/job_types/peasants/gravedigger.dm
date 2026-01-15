@@ -48,7 +48,8 @@
 	traits = list(
 		TRAIT_DEADNOSE,
 		TRAIT_STEELHEARTED,
-		TRAIT_GRAVEROBBER
+		TRAIT_GRAVEROBBER,
+		TRAIT_RITUALIST,
 	)
 
 	languages = list(/datum/language/celestial)
@@ -73,6 +74,9 @@
 	beltl = /obj/item/storage/keyring/gravetender
 	beltr = /obj/item/storage/belt/pouch/coins/poor
 	backr = /obj/item/weapon/shovel
+	backpack_contents = list(
+		/obj/item/ritual_chalk,
+	)
 /datum/outfit/undertaker/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
 	. = ..()
 	if(equipped_human.age == AGE_OLD)

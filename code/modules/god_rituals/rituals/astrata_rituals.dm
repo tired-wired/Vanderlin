@@ -12,7 +12,7 @@
 	. = ..()
 	if(success)
 		for(var/mob/living/target in range(1, sigil))
-			target.apply_status_effect(/datum/status_effect/light_buff, 10 MINUTES, 7) // applies the status effect
+			target.apply_status_effect(/datum/status_effect/light_buff, 15 MINUTES, 7) // applies the status effect
 			target.apply_status_effect(/datum/status_effect/buff/guiding_light)
 			to_chat(target,span_noticesmall("Astrata's light guides me forward, drawn to me by the ritualist's prayer!"))
 		playsound(sigil, 'sound/magic/holyshield.ogg', 80, FALSE, -1) // Cool sound!

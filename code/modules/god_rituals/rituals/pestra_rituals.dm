@@ -11,6 +11,18 @@
 		if(!target)
 			return
 */
-//PESTRA'S FAVOUR - leper upon ye. with an upside
 
+//PESTRA'S FAVOUR - leper upon ye. with an upside?
+/*
+/datum/god_ritual/pestra_favour
+	name = "Pestra's Favour"
+	ritual_patron = /datum/patron/divine/pestra
+
+/datum/god_ritual/pestra_favour/on_completion(success)
+	. = ..()
+	if(success)
+		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
+		if(!target)
+			return
+*/
 //grant the paintaker spell

@@ -14,3 +14,5 @@
 		for(var/mob/living/target in range(1, sigil))
 			target.apply_status_effect(/datum/status_effect/buff/lesser_wolf)
 			target.visible_message(span_notice("My teeth itch, my eyes focus. Dendor's wilds run in me!"))
+//way of the wood - 'swim' through trees
+//turn turfs into dirt?

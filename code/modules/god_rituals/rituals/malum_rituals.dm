@@ -19,13 +19,23 @@
 			target?.visible_message(span_warning("[target] glows with a forge's heat for a moment."))
 			target?.update_integrity(target.max_integrity, TRUE, null) //repair the actual integrity
 
-//REVITALISE - refill fatigue/stamina
-/*
+//REVITALISE - refill energy to keep working
 /datum/god_ritual/revitalize_malum
 	name = "Revitalise"
 	ritual_patron = /datum/patron/divine/malum
+	incantations = list(
+		"MALUM! We call on you!" = 3 SECONDS,
+		"Let this devoted work longer!" = 3 SECONDS,
+		"Bless them with your dedication!!" = 3 SECONDS,
+	)
 
 /datum/god_ritual/revitalize_malum/on_completion(success)
 	. = ..()
 	if(success)
-*/
+		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
+		if(!target)
+			return
+		var/energy_to_add = target.max_energy - target.energy
+		target.adjust_energy(energy_to_add)
+		target.visible_message(span_noticesmall("[target] shakes out their hands. Time to work."))
+
