@@ -16,3 +16,4 @@
 			target.visible_message(span_notice("My teeth itch, my eyes focus. Dendor's wilds run in me!"))
 //way of the wood - 'swim' through trees
 //turn turfs into dirt?
+//summon random chance of gote or saiga
