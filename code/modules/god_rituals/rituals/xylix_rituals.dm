@@ -23,20 +23,4 @@
 			friendship_necklace.collar_unlocked = TRUE
 			target.dropItemToGround(friendship_necklace, TRUE, FALSE)
 
-//LUCK OF THE DRAW - random fortune boost from -2 to +3
-/*
-/datum/god_ritual/luck_draw
-	name = "Luck of the Draw"
-	ritual_patron = /datum/patron/divine/xylix
-
-/datum/god_ritual/luck_draw/on_completion(success)
-	. = ..()
-	if(success)
-		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
-		if(!target)
-			return
-		target.apply_status_effect(/datum/status_effect/buff/luck_draw)
-	else
-		caster.apply_status_effect(/datum/status_effect/buff/luck_draw, 2 MINUTES)
-*/
 //MASQUERADE - temporarily copy the appearance of someone? or grant prophunt spell?

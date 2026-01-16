@@ -12,13 +12,19 @@
 	. = ..()
 	if(success)
 		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
-		target?.visible_message(span_warning("[target] stands straighter and squares their shoulders."), span_noticesmall("Ravox acknowledges your earnest plea. Your soul braces itself."))
+		target?.visible_message(span_noticesmall("[target] stands straighter and squares their shoulders."), span_noticesmall("Ravox acknowledges your earnest plea. Your soul braces itself."))
 		target?.add_spell(/datum/action/cooldown/spell/undirected/list_target/ultimate_sacrifice)
 
 //LAST STAND - trade [something] to avoid hardcrit.
 /datum/god_ritual/last_stand
 	name = "Last Stand"
 	ritual_patron = /datum/patron/divine/ravox
+	cooldown = 30 MINUTES
+	incantations = list(
+		"Ravox, we prepare for battle." = 3 SECONDS,
+		"Walk with this soul." = 3 SECONDS,
+		"Let their blade move with yours." = 3 SECONDS,
+	)
 
 /datum/god_ritual/last_stand/on_completion(success)
 	. = ..()
@@ -27,5 +33,5 @@
 		if(!target)
 			return
 		target.apply_status_effect(/datum/status_effect/buff/last_stand)
-		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, 30 MINUTES)
+		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, cooldown)
 

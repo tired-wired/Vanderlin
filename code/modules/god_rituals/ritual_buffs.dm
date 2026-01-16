@@ -120,20 +120,15 @@
 	REMOVE_TRAIT(owner, TRAIT_NOPAIN, "ritual")
 
 //xylix
-/datum/status_effect/buff/luck_draw
-	id = "luck_draw"
+/datum/status_effect/buff/masquerade
+	id = "masquerade"
 	status_type = STATUS_EFFECT_UNIQUE
-	alert_type = /atom/movable/screen/alert/status_effect/buff/luck_draw
-	duration = 5 MINUTES
+	alert_type = /atom/movable/screen/alert/status_effect/buff/masquerade
+	duration = 15 MINUTES
 
-/atom/movable/screen/alert/status_effect/buff/luck_draw
-	name = "Luck of the Draw"
-	desc = "Xylix has dealt your cards."
-
-/datum/status_effect/buff/luck_draw/on_creation(mob/living/new_owner, duration_override, ...)
-	//referenced from the wheel of fortune
-	effectedstats[STATKEY_LCK] = rand(-2, 3)
-	return ..()
+/atom/movable/screen/alert/status_effect/buff/masquerade
+	name = ""
+	desc = ""
 
 //ravox
 /datum/status_effect/buff/last_stand
@@ -147,10 +142,12 @@
 
 /datum/status_effect/buff/last_stand/on_apply()
 	. = ..()
+	to_chat(owner, "My blood rushes in my veins. Battle calls.")
 	ADD_TRAIT(owner, TRAIT_NOSOFTCRIT, "ritual")
 	ADD_TRAIT(owner, TRAIT_NOHARDCRIT, "ritual")
 
 /datum/status_effect/buff/last_stand/on_remove()
 	. = ..()
+	to_chat(owner, "The adrenaline fades and leaves me empty.")
 	REMOVE_TRAIT(owner, TRAIT_NOSOFTCRIT, "ritual")
 	REMOVE_TRAIT(owner, TRAIT_NOHARDCRIT, "ritual")

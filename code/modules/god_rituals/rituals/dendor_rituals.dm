@@ -19,6 +19,7 @@
 /datum/god_ritual/summon_creature
 	name  = "Summon Creacher"
 	ritual_patron = /datum/patron/divine/dendor
+	cooldown = 30 MINUTES
 	incantations = list(
 		"I CALL THE BEASTS OF THE WILDS!" = 3 SECONDS,
 		"MY COMPANIONS, MY COMRADES IN ARMS!" = 3 SECONDS,
@@ -29,7 +30,7 @@
 	. = ..()
 	if(success)
 		sigil.visible_message("Vines unfurl from the rune. A beast emerges!")
-		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, 30 MINUTES)
+		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, cooldown)
 		var/list/summon_options = list(
 			/mob/living/simple_animal/hostile/retaliate/goat = 15,
 			/mob/living/simple_animal/hostile/retaliate/goatmale = 15,
