@@ -161,3 +161,28 @@
 	to_chat(owner, "The adrenaline fades and leaves me empty.")
 	REMOVE_TRAIT(owner, TRAIT_NOSOFTCRIT, "ritual")
 	REMOVE_TRAIT(owner, TRAIT_NOHARDCRIT, "ritual")
+
+//necra
+/datum/status_effect/buff/make_time
+	id = "make_time"
+	duration = 2 MINUTES
+	alert_type = /atom/movable/screen/alert/status_effect/buff/make_time
+
+/atom/movable/screen/alert/status_effect/buff/make_time
+	name = "Make Time"
+	desc = "Necra turns Her gaze from me for a while."
+
+/datum/status_effect/buff/make_time/tick()
+	owner.adjustOxyLoss(-10)
+	owner.blood_volume = max((BLOOD_VOLUME_SURVIVE * 1.5), owner.blood_volume)
+
+/datum/status_effect/buff/make_time/on_apply()
+	. = ..()
+	to_chat(owner, "Necra's embrace feels further away.")
+	ADD_TRAIT(owner, TRAIT_NODEATH, "ritual")
+
+/datum/status_effect/buff/make_time/on_remove()
+	. = ..()
+	to_chat(owner, "My breath comes short once more.")
+	REMOVE_TRAIT(owner, TRAIT_NODEATH, "ritual")
+
