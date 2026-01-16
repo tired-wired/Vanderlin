@@ -39,7 +39,6 @@
 /atom/movable/screen/alert/status_effect/buff/moonlight_visions
 	name = "Moonlight Visions"
 	desc = "Noc's stony touch lay upon my mind, bringing me wisdom."
-	//icon_state = "moonlight_visions"
 
 /datum/status_effect/buff/moonlight_visions/on_apply()
 	. = ..()
@@ -100,3 +99,22 @@
 	to_chat(owner, span_warning("Dendor's senses leave me."))
 	REMOVE_TRAIT(owner, TRAIT_STRONGBITE, TRAIT_GENERIC)
 
+//pestra
+/datum/status_effect/buff/pestra_favour
+	id = "pestra_favour"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/pestra_favour
+	duration = 15 MINUTES
+
+/atom/movable/screen/alert/status_effect/buff/pestra_favour
+	name = "Pestra's Favour"
+	desc = "The Leech-queen blesses me!"
+
+/datum/status_effect/buff/pestra_favour/on_apply()
+	. = ..()
+	to_chat(owner, span_warning("Pestra's gifts numb my skin."))
+	ADD_TRAIT(owner, TRAIT_NOPAIN, "ritual")
+
+/datum/status_effect/buff/pestra_favour/on_remove()
+	. = ..()
+	to_chat(owner, span_warning("The pain of the flesh rushes back in."))
+	REMOVE_TRAIT(owner, TRAIT_NOPAIN, "ritual")

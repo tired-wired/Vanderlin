@@ -1,4 +1,4 @@
-//FREED SOUL: removes the prisoner cursed masks or inquisition collars
+//FREED SOUL - removes the prisoner cursed masks or inquisition collars
 /datum/god_ritual/freed_soul
 	name = "Freed Soul"
 	ritual_patron = /datum/patron/divine/xylix
@@ -22,4 +22,4 @@
 			friendship_necklace.collar_unlocked = TRUE
 			target.dropItemToGround(friendship_necklace, TRUE, FALSE)
 
-//MASQUERADE - temporarily copy the appearance of someone
+//MASQUERADE - temporarily copy the appearance of someone? or grant prophunt spell?
