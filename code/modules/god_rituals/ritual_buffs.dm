@@ -127,8 +127,18 @@
 	duration = 15 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/masquerade
-	name = ""
-	desc = ""
+	name = "Masquerade"
+	desc = "Xylix's mask covers my own."
+
+/datum/status_effect/buff/masquerade/on_apply()
+	. = ..()
+	to_chat(owner, span_noticesmall("Xylix laughs with me!"))
+	owner.add_spell(/datum/action/cooldown/spell/mimicry/ritual)
+
+/datum/status_effect/buff/masquerade/on_remove()
+	. = ..()
+	to_chat(owner, span_noticesmall("My mischief is over."))
+	owner.remove_spell(/datum/action/cooldown/spell/mimicry/ritual)
 
 //ravox
 /datum/status_effect/buff/last_stand

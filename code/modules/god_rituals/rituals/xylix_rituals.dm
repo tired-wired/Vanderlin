@@ -4,9 +4,7 @@
 	ritual_patron = /datum/patron/divine/xylix
 	invocation_type = INVOCATION_WHISPER
 	incantations = list(
-		"Locked up and away?" = 3 SECONDS,
-		"Not for long, not for long." = 3 SECONDS,
-		"Be free, run wild! Make mischief!" = 3 SECONDS,
+		"Friends don't let friends be chained." = 8 SECONDS,
 	)
 
 /datum/god_ritual/freed_soul/on_completion(success)
@@ -23,4 +21,19 @@
 			friendship_necklace.collar_unlocked = TRUE
 			target.dropItemToGround(friendship_necklace, TRUE, FALSE)
 
-//MASQUERADE - temporarily copy the appearance of someone? or grant prophunt spell?
+//MASQUERADE - temporarily copy the appearance of someone
+/datum/god_ritual/masquerade
+	name = "Masquerade"
+	ritual_patron = /datum/patron/divine/xylix
+	incantations = list(
+		"Xylix, let's have some fun!" = 4 SECONDS,
+		"Let's take on the face of another one." = 4 SECONDS,
+	)
+
+/datum/god_ritual/masquerade/on_completion(success)
+	. = ..()
+	if(success)
+		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
+		if(!target)
+			return
+		target.apply_status_effect(/datum/status_effect/buff/masquerade)

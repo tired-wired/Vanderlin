@@ -135,4 +135,5 @@
 
 	user.updateappearance(mutcolor_update = TRUE)
 
-
+/datum/action/cooldown/spell/mimicry/ritual
+	spell_cost = 0 //this variant is used in the xylixian god rituals, and only lasts for 15 minutes
