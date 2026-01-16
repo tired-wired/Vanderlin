@@ -22,4 +22,5 @@
 			friendship_necklace.collar_unlocked = TRUE
 			target.dropItemToGround(friendship_necklace, TRUE, FALSE)
 
+//LUCK OF THE DRAW - random fortune boost from -3 to +3?
 //MASQUERADE - temporarily copy the appearance of someone? or grant prophunt spell?

@@ -185,7 +185,7 @@
 
 /obj/structure/ritual_circle/pestra
 	name = "rune of medicine" //placeholder
-	desc = ""
+	desc = "The lines are drawn with surgical precision."
 	icon_state = "pestra_chalky"
 	base_icon_state = "pestra"
 	required_patron = /datum/patron/divine/pestra

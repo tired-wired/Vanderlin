@@ -33,6 +33,6 @@
 			return
 		target.apply_status_effect(/datum/status_effect/debuff/dreamytime)
 		target.apply_status_effect(/datum/status_effect/debuff/sleepytime)
-		target.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, 30 MINUTES)//make sure this overrides the basic one
+		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, 30 MINUTES)//make sure this overrides the basic one
 
 //two-way scrying. phone call?
