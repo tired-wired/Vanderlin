@@ -17,8 +17,17 @@
 		target?.add_spell(/datum/action/cooldown/spell/undirected/list_target/ultimate_sacrifice)
 
 //LAST STAND - trade [something] to avoid hardcrit.
-/*/datum/god_ritual/last_stand
+/*
+/datum/god_ritual/last_stand
 	name = "Last Stand"
 	ritual_patron = /datum/patron/divine/ravox
+
+/datum/god_ritual/last_stand/on_completion(success)
+	. = ..()
+	if(success)
+		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
+		if(!target)
+			return
+		target.apply_status_effect(/datum/status_effect/buff/last_stand)
+		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, 30 MINUTES)
 */
-//antag check?

@@ -118,3 +118,39 @@
 	. = ..()
 	to_chat(owner, span_warning("The pain of the flesh rushes back in."))
 	REMOVE_TRAIT(owner, TRAIT_NOPAIN, "ritual")
+
+//xylix
+/datum/status_effect/buff/luck_draw
+	id = "luck_draw"
+	status_type = STATUS_EFFECT_UNIQUE
+	alert_type = /atom/movable/screen/alert/status_effect/buff/luck_draw
+	duration = 5 MINUTES
+
+/atom/movable/screen/alert/status_effect/buff/luck_draw
+	name = "Luck of the Draw"
+	desc = "Xylix has dealt your cards."
+
+/datum/status_effect/buff/luck_draw/on_creation(mob/living/new_owner, duration_override, ...)
+	//referenced from the wheel of fortune
+	effectedstats[STATKEY_LCK] = rand(-2, 3)
+	return ..()
+
+//ravox
+/datum/status_effect/buff/last_stand
+	id = "last_stand"
+	duration = 15 MINUTES
+	alert_type = /atom/movable/screen/alert/status_effect/buff/last_stand
+
+/atom/movable/screen/alert/status_effect/buff/last_stand
+	name = "Last Stand"
+	desc = "Ravox stands with me."
+
+/datum/status_effect/buff/last_stand/on_apply()
+	. = ..()
+	ADD_TRAIT(owner, TRAIT_NOSOFTCRIT, "ritual")
+	ADD_TRAIT(owner, TRAIT_NOHARDCRIT, "ritual")
+
+/datum/status_effect/buff/last_stand/on_remove()
+	. = ..()
+	REMOVE_TRAIT(owner, TRAIT_NOSOFTCRIT, "ritual")
+	REMOVE_TRAIT(owner, TRAIT_NOHARDCRIT, "ritual")
