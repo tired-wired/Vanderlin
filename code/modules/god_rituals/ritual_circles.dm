@@ -84,19 +84,19 @@
 /obj/structure/ritual_circle/attack_hand(mob/living/user)
 	//ensure they CAN do rituals
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
-		user.visible_message(span_warning("This is beyond my knowledge."))
+		user.visible_message(null, span_warning("This is beyond my knowledge."))
 		return
 	//get your own rune, nerd
 	if(active)
-		user.visible_message(span_warning("Someone is already using this rune."))
+		user.visible_message(null, span_warning("Someone is already using this rune."))
 		return
 	//...gotta be your god, too
 	if(!ispath(required_patron, user.patron))
-		user.visible_message(span_warning("I don't know this god's rites."))
+		user.visible_message(null, span_warning("I don't know this god's rites."))
 		return
 	//cooldown check.
 	if(user.has_status_effect(/datum/status_effect/debuff/ritual_exhaustion))
-		user.visible_message(span_warning("I've done a ritual too recently, I must rest."))
+		user.visible_message(null, span_warning("I've done a ritual too recently, I must rest."))
 		return
 	if(!length(god_rites))
 		return

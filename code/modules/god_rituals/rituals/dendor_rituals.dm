@@ -13,7 +13,7 @@
 	if(success)
 		for(var/mob/living/target in range(1, sigil))
 			target.apply_status_effect(/datum/status_effect/buff/lesser_wolf)
-			target.visible_message(span_notice("My teeth itch, my eyes focus. Dendor's wilds run in me!"))
+			target.visible_message(null, span_notice("My teeth itch, my eyes focus. Dendor's wilds run in me!"))
 
 //SUMMON CREACHER - summon random chance of gote or saiga or mole
 /datum/god_ritual/summon_creature
@@ -28,6 +28,7 @@
 /datum/god_ritual/summon_creature/on_completion(success)
 	. = ..()
 	if(success)
+		sigil.visible_message("Vines unfurl from the rune. A beast emerges!")
 		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, 30 MINUTES)
 		var/list/summon_options = list(
 			/mob/living/simple_animal/hostile/retaliate/goat = 15,

@@ -16,7 +16,7 @@
 			return
 		to_chat(caster,span_noticesmall("Their flesh writhes, their wounds knit shut! Beautiful!!"))
 		target.emote("agony")
-		to_chat(target,span_userdanger("You feel your skin crawling, your flesh moving as it shouldn't!"))
+		target.visible_message("[target] writhes in pain!", span_userdanger("You feel your skin crawling, your flesh moving as it shouldn't!"))
 		target.heal_overall_damage(100, 100)
 
 //PESTRA'S FAVOUR - temporary nopain

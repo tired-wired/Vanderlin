@@ -37,5 +37,5 @@
 			return
 		var/energy_to_add = target.max_energy - target.energy
 		target.adjust_energy(energy_to_add)
-		target.visible_message(span_noticesmall("[target] shakes out their hands. Time to work."))
+		target.visible_message(span_noticesmall("[target] shakes out their hands. Time to work."), "I feel refreshed and ready to work.")
 

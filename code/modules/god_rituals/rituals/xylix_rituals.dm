@@ -15,6 +15,7 @@
 		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
 		if(!target)
 			return
+		target.visible_message("[target] breathes a sigh of relief.", "You breathe more freely now.")
 		if(istype(target.wear_mask, /obj/item/clothing/face/facemask/prisoner))//check for prisoner masks
 			target.dropItemToGround(target.wear_mask, TRUE, FALSE)
 		if(istype(target.wear_neck, /obj/item/clothing/neck/gorget/explosive))//check for inquisition collars

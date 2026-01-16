@@ -124,4 +124,4 @@
 		if(should_update)
 			H.update_body()
 			H.update_body_parts()
-		H.visible_message("[H] glows from within for a moment!")
+		H.visible_message("[H] glows from within for a moment!", "I feel beautiful!")
