@@ -37,7 +37,7 @@
 	alert_type = /atom/movable/screen/alert/status_effect/buff/moonlight_visions
 	effectedstats = list("intelligence" = 2)
 	status_type = STATUS_EFFECT_UNIQUE
-	duration = 15 MINUTES
+	duration = 10 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/moonlight_visions
 	name = "Moonlight Visions"
@@ -77,7 +77,7 @@
 	REMOVE_TRAIT(owner, TRAIT_PACIFISM, TRAIT_GENERIC)
 
 /datum/stress_event/pacified
-	timer = 15 MINUTES
+	timer = 10 MINUTES
 	stress_change = -5
 	desc = span_green("All my problems have washed away!")
 
@@ -109,7 +109,7 @@
 	id = "pestra_favour"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/pestra_favour
 	status_type = STATUS_EFFECT_UNIQUE
-	duration = 15 MINUTES
+	duration = 10 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/pestra_favour
 	name = "Pestra's Favour"
@@ -131,7 +131,7 @@
 	status_type = STATUS_EFFECT_UNIQUE
 	alert_type = /atom/movable/screen/alert/status_effect/buff/masquerade
 	status_type = STATUS_EFFECT_UNIQUE
-	duration = 15 MINUTES
+	duration = 10 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/masquerade
 	name = "Masquerade"
@@ -150,7 +150,7 @@
 //ravox
 /datum/status_effect/buff/last_stand
 	id = "last_stand"
-	duration = 15 MINUTES
+	duration = 10 MINUTES
 	status_type = STATUS_EFFECT_UNIQUE
 	alert_type = /atom/movable/screen/alert/status_effect/buff/last_stand
 
