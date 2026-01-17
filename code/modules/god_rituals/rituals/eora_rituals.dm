@@ -14,8 +14,7 @@
 		var/mob/living/carbon/human/target = locate(/mob/living/carbon/human) in get_turf(sigil)
 		if(!target)
 			return
-		target.visible_message(span_warning("[target] sways like windchimes in the wind..."))
-		to_chat(target,span_green("I feel the burdens of my heart lifting. Something feels very wrong... I don't mind at all..."))
+		target.visible_message(span_warning("[target] sways like windchimes in the wind..."), span_green("I feel the burdens of my heart lifting. Something feels very wrong... I don't mind at all..."))
 		target.apply_status_effect(/datum/status_effect/buff/eora_peace)
 
 //GIFT OF BEAUTY - Works like a mirror, allows you to change your hair, facial hair, or hair colour. Gives you the beautiful trait afterwards.

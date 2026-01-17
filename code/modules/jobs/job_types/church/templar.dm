@@ -48,8 +48,7 @@
 	traits = list(
 		TRAIT_HEAVYARMOR,
 		TRAIT_STEELHEARTED,
-		TRAIT_KNOWBANDITS,
-		TRAIT_RITUALIST
+		TRAIT_KNOWBANDITS
 	)
 
 	languages = list(/datum/language/celestial)
@@ -136,7 +135,7 @@
 	pants = /obj/item/clothing/pants/chainlegs
 	shoes = /obj/item/clothing/shoes/boots/armor/light
 	backl = /obj/item/storage/backpack/satchel
-	backpack_contents = list(/obj/item/storage/keyring/priest = 1,  /obj/item/storage/belt/pouch/coins/poor = 1, /obj/item/ritual_chalk)
+	backpack_contents = list(/obj/item/storage/keyring/priest = 1,  /obj/item/storage/belt/pouch/coins/poor = 1)
 	belt = /obj/item/storage/belt/leather/black
 	ring = /obj/item/clothing/ring/silver
 	gloves = /obj/item/clothing/gloves/chain

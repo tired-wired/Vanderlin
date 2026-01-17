@@ -16,8 +16,8 @@
 			if(counter == 2)
 				return
 			counter++
-			target?.visible_message(span_warning("[target] glows with a forge's heat for a moment."))
-			target?.update_integrity(target.max_integrity, TRUE, null) //repair the actual integrity
+			target.visible_message(span_warning("[target] glows with a forge's heat for a moment."))
+			target.update_integrity(target.max_integrity, TRUE, null) //repair the actual integrity
 
 //REVITALISE - refill energy to keep working
 /datum/god_ritual/revitalize_malum
@@ -35,7 +35,6 @@
 		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
 		if(!target)
 			return
-		var/energy_to_add = target.max_energy - target.energy
-		target.adjust_energy(energy_to_add)
-		target.visible_message(span_noticesmall("[target] shakes out their hands. Time to work."), "I feel refreshed and ready to work.")
+		target.adjust_energy(target.max_energy)
+		target.visible_message(span_noticesmall("[target] shakes out their hands. Time to work."), span_noticesmall("I feel refreshed and ready to work."))
 

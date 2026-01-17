@@ -2,6 +2,7 @@
 /datum/status_effect/debuff/ritual_exhaustion
 	id = "ritual_exhaustion"
 	duration = 5 MINUTES
+	status_type = STATUS_EFFECT_REPLACE
 
 /atom/movable/screen/alert/status_effect/debuff/ritual_exhaustion
 	name = "Ritual Exhaustion"
@@ -15,7 +16,8 @@
 	id = "guiding_light"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/guiding_light
 	effectedstats = list("perception" = 2)
-	duration = 15 MINUTES
+	status_type = STATUS_EFFECT_UNIQUE
+	duration = 10 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/guiding_light
 	name = "Guiding Light"
@@ -34,6 +36,7 @@
 	id = "moonlight_visions"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/moonlight_visions
 	effectedstats = list("intelligence" = 2)
+	status_type = STATUS_EFFECT_UNIQUE
 	duration = 15 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/moonlight_visions
@@ -54,6 +57,7 @@
 /datum/status_effect/buff/eora_peace
 	id = "eora_peace"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/eora_peace
+	status_type = STATUS_EFFECT_UNIQUE
 	duration = 5 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/eora_peace
@@ -81,7 +85,8 @@
 /datum/status_effect/buff/lesser_wolf
 	id = "lesser_wolf"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/lesser_wolf
-	duration = 15 MINUTES
+	status_type = STATUS_EFFECT_UNIQUE
+	duration = 10 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/lesser_wolf
 	name = "Lesser Wolf"
@@ -103,6 +108,7 @@
 /datum/status_effect/buff/pestra_favour
 	id = "pestra_favour"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/pestra_favour
+	status_type = STATUS_EFFECT_UNIQUE
 	duration = 15 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/pestra_favour
@@ -124,6 +130,7 @@
 	id = "masquerade"
 	status_type = STATUS_EFFECT_UNIQUE
 	alert_type = /atom/movable/screen/alert/status_effect/buff/masquerade
+	status_type = STATUS_EFFECT_UNIQUE
 	duration = 15 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/masquerade
@@ -144,6 +151,7 @@
 /datum/status_effect/buff/last_stand
 	id = "last_stand"
 	duration = 15 MINUTES
+	status_type = STATUS_EFFECT_UNIQUE
 	alert_type = /atom/movable/screen/alert/status_effect/buff/last_stand
 
 /atom/movable/screen/alert/status_effect/buff/last_stand
@@ -166,6 +174,7 @@
 /datum/status_effect/buff/make_time
 	id = "make_time"
 	duration = 2 MINUTES
+	status_type = STATUS_EFFECT_UNIQUE
 	alert_type = /atom/movable/screen/alert/status_effect/buff/make_time
 
 /atom/movable/screen/alert/status_effect/buff/make_time

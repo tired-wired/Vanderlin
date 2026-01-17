@@ -50,9 +50,7 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 		qdel(src)
 		return FALSE
 	var/success = perform_ritual()
-	if(success && !QDELETED(caster))
-		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, cooldown)
-	if(!QDELETED(sigil))
+	if(!QDELETED(sigil) && !QDELETED(caster))
 		on_completion(success/*, get_targets(success)*/)
 		qdel(src)
 	return success
@@ -81,6 +79,8 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 			)
 
 /datum/god_ritual/proc/on_completion(success/*, list/targets*/)
+	if(success)
+		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, cooldown)
 	return
 /*
 /datum/god_ritual/proc/get_targets(success)

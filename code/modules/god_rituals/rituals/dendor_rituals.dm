@@ -11,9 +11,9 @@
 /datum/god_ritual/lesser_wolf/on_completion(success)
 	. = ..()
 	if(success)
-		for(var/mob/living/target in range(1, sigil))
+		var/mob/living/carbon/human/target = locate(/mob/living/carbon/human) in get_turf(sigil)
 			target.apply_status_effect(/datum/status_effect/buff/lesser_wolf)
-			target.visible_message(null, span_notice("My teeth itch, my eyes focus. Dendor's wilds run in me!"))
+			to_chat(target, span_notice("My teeth itch, my eyes focus. Dendor's wilds run in me!"))
 
 //SUMMON CREACHER - summon random chance of gote or saiga or mole
 /datum/god_ritual/summon_creature

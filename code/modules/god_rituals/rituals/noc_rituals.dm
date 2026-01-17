@@ -34,6 +34,5 @@
 		to_chat(target, span_noticesmall("My eyelids grow heavy. Noc's dreams reach my mind."))
 		target.apply_status_effect(/datum/status_effect/debuff/dreamytime)
 		target.apply_status_effect(/datum/status_effect/debuff/sleepytime)
-		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, cooldown)//make sure this overrides the basic one
 
 //two-way scrying. phone call?

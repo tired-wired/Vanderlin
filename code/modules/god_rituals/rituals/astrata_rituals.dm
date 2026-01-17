@@ -11,7 +11,7 @@
 /datum/god_ritual/guiding_light/on_completion(success)
 	. = ..()
 	if(success)
-		for(var/mob/living/target in range(2, sigil))
+		for(var/mob/living/target in range(1, sigil))
 			target.apply_status_effect(/datum/status_effect/light_buff, 15 MINUTES, 7) // applies the status effect
 			target.apply_status_effect(/datum/status_effect/buff/guiding_light)
 			to_chat(target,span_noticesmall("Astrata's light guides me forward, drawn to me by the ritualist's prayer!"))
@@ -35,8 +35,8 @@
 		if(!target)
 			return
 		playsound(sigil.loc, 'sound/combat/hits/burn (1).ogg', 100, FALSE, -1)
-		to_chat(target,span_danger("You feel the eye of Astrata turned upon you. Your soul shall be cleansed!"))
 		target.adjust_divine_fire_stacks(30)
 		target.IgniteMob()
-		target.loc.visible_message(span_warning("[target] bursts into flames, cleansed by Astrata!"))
-		target.emote("firescream")
+		target.visible_message(span_warning("[target] bursts into flames, cleansed by Astrata!"), span_danger("You feel the eye of Astrata turned upon you. Your soul shall be cleansed!"))
+		if(!HAS_TRAIT(target, TRAIT_NOPAIN))
+			target.emote("firescream")

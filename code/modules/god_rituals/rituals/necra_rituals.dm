@@ -17,7 +17,7 @@
 			if(victim.mob_biotypes && MOB_UNDEAD)
 				victim.visible_message(span_warning("[victim] HAS BEEN CHURNED BY NECRA'S GRIP!"), span_userdanger("I'VE BEEN CHURNED BY NECRA'S GRIP!"))
 				explosion(get_turf(victim), light_impact_range = 1, flash_range = 1, smoke = FALSE)
-				victim.throw_at(get_ranged_target_turf(victim, get_dir(caster, victim), 4), 4, 1, victim, spin = FALSE)
+				victim.throw_at(get_ranged_target_turf(victim, get_dir(sigil, victim), 4), 4, 1, victim, spin = FALSE)
 				//Same as a lesser miracle direct
 				victim.adjustFireLoss(30)
 				victim.adjust_divine_fire_stacks(1)
