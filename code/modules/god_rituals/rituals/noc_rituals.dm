@@ -1,4 +1,4 @@
-//MOONLIGHT VISIONS - grants darkvision and +2 int. figure out source restrictions.
+//MOONLIGHT VISIONS - grants darkvision and +2 int
 /datum/god_ritual/moonlight_visions
 	name = "Moonlight Visions"
 	ritual_patron = /datum/patron/divine/noc

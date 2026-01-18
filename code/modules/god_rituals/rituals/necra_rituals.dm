@@ -24,7 +24,7 @@
 				victim.IgniteMob()
 				victim.Immobilize(5 SECONDS)
 
-//MAKE TIME - Freeze all of a patient's current bloodloss for a while. After the effects end, all bloodloss applies. (For stabilizing patients, not combat.)
+//MAKE TIME - Freeze all of a patient's current bloodloss for a while. (For stabilizing patients, not combat.)
 /datum/god_ritual/make_time
 	name = "Make Time"
 	ritual_patron = /datum/patron/divine/necra
