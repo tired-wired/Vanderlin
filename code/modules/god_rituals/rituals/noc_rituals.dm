@@ -20,7 +20,7 @@
 	ritual_patron = /datum/patron/divine/noc
 	cooldown = 30 MINUTES
 	items_required = list(
-		/obj/item/mana_battery/mana_crystal/small
+		/obj/item/mana_battery/mana_crystal/small = 1
 	)
 	incantations = list(
 		"Noc, bless this soul with dreams." = 3 SECONDS,

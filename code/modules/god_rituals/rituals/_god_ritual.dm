@@ -59,6 +59,11 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 //TODO: make sure these stop if you can't speak or whatever
 
 /datum/god_ritual/proc/perform_ritual()
+	/*for(var/requirement in items_required)
+		if(requirement in get_turf(sigil))
+			continue
+		else
+			to_chat(caster, span_noticesmall("I am missing [requirement.name]!"))*/
 	var/index = 0
 	for(var/incantation in incantations)
 		index++

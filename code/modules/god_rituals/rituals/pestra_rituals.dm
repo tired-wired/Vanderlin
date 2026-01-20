@@ -27,7 +27,7 @@
 	ritual_patron = /datum/patron/divine/pestra
 	cooldown = 30 MINUTES
 	items_required = list(
-		/obj/item/alch/herb/paris //there's an alchemy recipe for this as a numbing agent
+		/obj/item/alch/herb/paris = 2 //there's an alchemy recipe for this as a numbing agent
 	)
 	incantations = list(
 		"Pestra, grant us Your gaze." = 3 SECONDS,
