@@ -249,7 +249,7 @@ GLOBAL_LIST_EMPTY(job_respawn_delays)
 #define M_BRONZE	M_COPPER*2
 #define M_IRON		12	// one iron bar  Twelve is a good number for it can be halved, cut in three and four without fractions. Multiples of 6
 #define M_STEEL		M_IRON+W_MODERATE	// one steel bar
-#define M_BLCKSTL	(M_IRON*3 + M_SILVER)/4
+#define M_BLCKSTL	(M_IRON*3 + M_SILVER)/4 + W_MODERATE
 #define M_SILVER	M_IRON*3	// one silver bar
 #define M_GOLD		M_IRON*5	// one gold bar
 #define M_ESSENCE	20

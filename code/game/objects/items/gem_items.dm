@@ -469,7 +469,7 @@
 	icon_state = "cutgem_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR
+	sellprice = M_ONYX + W_MINOR
 
 /obj/item/carvedgem/onyxa/fork
 	name = "onyxa fork"
@@ -477,7 +477,7 @@
 	icon_state = "fork_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR
+	sellprice = M_ONYX + W_MINOR
 
 /obj/item/carvedgem/onyxa/spoon
 	name = "onyxa spoon"
@@ -485,7 +485,7 @@
 	icon_state = "spoon_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR
+	sellprice = M_ONYX + W_MINOR
 
 /obj/item/carvedgem/onyxa/cameo
 	name = "onyxa cameo"
@@ -493,7 +493,7 @@
 	icon_state = "cameo_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR
+	sellprice = M_ONYX + W_MINOR
 
 /obj/item/carvedgem/onyxa/figurine
 	name = "onyxa figurine"
@@ -501,7 +501,7 @@
 	icon_state = "figurine_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_TINY
+	sellprice = M_ONYX + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/onyxa/fish
 	name = "onyxa fish figurine"
@@ -509,7 +509,7 @@
 	icon_state = "fish_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_TINY
+	sellprice = M_ONYX + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/onyxa/vase
 	name = "onyxa vase"
@@ -517,7 +517,7 @@
 	icon_state = "vase_onyxa"
 	grid_height = 64
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_TINY
+	sellprice = M_ONYX + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/onyxa/tablet
 	name = "onyxa tablet"
@@ -525,7 +525,7 @@
 	icon_state = "tablet_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_TINY
+	sellprice = M_ONYX + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/onyxa/bust
 	name = "onyxa bust"
@@ -533,7 +533,7 @@
 	icon_state = "bust_onyxa"
 	grid_height = 64
 	grid_width = 64
-	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_SMALL
+	sellprice = M_ONYX + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/onyxa/fancyvase
 	name = "fancy onyxa vase"
@@ -541,7 +541,7 @@
 	icon_state = "fancyvase_onyxa"
 	grid_height = 64
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_SMALL
+	sellprice = M_ONYX + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/onyxa/comb
 	name = "onyxa comb"
@@ -549,7 +549,7 @@
 	icon_state = "comb_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_SMALL
+	sellprice = M_ONYX + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/onyxa/duck
 	name = "onyxa duck"
@@ -557,7 +557,7 @@
 	icon_state = "duck_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_SMALL
+	sellprice = M_ONYX + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/onyxa/urn
 	name = "onyxa urn"
@@ -565,7 +565,7 @@
 	icon_state = "urn_onyxa"
 	grid_height = 64
 	grid_width = 64
-	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_MODEST
+	sellprice = M_ONYX + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/onyxa/statue
 	name = "onyxa statue"
@@ -573,7 +573,7 @@
 	icon_state = "statue_onyxa"
 	grid_height = 64
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_MODEST
+	sellprice = M_ONYX + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/onyxa/obelisk
 	name = "onyxa obelisk"
@@ -581,7 +581,7 @@
 	icon_state = "obelisk_onyxa"
 	grid_height = 64
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_MODEST
+	sellprice = M_ONYX + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/onyxa/snake
 	name = "onyxa snake statue"
@@ -589,7 +589,7 @@
 	icon_state = "snake_onyxa"
 	grid_height = 64
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_BIG
+	sellprice = M_ONYX + W_MINOR + BONUS_VALUE_BIG
 
 /obj/item/carvedgem/onyxa/spider
 	name = "onyxa spider statue"
@@ -597,7 +597,7 @@
 	icon_state = "spider_onyxa"
 	grid_height = 64
 	grid_width = 32
-	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_BIG
+	sellprice = M_ONYX + W_MINOR + BONUS_VALUE_BIG
 
 //.....................Ceruleabaster......................//
 
