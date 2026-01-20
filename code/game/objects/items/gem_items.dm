@@ -23,7 +23,7 @@
 	icon_state = "oyster_open"
 	grid_height = 96
 	grid_width = 64
-	sellprice = 10
+	sellprice = M_SHELL*2
 
 /obj/item/carvedgem/shell/rawshell
 	name = "clamshell"
@@ -31,7 +31,7 @@
 	icon_state = "raw_shell"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 10
+	sellprice = M_SHELL
 
 /obj/item/carvedgem/shell/cutgem
 	name = "polished clamshell"
@@ -39,7 +39,7 @@
 	icon_state = "cutgem_shell"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 15
+	sellprice = M_SHELL+W_MINOR
 
 /obj/item/carvedgem/shell/fork
 	name = "shell fork"
@@ -47,7 +47,7 @@
 	icon_state = "fork_shell"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 15
+	sellprice = M_SHELL+W_MINOR
 
 /obj/item/carvedgem/shell/spoon
 	name = "shell spoon"
@@ -55,7 +55,7 @@
 	icon_state = "spoon_shell"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 15
+	sellprice = M_SHELL+W_MINOR
 
 /obj/item/carvedgem/shell/cameo
 	name = "shell cameo"
@@ -63,7 +63,7 @@
 	icon_state = "cameo_shell"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 15
+	sellprice = M_SHELL+W_MINOR
 
 /obj/item/carvedgem/shell/figurine
 	name = "shell figurine"
@@ -71,7 +71,7 @@
 	icon_state = "figurine_shell"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 20
+	sellprice = M_SHELL+W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/shell/fish
 	name = "shell fish figurine"
@@ -79,7 +79,7 @@
 	icon_state = "fish_shell"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 20
+	sellprice = M_SHELL+W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/shell/vase
 	name = "shell vase"
@@ -87,7 +87,7 @@
 	icon_state = "vase_shell"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 20
+	sellprice = M_SHELL+W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/shell/tablet
 	name = "shell tablet"
@@ -95,7 +95,7 @@
 	icon_state = "tablet_shell"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 20
+	sellprice = M_SHELL+W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/shell/bust
 	name = "shell bust"
@@ -103,7 +103,7 @@
 	icon_state = "bust_shell"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 25
+	sellprice = M_SHELL+W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/shell/fancyvase
 	name = "fancy shell vase"
@@ -111,7 +111,7 @@
 	icon_state = "fancyvase_shell"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 25
+	sellprice = M_SHELL+W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/shell/comb
 	name = "shell comb"
@@ -119,7 +119,7 @@
 	icon_state = "comb_shell"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 25
+	sellprice = M_SHELL+W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/shell/duck
 	name = "shell duck"
@@ -127,7 +127,7 @@
 	icon_state = "duck_shell"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 25
+	sellprice = M_SHELL+W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/shell/urn
 	name = "shell urn"
@@ -135,7 +135,7 @@
 	icon_state = "urn_shell"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 30
+	sellprice = M_SHELL+W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/shell/statue
 	name = "shell statue"
@@ -143,7 +143,7 @@
 	icon_state = "statue_shell"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 30
+	sellprice = M_SHELL+W_MINOR + BONUS_VALUE_MODEST
 
 
 /obj/item/carvedgem/shell/obelisk
@@ -152,7 +152,7 @@
 	icon_state = "obelisk_shell"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 30
+	sellprice = M_SHELL+W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/shell/turtle
 	name = "turtle carving"
@@ -160,7 +160,7 @@
 	icon_state = "turtle_shell"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 35
+	sellprice = M_SHELL+W_MINOR + BONUS_VALUE_BIG
 //.....................Rose......................//
 /obj/item/carvedgem/rose/
 	name = "rose base"
@@ -176,7 +176,7 @@
 	icon_state = "raw_rose"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 15
+	sellprice = M_ROSESH
 
 /obj/item/carvedgem/rose/cutgem
 	name = "rosellusk pearl"
@@ -184,7 +184,7 @@
 	icon_state = "cutgem_rose"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 20
+	sellprice = M_ROSESH + W_MINOR
 
 /obj/item/carvedgem/rose/fork
 	name = "rosellusk fork"
@@ -192,7 +192,7 @@
 	icon_state = "fork_rose"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 20
+	sellprice = M_ROSESH + W_MINOR
 
 /obj/item/carvedgem/rose/spoon
 	name = "rosellusk spoon"
@@ -200,7 +200,7 @@
 	icon_state = "spoon_rose"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 20
+	sellprice = M_ROSESH + W_MINOR
 
 /obj/item/carvedgem/rose/cameo
 	name = "rosellusk cameo"
@@ -208,7 +208,7 @@
 	icon_state = "cameo_rose"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 20
+	sellprice = M_ROSESH + W_MINOR
 
 /obj/item/carvedgem/rose/figurine
 	name = "rosellusk figurine"
@@ -216,7 +216,7 @@
 	icon_state = "figurine_rose"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 25
+	sellprice = M_ROSESH + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/rose/fish
 	name = "rosellusk fish figurine"
@@ -224,7 +224,7 @@
 	icon_state = "fish_rose"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 25
+	sellprice = M_ROSESH + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/rose/vase
 	name = "rosellusk vase"
@@ -232,7 +232,7 @@
 	icon_state = "vase_rose"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 25
+	sellprice = M_ROSESH + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/rose/tablet
 	name = "rosellusk tablet"
@@ -240,7 +240,7 @@
 	icon_state = "tablet_rose"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 25
+	sellprice = M_ROSESH + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/rose/bust
 	name = "rosellusk bust"
@@ -248,7 +248,7 @@
 	icon_state = "bust_rose"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 30
+	sellprice = M_ROSESH + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/rose/fancyvase
 	name = "fancy rosellusk vase"
@@ -256,7 +256,7 @@
 	icon_state = "fancyvase_rose"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 30
+	sellprice = M_ROSESH + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/rose/comb
 	name = "rosellusk comb"
@@ -264,7 +264,7 @@
 	icon_state = "comb_rose"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 30
+	sellprice = M_ROSESH + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/rose/duck
 	name = "rosellusk duck"
@@ -272,7 +272,7 @@
 	icon_state = "duck_rose"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 30
+	sellprice = M_ROSESH + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/rose/urn
 	name = "rosellusk urn"
@@ -280,7 +280,7 @@
 	icon_state = "urn_rose"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 35
+	sellprice = M_ROSESH + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/rose/statue
 	name = "rosellusk statue"
@@ -288,7 +288,7 @@
 	icon_state = "statue_rose"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 35
+	sellprice = M_ROSESH + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/rose/obelisk
 	name = "rosellusk obelisk"
@@ -296,7 +296,7 @@
 	icon_state = "obelisk_rose"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 35
+	sellprice = M_ROSESH + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/rose/flower
 	name = "rosellusk flower carving"
@@ -305,7 +305,7 @@
 	dropshrink = 0.8
 	grid_height = 64
 	grid_width = 64
-	sellprice = 40
+	sellprice = M_ROSESH + W_MINOR + BONUS_VALUE_BIG
 
 /obj/item/carvedgem/rose/carp
 	name = "rosellusk carp statue"
@@ -313,7 +313,7 @@
 	icon_state = "carp_rose"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 40
+	sellprice = M_ROSESH + W_MINOR + BONUS_VALUE_BIG
 
 //.....................Joapstone......................//
 
@@ -331,7 +331,7 @@
 	icon_state = "cutgem_jade"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 55
+	sellprice = M_JADE + W_MINOR
 
 /obj/item/carvedgem/jade/fork
 	name = "joapstone fork"
@@ -339,7 +339,7 @@
 	icon_state = "fork_jade"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 55
+	sellprice = M_JADE + W_MINOR
 
 /obj/item/carvedgem/jade/spoon
 	name = "joapstone spoon"
@@ -347,7 +347,7 @@
 	icon_state = "spoon_jade"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 55
+	sellprice = M_JADE + W_MINOR
 
 /obj/item/carvedgem/jade/cameo
 	name = "joapstone cameo"
@@ -355,7 +355,7 @@
 	icon_state = "cameo_jade"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 55
+	sellprice = M_JADE + W_MINOR
 
 /obj/item/carvedgem/jade/figurine
 	name = "joapstone figurine"
@@ -363,7 +363,7 @@
 	icon_state = "figurine_jade"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 60
+	sellprice = M_JADE + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/jade/fish
 	name = "joapstone fish figurine"
@@ -371,7 +371,7 @@
 	icon_state = "fish_jade"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 60
+	sellprice = M_JADE + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/jade/tablet
 	name = "joapstone tablet"
@@ -379,7 +379,7 @@
 	icon_state = "tablet_jade"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 60
+	sellprice = M_JADE + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/jade/vase
 	name = "joapstone vase"
@@ -387,7 +387,7 @@
 	icon_state = "vase_jade"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 60
+	sellprice = M_JADE + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/jade/bust
 	name = "joapstone bust"
@@ -395,7 +395,7 @@
 	icon_state = "bust_jade"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 65
+	sellprice = M_JADE + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/jade/fancyvase
 	name = "fancy joapstone vase"
@@ -403,7 +403,7 @@
 	icon_state = "fancyvase_jade"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 65
+	sellprice = M_JADE + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/jade/comb
 	name = "joapstone comb"
@@ -411,7 +411,7 @@
 	icon_state = "comb_jade"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 65
+	sellprice = M_JADE + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/jade/duck
 	name = "joapstone duck"
@@ -419,7 +419,7 @@
 	icon_state = "duck_jade"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 65
+	sellprice = M_JADE + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/jade/urn
 	name = "joapstone urn"
@@ -427,7 +427,7 @@
 	icon_state = "urn_jade"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 70
+	sellprice = M_JADE + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/jade/statue
 	name = "joapstone statue"
@@ -435,7 +435,7 @@
 	icon_state = "statue_jade"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 70
+	sellprice = M_JADE + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/jade/obelisk
 	name = "joapstone obelisk"
@@ -443,7 +443,7 @@
 	icon_state = "obelisk_jade"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 70
+	sellprice = M_JADE + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/jade/wyrm
 	name = "joapstone wyrm"
@@ -451,7 +451,7 @@
 	icon_state = "dragon_jade"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 75
+	sellprice = M_JADE + W_MINOR + BONUS_VALUE_BIG
 
 //.....................Onyxa......................//
 
@@ -469,7 +469,7 @@
 	icon_state = "cutgem_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 35
+	sellprice = M_ONYXA + W_MINOR
 
 /obj/item/carvedgem/onyxa/fork
 	name = "onyxa fork"
@@ -477,7 +477,7 @@
 	icon_state = "fork_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 35
+	sellprice = M_ONYXA + W_MINOR
 
 /obj/item/carvedgem/onyxa/spoon
 	name = "onyxa spoon"
@@ -485,7 +485,7 @@
 	icon_state = "spoon_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 35
+	sellprice = M_ONYXA + W_MINOR
 
 /obj/item/carvedgem/onyxa/cameo
 	name = "onyxa cameo"
@@ -493,7 +493,7 @@
 	icon_state = "cameo_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 35
+	sellprice = M_ONYXA + W_MINOR
 
 /obj/item/carvedgem/onyxa/figurine
 	name = "onyxa figurine"
@@ -501,7 +501,7 @@
 	icon_state = "figurine_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 40
+	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/onyxa/fish
 	name = "onyxa fish figurine"
@@ -509,7 +509,7 @@
 	icon_state = "fish_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 40
+	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/onyxa/vase
 	name = "onyxa vase"
@@ -517,7 +517,7 @@
 	icon_state = "vase_onyxa"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 40
+	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/onyxa/tablet
 	name = "onyxa tablet"
@@ -525,7 +525,7 @@
 	icon_state = "tablet_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 40
+	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/onyxa/bust
 	name = "onyxa bust"
@@ -533,7 +533,7 @@
 	icon_state = "bust_onyxa"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 45
+	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/onyxa/fancyvase
 	name = "fancy onyxa vase"
@@ -541,7 +541,7 @@
 	icon_state = "fancyvase_onyxa"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 45
+	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/onyxa/comb
 	name = "onyxa comb"
@@ -549,7 +549,7 @@
 	icon_state = "comb_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 45
+	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/onyxa/duck
 	name = "onyxa duck"
@@ -557,7 +557,7 @@
 	icon_state = "duck_onyxa"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 45
+	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/onyxa/urn
 	name = "onyxa urn"
@@ -565,7 +565,7 @@
 	icon_state = "urn_onyxa"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 50
+	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/onyxa/statue
 	name = "onyxa statue"
@@ -573,7 +573,7 @@
 	icon_state = "statue_onyxa"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 50
+	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/onyxa/obelisk
 	name = "onyxa obelisk"
@@ -581,7 +581,7 @@
 	icon_state = "obelisk_onyxa"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 50
+	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/onyxa/snake
 	name = "onyxa snake statue"
@@ -589,7 +589,7 @@
 	icon_state = "snake_onyxa"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 55
+	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_BIG
 
 /obj/item/carvedgem/onyxa/spider
 	name = "onyxa spider statue"
@@ -597,7 +597,7 @@
 	icon_state = "spider_onyxa"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 55
+	sellprice = M_ONYXA + W_MINOR + BONUS_VALUE_BIG
 
 //.....................Ceruleabaster......................//
 
@@ -615,7 +615,7 @@
 	icon_state = "cutgem_turq"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 80
+	sellprice = M_TURQOISE + W_MINOR
 
 /obj/item/carvedgem/turq/fork
 	name = "ceruleabaster fork"
@@ -623,7 +623,7 @@
 	icon_state = "fork_turq"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 80
+	sellprice = M_TURQOISE + W_MINOR
 
 /obj/item/carvedgem/turq/spoon
 	name = "ceruleabaster spoon"
@@ -631,7 +631,7 @@
 	icon_state = "spoon_turq"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 80
+	sellprice = M_TURQOISE + W_MINOR
 
 /obj/item/carvedgem/turq/cameo
 	name = "ceruleabaster cameo"
@@ -639,7 +639,7 @@
 	icon_state = "cameo_turq"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 80
+	sellprice = M_TURQOISE + W_MINOR
 
 /obj/item/carvedgem/turq/figurine
 	name = "ceruleabaster figurine"
@@ -647,7 +647,7 @@
 	icon_state = "figurine_turq"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 85
+	sellprice = M_TURQOISE + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/turq/fish
 	name = "ceruleabaster fish figurine"
@@ -655,7 +655,7 @@
 	icon_state = "fish_turq"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 85
+	sellprice = M_TURQOISE + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/turq/vase
 	name = "ceruleabaster vase"
@@ -663,7 +663,7 @@
 	icon_state = "vase_turq"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 85
+	sellprice = M_TURQOISE + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/turq/tablet
 	name = "ceruleabaster tablet"
@@ -671,7 +671,7 @@
 	icon_state = "tablet_turq"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 85
+	sellprice = M_TURQOISE + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/turq/bust
 	name = "ceruleabaster bust"
@@ -679,7 +679,7 @@
 	icon_state = "bust_turq"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 90
+	sellprice = M_TURQOISE + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/turq/fancyvase
 	name = "fancy ceruleabaster vase"
@@ -687,7 +687,7 @@
 	icon_state = "fancyvase_turq"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 90
+	sellprice = M_TURQOISE + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/turq/comb
 	name = "ceruleabaster comb"
@@ -695,7 +695,7 @@
 	icon_state = "comb_turq"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 90
+	sellprice = M_TURQOISE + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/turq/duck
 	name = "ceruleabaster duck"
@@ -703,7 +703,7 @@
 	icon_state = "duck_turq"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 90
+	sellprice = M_TURQOISE + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/turq/urn
 	name = "ceruleabaster urn"
@@ -711,7 +711,7 @@
 	icon_state = "urn_turq"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 95
+	sellprice = M_TURQOISE + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/turq/statue
 	name = "ceruleabaster statue"
@@ -719,7 +719,7 @@
 	icon_state = "statue_turq"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 95
+	sellprice = M_TURQOISE + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/turq/obelisk
 	name = "ceruleabaster obelisk"
@@ -727,7 +727,7 @@
 	icon_state = "obelisk_turq"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 95
+	sellprice = M_TURQOISE + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/turq/ka
 	name = "ceruleabaster ka statue"
@@ -735,7 +735,7 @@
 	icon_state = "ka_turq"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 100
+	sellprice = M_TURQOISE + W_MINOR + BONUS_VALUE_BIG
 
 /obj/item/carvedgem/turq/scarab
 	name = "ceruleabaster scarab"
@@ -744,7 +744,7 @@
 	dropshrink = 0.8
 	grid_height = 64
 	grid_width = 64
-	sellprice = 100
+	sellprice = M_TURQOISE + W_MINOR + BONUS_VALUE_BIG
 
 // aoetal //
 
@@ -762,7 +762,7 @@
 	icon_state = "cutgem_coral"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 65
+	sellprice = M_CORAL + W_MINOR
 
 /obj/item/carvedgem/coral/fork
 	name = "aoetal fork"
@@ -770,7 +770,7 @@
 	icon_state = "fork_coral"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 65
+	sellprice = M_CORAL + W_MINOR
 
 /obj/item/carvedgem/coral/spoon
 	name = "aoetal spoon"
@@ -778,7 +778,7 @@
 	icon_state = "spoon_coral"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 65
+	sellprice = M_CORAL + W_MINOR
 
 /obj/item/carvedgem/coral/cameo
 	name = "aoetal cameo"
@@ -786,7 +786,7 @@
 	icon_state = "cameo_coral"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 65
+	sellprice = M_CORAL + W_MINOR
 
 /obj/item/carvedgem/coral/figurine
 	name = "aoetal figurine"
@@ -794,7 +794,7 @@
 	icon_state = "figurine_coral"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 70
+	sellprice = M_CORAL + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/coral/fish
 	name = "aoetal fish figurine"
@@ -802,7 +802,7 @@
 	icon_state = "fish_coral"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 70
+	sellprice = M_CORAL + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/coral/vase
 	name = "aoetal vase"
@@ -810,7 +810,7 @@
 	icon_state = "vase_coral"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 70
+	sellprice = M_CORAL + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/coral/tablet
 	name = "aoetal tablet"
@@ -818,7 +818,7 @@
 	icon_state = "tablet_coral"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 70
+	sellprice = M_CORAL + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/coral/bust
 	name = "aoetal bust"
@@ -826,7 +826,7 @@
 	icon_state = "bust_coral"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 75
+	sellprice = M_CORAL + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/coral/fancyvase
 	name = "fancy aoetal vase"
@@ -834,7 +834,7 @@
 	icon_state = "fancyvase_coral"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 75
+	sellprice = M_CORAL + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/coral/comb
 	name = "aoetal comb"
@@ -842,7 +842,7 @@
 	icon_state = "comb_coral"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 75
+	sellprice = M_CORAL + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/coral/duck
 	name = "aoetal duck"
@@ -850,7 +850,7 @@
 	icon_state = "duck_coral"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 75
+	sellprice = M_CORAL + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/coral/urn
 	name = "aoetal urn"
@@ -858,7 +858,7 @@
 	icon_state = "urn_coral"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 80
+	sellprice = M_CORAL + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/coral/statue
 	name = "aoetal statue"
@@ -866,7 +866,7 @@
 	icon_state = "statue_coral"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 80
+	sellprice = M_CORAL + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/coral/obelisk
 	name = "aoetal obelisk"
@@ -874,7 +874,7 @@
 	icon_state = "obelisk_coral"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 80
+	sellprice = M_CORAL + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/coral/jaw
 	name = "shark jaw statue"
@@ -882,7 +882,7 @@
 	icon_state = "jaw_coral"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 85
+	sellprice = M_CORAL + W_MINOR + BONUS_VALUE_BIG
 
 /obj/item/carvedgem/coral/shark
 	name = "aoetal shark statue"
@@ -890,7 +890,7 @@
 	icon_state = "shark_coral"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 85
+	sellprice = M_CORAL + W_MINOR + BONUS_VALUE_BIG
 
 // petriamber //
 
@@ -908,7 +908,7 @@
 	icon_state = "cutgem_amber"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 55
+	sellprice = M_AMBER + W_MINOR
 
 /obj/item/carvedgem/amber/fork
 	name = "petriamber fork"
@@ -916,7 +916,7 @@
 	icon_state = "fork_amber"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 55
+	sellprice = M_AMBER + W_MINOR
 
 /obj/item/carvedgem/amber/spoon
 	name = "petriamber spoon"
@@ -924,7 +924,7 @@
 	icon_state= "spoon_amber"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 55
+	sellprice = M_AMBER + W_MINOR
 
 /obj/item/carvedgem/amber/cameo
 	name = "petriamber cameo"
@@ -932,7 +932,7 @@
 	icon_state = "cameo_amber"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 55
+	sellprice = M_AMBER + W_MINOR
 
 /obj/item/carvedgem/amber/figurine
 	name = "petriamber figurine"
@@ -940,7 +940,7 @@
 	icon_state = "figurine_amber"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 60
+	sellprice = M_AMBER + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/amber/fish
 	name = "petriamber fish figurine"
@@ -948,7 +948,7 @@
 	icon_state = "fish_amber"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 60
+	sellprice = M_AMBER + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/amber/tablet
 	name = "petriamber tablet"
@@ -956,7 +956,7 @@
 	icon_state = "tablet_amber"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 60
+	sellprice = M_AMBER + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/amber/vase
 	name = "petriamber vase"
@@ -964,7 +964,7 @@
 	icon_state = "vase_amber"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 60
+	sellprice = M_AMBER + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/amber/bust
 	name = "petriamber bust"
@@ -972,7 +972,7 @@
 	icon_state = "bust_amber"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 65
+	sellprice = M_AMBER + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/amber/fancyvase
 	name = "fancy petriamber vase"
@@ -980,7 +980,7 @@
 	icon_state= "fancyvase_amber"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 65
+	sellprice = M_AMBER + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/amber/comb
 	name = "petriamber comb"
@@ -988,7 +988,7 @@
 	icon_state = "comb_amber"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 65
+	sellprice = M_AMBER + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/amber/duck
 	name = "petriamber duck"
@@ -996,7 +996,7 @@
 	icon_state = "duck_amber"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 65
+	sellprice = M_AMBER + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/amber/urn
 	name = "petriamber urn"
@@ -1004,7 +1004,7 @@
 	icon_state = "urn_amber"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 70
+	sellprice = M_AMBER + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/amber/statue
 	name = "petriamber statue"
@@ -1012,7 +1012,7 @@
 	icon_state = "statue_amber"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 70
+	sellprice = M_AMBER + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/amber/obelisk
 	name = "petriamber obelisk"
@@ -1020,7 +1020,7 @@
 	icon_state = "obelisk_amber"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 70
+	sellprice = M_AMBER + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/amber/beaver
 	name = "petriamber beaver statue"
@@ -1028,7 +1028,7 @@
 	icon_state = "beaver_amber"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 75
+	sellprice = M_AMBER + W_MINOR + BONUS_VALUE_BIG
 
 /obj/item/carvedgem/amber/sun
 	name = "petriamber sun carving"
@@ -1036,7 +1036,7 @@
 	icon_state = "sun_amber"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 75
+	sellprice = M_AMBER + W_MINOR + BONUS_VALUE_BIG
 
 // opaloise
 
@@ -1054,7 +1054,7 @@
 	icon_state = "cutgem_opal"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 85
+	sellprice = M_OPAL + W_MINOR
 
 /obj/item/carvedgem/opal/fork
 	name = "opaloise fork"
@@ -1062,7 +1062,7 @@
 	icon_state = "fork_opal"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 85
+	sellprice = M_OPAL + W_MINOR
 
 /obj/item/carvedgem/opal/spoon
 	name = "opaloise spoon"
@@ -1070,7 +1070,7 @@
 	icon_state = "spoon_opal"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 85
+	sellprice = M_OPAL + W_MINOR
 
 /obj/item/carvedgem/opal/cameo
 	name = "opaloise cameo"
@@ -1078,7 +1078,7 @@
 	icon_state = "cameo_opal"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 85
+	sellprice = M_OPAL + W_MINOR
 
 /obj/item/carvedgem/opal/figurine
 	name = "opaloise figurine"
@@ -1086,7 +1086,7 @@
 	icon_state = "figurine_opal"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 90
+	sellprice = M_OPAL + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/opal/fish
 	name = "opaloise fish figurine"
@@ -1094,7 +1094,7 @@
 	icon_state = "fish_opal"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 90
+	sellprice = M_OPAL + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/opal/vase
 	name = "opaloise vase"
@@ -1102,7 +1102,7 @@
 	icon_state = "vase_opal"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 90
+	sellprice = M_OPAL + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/opal/tablet
 	name = "opaloise tablet"
@@ -1110,7 +1110,7 @@
 	icon_state = "tablet_opal"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 90
+	sellprice = M_OPAL + W_MINOR + BONUS_VALUE_TINY
 
 /obj/item/carvedgem/opal/fancyvase
 	name = "fancy opaloise vase"
@@ -1118,7 +1118,7 @@
 	icon_state = "fancyvase_opal"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 95
+	sellprice = M_OPAL + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/opal/bust
 	name = "opaloise bust"
@@ -1126,7 +1126,7 @@
 	icon_state = "bust_opal"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 95
+	sellprice = M_OPAL + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/opal/comb
 	name = "opaloise comb"
@@ -1134,7 +1134,7 @@
 	icon_state = "comb_opal"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 95
+	sellprice = M_OPAL + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/opal/duck
 	name = "opaloise duck"
@@ -1142,7 +1142,7 @@
 	icon_state = "duck_opal"
 	grid_height = 32
 	grid_width = 32
-	sellprice = 95
+	sellprice = M_OPAL + W_MINOR + BONUS_VALUE_SMALL
 
 /obj/item/carvedgem/opal/obelisk
 	name = "opaloise obelisk"
@@ -1150,7 +1150,7 @@
 	icon_state = "obelisk_opal"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 100
+	sellprice = M_OPAL + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/opal/statue
 	name = "opaloise statue"
@@ -1158,7 +1158,7 @@
 	icon_state = "statue_opal"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 100
+	sellprice = M_OPAL + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/opal/urn
 	name = "opaloise urn"
@@ -1166,7 +1166,7 @@
 	icon_state = "urn_opal"
 	grid_height = 64
 	grid_width = 32
-	sellprice = 100
+	sellprice = M_OPAL + W_MINOR + BONUS_VALUE_MODEST
 
 /obj/item/carvedgem/opal/crab
 	name = "opaloise crab sculpture"
@@ -1174,4 +1174,4 @@
 	icon_state = "crab_opal"
 	grid_height = 64
 	grid_width = 64
-	sellprice = 105
+	sellprice = M_OPAL + W_MINOR + BONUS_VALUE_BIG

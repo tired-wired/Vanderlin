@@ -287,9 +287,9 @@ GLOBAL_LIST_EMPTY(job_respawn_delays)
 
 // Bonus value - totally arbitrary bonus slapped on. For magic items, unique stuff you want people to steal/plunder etc
 #define BONUS_VALUE_TINY		6
-#define BONUS_VALUE_SMALL		12
-#define BONUS_VALUE_MODEST		BONUS_VALUE_SMALL * 2
-#define BONUS_VALUE_BIG			BONUS_VALUE_SMALL * 4
+#define BONUS_VALUE_SMALL		BONUS_VALUE_TINY * 2
+#define BONUS_VALUE_MODEST		BONUS_VALUE_TINY * 3
+#define BONUS_VALUE_BIG			BONUS_VALUE_TINY * 4
 
 #define GREED_SMALL_POTATO		BONUS_VALUE_TINY	// to get some profit margin to the offmap trading company and make economy make sense
 #define GREEDY_TRADER			BONUS_VALUE_SMALL	// slap this on most stuff the trader imports (its the markup they pay their supplier, or just double value for stuff you want to keep rare)
