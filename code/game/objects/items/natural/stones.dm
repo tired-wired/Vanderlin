@@ -145,6 +145,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 	var/magic_power = 0
 	var/magicstone = FALSE
 	resistance_flags = FIRE_PROOF
+	sellprice = M_MISC
 
 /obj/item/natural/stone/Initialize()
 	. = ..()
@@ -479,7 +480,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 	throwforce = 18 //brick is valid weapon
 	w_class = WEIGHT_CLASS_SMALL
 	bundletype = /obj/item/natural/bundle/stoneblock
-	sellprice = 2
+	sellprice = M_MISC
 
 //................ Stone block stack	............... //
 /obj/item/natural/bundle/stoneblock

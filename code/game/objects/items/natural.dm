@@ -226,7 +226,7 @@
 	desc = "Ash burnt and burnt once again. Smells of brimstone and hellfire. Still has embers within."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_MAGIC
 	attunement_values = list(
 		/datum/attunement/fire = 0.05,
 		/datum/attunement/blood = -0.1,
@@ -240,7 +240,7 @@
 	desc = "A sharp fang that glows bright red, no matter how long it's left to cool."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_MAGIC*2
 	attunement_values = list(
 		/datum/attunement/fire = 0.1,
 		/datum/attunement/blood = -0.1,
@@ -255,7 +255,7 @@
 	desc = "A molten orb of rock and magick. It gives off waves of magical heat and energy."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_MAGIC*3
 	attunement_values = list(
 		/datum/attunement/fire = 0.15,
 		/datum/attunement/blood = -0.1,
@@ -270,7 +270,7 @@
 	desc = "A flickering, black flame contained in a crystal; the heart of an archfiend. Or, at least, what passes for one. It pulses with dense thrums of magick."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_MAGIC*4
 	attunement_values = list(
 		/datum/attunement/fire = 0.2,
 		/datum/attunement/blood = -0.1,
@@ -286,7 +286,7 @@
 	desc = "A glittering powder from a fae sprite."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_MAGIC
 
 	attunement_values = list(
 		/datum/attunement/earth = 0.05,
@@ -302,7 +302,7 @@
 	desc = "Tiny, colorful scales from a glimmerwing, they shine with inate magic"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_MAGIC*2
 
 	attunement_values = list(
 		/datum/attunement/earth = 0.1,
@@ -318,7 +318,7 @@
 	desc = "A piece of enchanted wood imbued with the dryad’s essence. Merely holding it transports one's mind to ancient times."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_MAGIC*3
 	attunement_values = list(
 		/datum/attunement/earth = 0.15,
 		/datum/attunement/electric = -0.1,
@@ -333,7 +333,7 @@
 	desc = "A swirling, multicolored liquid with emitting a dizzying array of lights."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_MAGIC*4
 	attunement_values = list(
 		/datum/attunement/earth = 0.2,
 		/datum/attunement/electric = -0.1,
@@ -349,7 +349,7 @@
 	desc = "A mystical essence imbued with the power of Dendor. Merely holding it transports one's mind to ancient times."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_MAGIC
 
 	attunement_values = list(
 		/datum/attunement/electric = 0.05,
@@ -366,7 +366,7 @@
 	desc = "A mystical essence imbued with the power of Dendor. Merely holding it transports one's mind to ancient times."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_MAGIC*2
 
 	attunement_values = list(
 		/datum/attunement/electric = 0.1,
@@ -383,7 +383,7 @@
 	desc = "A mystical essence imbued with the power of Dendor. Merely holding it transports one's mind to ancient times."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_MAGIC*3
 
 	attunement_values = list(
 		/datum/attunement/electric = 0.1,
@@ -400,7 +400,7 @@
 	desc = "A mystical essence imbued with the power of Dendor. Merely holding it transports one's mind to ancient times."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_MAGIC*4
 
 	attunement_values = list(
 		/datum/attunement/electric = 0.1,
@@ -418,7 +418,7 @@
 	desc = "An incredibly rare substance torn from creatures immune to magick. This material forsakes Noc's gifts."
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_MAGIC*5
 
 	attunement_values = list(
 		/datum/attunement/arcyne = 0.2,

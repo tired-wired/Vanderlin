@@ -31,7 +31,7 @@
 	name = "raw gold"
 	icon_state = "oregold1"
 	smeltresult = /obj/item/ingot/gold
-	sellprice = 10
+	sellprice = M_GOLD/2 //smelt this shit if you want full value
 	melting_material = /datum/material/gold
 	item_weight = 6.2 * GOLD_MULITPLIER
 	mill_result = /obj/item/ore/dust/gold
@@ -44,7 +44,7 @@
 	name = "raw silver"
 	icon_state = "oresilv1"
 	smeltresult = /obj/item/ingot/silver
-	sellprice = 8
+	sellprice = M_SILVER/2
 	melting_material = /datum/material/silver
 	item_weight = 6.2 * SILVER_MULTIPLIER
 	mill_result = /obj/item/ore/dust/silver
@@ -58,7 +58,7 @@
 	name = "raw iron"
 	icon_state = "oreiron1"
 	smeltresult = /obj/item/ingot/iron
-	sellprice = 5
+	sellprice = M_IRON/2
 	melting_material = /datum/material/iron
 	item_weight = 6.2 * IRON_MULTIPLIER
 	mill_result = /obj/item/ore/dust/iron
@@ -71,7 +71,7 @@
 	name = "raw copper"
 	icon_state = "orecop1"
 	smeltresult = /obj/item/ingot/copper
-	sellprice = 2
+	sellprice = M_COPPER/2
 	melting_material = /datum/material/copper
 	item_weight = 6.2 * COPPER_MULTIPLIER
 	mill_result = /obj/item/ore/dust/copper
@@ -85,7 +85,7 @@
 	desc = "A mass of soft, almost malleable white ore."
 	icon_state = "oretin1"
 	smeltresult = /obj/item/ingot/tin
-	sellprice = 4
+	sellprice = M_COPPER/2
 	melting_material = /datum/material/tin
 	item_weight = 6.2 * TIN_MULTIPLIER
 	mill_result = /obj/item/ore/dust/tin
@@ -99,7 +99,7 @@
 	icon_state = "orecoal1"
 	firefuel = 10 MINUTES
 	smeltresult = /obj/item/ore/coal
-	sellprice = 1
+	sellprice = M_SALT
 	item_weight = 7
 
 /obj/item/ore/coal/Initialize(mapload)
@@ -111,7 +111,7 @@
 	desc = "Red gems that contain the essence of quicksilver."
 	icon_state = "orecinnabar"
 	grind_results = list(/datum/reagent/mercury = 15)
-	sellprice = 5
+	sellprice = M_SALT*3
 	item_weight = 6.2
 
 /obj/item/ore/coal/charcoal
@@ -122,7 +122,7 @@
 	color = "#929292"
 	firefuel = 30 MINUTES
 	smeltresult = /obj/item/ore/coal/charcoal
-	sellprice = 1
+	sellprice = M_SALT
 
 /obj/item/ingot
 	name = "ingot"
@@ -179,7 +179,7 @@
 	desc = "A bar of glittering gold."
 	icon_state = "ingotgold"
 	smeltresult = /obj/item/ingot/gold
-	sellprice = 100
+	sellprice = M_GOLD
 	melting_material = /datum/material/gold
 	item_weight = 7.5 * GOLD_MULITPLIER
 
@@ -188,7 +188,7 @@
 	desc = "A bar of wrought iron."
 	icon_state = "ingotiron"
 	smeltresult = /obj/item/ingot/iron
-	sellprice = 25
+	sellprice = M_IRON
 	melting_material = /datum/material/iron
 	item_weight = 7.5 * IRON_MULTIPLIER
 
@@ -198,7 +198,7 @@
 	icon_state = "infused_iron"
 	icon = 'icons/roguetown/misc/alchemy.dmi'
 	smeltresult = /obj/item/ingot/thaumic
-	sellprice = 25
+	sellprice = M_IRON
 	melting_material = /datum/material/thaumic_iron
 	item_weight = 7.5 * IRON_MULTIPLIER
 
@@ -207,7 +207,7 @@
 	desc = "A bar of copper."
 	icon_state = "ingotcop"
 	smeltresult = /obj/item/ingot/copper
-	sellprice = 10
+	sellprice = M_COPPER
 	melting_material = /datum/material/copper
 	item_weight = 7.5 * COPPER_MULTIPLIER
 
@@ -216,7 +216,7 @@
 	desc = "An ingot of strangely soft and malleable essence."
 	icon_state = "ingottin"
 	smeltresult = /obj/item/ingot/tin
-	sellprice = 15
+	sellprice = M_COPPER
 	melting_material = /datum/material/tin
 	item_weight = 7.5 * TIN_MULTIPLIER
 
@@ -225,7 +225,7 @@
 	desc = "A hard and durable alloy favored by engineers and followers of Malum alike."
 	icon_state = "ingotbronze"
 	smeltresult = /obj/item/ingot/bronze
-	sellprice = 30
+	sellprice = M_BRONZE
 	melting_material = /datum/material/bronze
 	item_weight = 7.5 * BRONZE_MULTIPLIER
 
@@ -234,7 +234,7 @@
 	desc = "A bar of glistening silver. The bane of nitewalkers."
 	icon_state = "ingotsilv"
 	smeltresult = /obj/item/ingot/silver
-	sellprice = 60
+	sellprice = M_SILVER
 	melting_material = /datum/material/silver
 	item_weight = 7.5 * SILVER_MULTIPLIER
 
@@ -247,7 +247,7 @@
 	desc = "A bar of alloyed steel."
 	icon_state = "ingotsteel"
 	smeltresult = /obj/item/ingot/steel
-	sellprice = 40
+	sellprice = M_STEEL
 	melting_material = /datum/material/steel
 	item_weight = 7.5 * STEEL_MULTIPLIER
 
@@ -256,21 +256,21 @@
 	desc = "This ingot of steel has been touched by Malum. It radiates heat, even when outside a forge."
 	icon_state = "ingotsteelholy"
 	melting_material = /datum/material/steel //Smelting it removes the blessing
-	sellprice = 20
+	sellprice = M_STEEL*2
 
 /obj/item/ingot/silverblessed/
 	name = "blessed silver bar"
 	desc = "This bar radiates a divine purity. Treasured by the realms and commonly found in Psydonic weaponry."
 	icon_state = "ingotsilvblessed"
 	melting_material = /datum/material/silver
-	sellprice = 100
+	sellprice = M_SILVER
 
 /obj/item/ingot/silverblessed/bullion
 	name = "blessed silver bullion"
 	desc = "This bar radiates a divine purity. The Psycross and the words cast into the surface denotes the Oratorium Throni Vacui as the point of its origin."
 	icon_state = "ingotsilvblessed_psy"
 	melting_material = /datum/material/silver
-	sellprice = 100
+	sellprice = M_SILVER
 
 
 /obj/item/ingot/blacksteel
@@ -278,7 +278,7 @@
 	desc = "Sacrificing the holy elements of silver for raw strength, this strange and powerful ingot's origin carries dark rumors..."
 	icon_state = "ingotblacksteel"
 	smeltresult = /obj/item/ingot/blacksteel
-	sellprice = 90
+	sellprice = M_BLCKSTL
 	melting_material = /datum/material/blacksteel
 	item_weight = 7.5 * BLACKSTEEL_MULTIPLIER
 
@@ -287,6 +287,6 @@
 	desc = "Slag containing steel, the result of blooming iron and coal."
 	icon_state = "steel_slag"
 	smeltresult = /obj/item/ingot/steel_slag
-	sellprice = 90
+	sellprice = M_STEEL
 	melting_material = /datum/material/steel
 	item_weight = 7.5 * STEEL_MULTIPLIER

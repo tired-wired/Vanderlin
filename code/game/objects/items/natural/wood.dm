@@ -135,6 +135,7 @@
 	lumber_amount = 2
 	grid_height = 64
 	grid_width = 64
+	sellprice = M_WOOD
 
 /obj/item/grown/log/tree/small/apply_components()
 	return
@@ -157,6 +158,7 @@
 	slot_flags = ITEM_SLOT_MOUTH|ITEM_SLOT_HIP
 	lumber_amount = 0
 	lumber = null
+	sellprice = M_MISC
 
 /obj/item/grown/log/tree/stick/apply_components()
 	return
@@ -247,6 +249,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	smeltresult = /obj/item/fertilizer/ash
 	bundletype = /obj/item/natural/bundle/plank
+	sellprice = M_WOOD
 
 /obj/item/natural/bundle/plank
 	name = "wooden planks"
@@ -287,3 +290,4 @@
 	lumber_amount = 0
 	grid_height = 64
 	grid_width = 64
+	sellprice = M_ESSENCE

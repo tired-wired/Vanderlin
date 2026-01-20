@@ -10,12 +10,12 @@
 	w_class = WEIGHT_CLASS_SMALL
 	resistance_flags = FLAMMABLE
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
-	sellprice = 5
+	sellprice = M_LEATHER/2
 /obj/item/natural/hide/cured
 	name = "cured leather"
 	icon_state = "leather"
 	desc = "A hide piece that has been cured and may now be worked."
-	sellprice = 7
+	sellprice = M_LEATHER
 	bundletype = /obj/item/natural/bundle/curred_hide
 
 /obj/item/natural/bundle/curred_hide
@@ -37,7 +37,7 @@
 	desc = "A mystical essence imbued with the power of Dendor. Merely holding it transports one's mind to ancient times."
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 20
+	sellprice = M_ESSENCE
 
 /obj/item/natural/fur // a piece of skin with animal hair on it. Could be called a fur but its untanned and also encompasses rat skins and goat skins so pelt is more suitable at least to my ears.
 	name = "fur"
@@ -49,7 +49,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	resistance_flags = FLAMMABLE
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
-	sellprice = 5
+	sellprice = M_FUR
 
 /obj/item/natural/fur/gote
 	desc = "Pelt from a gote."
@@ -75,7 +75,7 @@
 	desc = "fur from one of Dendor's mightiest creachers."
 	icon_state = "pelt_direbear"
 	color = "#33302b"
-	sellprice = 28
+	sellprice = M_FUR + BONUS_VALUE_MODEST
 
 /obj/item/natural/fur/fox
 	desc = "Fur from a venard."
@@ -86,7 +86,7 @@
 	desc = "Fur from a raccoon."
 	icon_state = "pelt_raccoon"
 	color = null
-	sellprice = 12
+	sellprice = M_FUR + BONUS_VALUE_TINY
 
 /obj/item/natural/fur/bobcat
 	desc = "Fur from a lynx."
@@ -150,14 +150,14 @@
 	icon_state = "volfhead"
 	headpricemin = 3
 	headpricemax = 7
-	sellprice = 5
+	sellprice = M_HEAD
 
 /obj/item/natural/head/saiga
 	name = "saiga head"
 	desc = "The severed head of a proud saiga."
 	icon_state = "saigahead"
 	headprice = 3
-	sellprice = 3
+	sellprice = M_HEAD/2
 
 /obj/item/natural/head/troll
 	name = "troll head"
@@ -168,7 +168,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	headpricemin = 80
 	headpricemax = 230
-	sellprice = 155
+	sellprice = M_HEAD*4
 
 /obj/item/natural/head/troll/apply_components()
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
@@ -179,14 +179,14 @@
 	icon_state = "trollhead_axe"
 	headpricemin = 90
 	headpricemax = 250
-	sellprice = 170
+	sellprice = M_HEAD*6
 
 /obj/item/natural/head/troll/cave
 	name = "cave troll head"
 	icon_state = "cavetrollhead"
 	headpricemin = 120
 	headpricemax = 280
-	sellprice = 200
+	sellprice = M_HEAD*7
 
 /obj/item/natural/head/rous
 	name = "rous head"
@@ -194,7 +194,7 @@
 	icon_state = "roushead"
 	headpricemin = 3
 	headpricemax = 7
-	sellprice = 5
+	sellprice = M_HEAD/2
 	meat_to_give = /obj/item/reagent_containers/food/snacks/meat/mince/beef
 
 /obj/item/natural/head/direbear
@@ -202,7 +202,7 @@
 	desc = "The head of a terrifying direbear."
 	icon_state = "direbearhead"
 	layer = 3.1
-	sellprice = 20
+	sellprice = M_HEAD*3
 
 /obj/item/natural/head/fox
 	name = "venard head"
@@ -210,7 +210,7 @@
 	icon_state = "foxhead"
 	layer = 3.1
 	grid_height = 32
-	sellprice = 6
+	sellprice = M_HEAD
 
 /obj/item/natural/head/spider
 	name = "beespider head"
@@ -218,7 +218,7 @@
 	icon_state = "spiderhead"
 	headpricemin = 4
 	headpricemax = 20
-	sellprice = 12
+	sellprice = M_HEAD
 	meat_to_give = /obj/item/reagent_containers/food/snacks/meat/strange
 
 /obj/item/natural/head/bug
@@ -227,7 +227,7 @@
 	icon_state = "boghead"
 	headpricemin = 4
 	headpricemax = 15
-	sellprice = 10
+	sellprice = M_HEAD
 	meat_to_give = /obj/item/reagent_containers/food/snacks/meat/strange
 
 /obj/item/natural/head/mole
@@ -238,7 +238,7 @@
 	grid_width = 96
 	headpricemin = 3
 	headpricemax = 7
-	sellprice = 5
+	sellprice = M_HEAD
 
 /obj/item/natural/head/mole/apply_components()
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
@@ -248,7 +248,7 @@
 	desc = "The severed head of a fiery gote."
 	icon_state = "gotehead"
 	headprice = 2
-	sellprice = 2
+	sellprice = M_HEAD/2
 
 //RTD make this a storage item and make clickign on animals with things put it in storage
 /obj/item/natural/saddle
@@ -261,7 +261,7 @@
 	gripped_intents = list(/datum/intent/use)
 	force = 0
 	throwforce = 0
-	sellprice = 80
+	sellprice = get_item_base_value()
 
 /obj/item/natural/saddle/apply_components()
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE)

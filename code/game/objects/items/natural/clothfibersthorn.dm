@@ -14,6 +14,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	spitoutmouth = FALSE
 	bundletype = /obj/item/natural/bundle/fibers
+	sellprice = M_MISC
 
 /obj/item/natural/silk
 	name = "silk"
@@ -31,6 +32,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	spitoutmouth = FALSE
 	bundletype = /obj/item/natural/bundle/silk
+	sellprice = M_SILK
 
 #ifdef TESTSERVER
 

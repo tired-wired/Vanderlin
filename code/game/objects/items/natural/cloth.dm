@@ -15,6 +15,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	spitoutmouth = FALSE
 	bundletype = /obj/item/natural/bundle/cloth
+	sellprice = M_CLOTH
 
 	var/datum/component/cleaner/cleaner_component = null
 	var/clean_speed = 0.4 SECONDS

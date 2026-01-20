@@ -4,7 +4,7 @@
 	icon = 'icons/roguetown/items/cooking.dmi'	//It's because these are cooked via clay. Don't ask questions.
 	icon_state = "claybrickcook"
 	gripped_intents = null
-	sellprice = 3
+	sellprice = M_MISC
 	dropshrink = 0.75
 	possible_item_intents = list(INTENT_GENERIC)
 	force = 14			//stronger than rock

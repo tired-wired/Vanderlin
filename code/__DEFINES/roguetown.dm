@@ -245,10 +245,33 @@ GLOBAL_LIST_EMPTY(job_respawn_delays)
 #define M_SILK		M_CLOTH * 2	// one silk thread
 #define M_SALT		4	// one salt, or raw ore, or coal
 #define M_LEATHER	M_CLOTH * 2 // one hide
+#define M_COPPER	M_IRON/2
+#define M_BRONZE	M_COPPER*2
 #define M_IRON		12	// one iron bar  Twelve is a good number for it can be halved, cut in three and four without fractions. Multiples of 6
 #define M_STEEL		M_IRON+W_MODERATE	// one steel bar
+#define M_BLCKSTL	(M_IRON*3 + M_SILVER)/4
 #define M_SILVER	M_IRON*3	// one silver bar
 #define M_GOLD		M_IRON*5	// one gold bar
+#define M_ESSENCE	20
+#define M_HEAD		6
+#define M_GLASS		M_WOOD*2
+#define M_MAGIC		10 //magic summoning item
+
+//gemstone prices
+#define M_GEMERALD	44
+#define M_BLORTZ	88
+#define M_TOPER		25
+#define M_SAFFIRA	56
+#define M_DORPEL	121
+#define M_RONTZ		100
+#define M_ONYX		30
+#define M_JADE		50
+#define M_SHELL 	M_MISC
+#define M_ROSESH	15
+#define M_CORAL		60
+#define M_TURQOISE	75
+#define M_AMBER		50
+#define M_OPAL		80
 
 // Skill costs - a rarity value add, items requiring a high skill to produce are rarer and has more intrinsic value. So craftsmen can make a profit.
 #define SKILL_1		2

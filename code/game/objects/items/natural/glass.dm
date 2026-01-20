@@ -11,6 +11,7 @@
 	max_integrity = 20
 	w_class = WEIGHT_CLASS_BULKY
 	bundletype = /obj/item/natural/bundle/glass
+	sellprice = M_GLASS
 
 /obj/item/natural/bundle/glass
 	name = "stack of glass"
@@ -51,3 +52,4 @@
 	attack_verb = list("stabbed", "slashed", "sliced", "cut")
 	max_integrity = 40
 	smeltresult = /obj/item/natural/glass
+	sellprice = 0
