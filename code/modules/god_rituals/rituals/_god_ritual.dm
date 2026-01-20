@@ -25,6 +25,7 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 	var/cast_radius = 0
 	var/ignore_caster = FALSE
 	var/cooldown = 5 MINUTES
+	var/list/items_required = list()
 	// what types in the radius are targetted? leave null for override targetting.
 	var/affected_type = /mob/living
 

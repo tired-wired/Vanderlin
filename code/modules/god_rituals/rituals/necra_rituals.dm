@@ -3,6 +3,9 @@
 	name = "Purge Undead"
 	ritual_patron = /datum/patron/divine/necra
 	cooldown = 30 MINUTES
+	items_required = list(
+		//find suitable item
+	)
 	incantations = list(
 		"Accursed, defilers of the natural order!!" = 4 SECONDS,
 		"Leave this place, protected by the Ten!!" = 4 SECONDS,

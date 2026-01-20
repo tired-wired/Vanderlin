@@ -22,6 +22,7 @@
 /atom/movable/screen/alert/status_effect/buff/guiding_light
 	name = "Guiding Light"
 	desc = "Astrata's light shows me the path."
+	icon_state = "intelligence"
 
 /datum/status_effect/buff/guiding_light/on_apply()
 	. = ..()
@@ -42,6 +43,7 @@
 /atom/movable/screen/alert/status_effect/buff/moonlight_visions
 	name = "Moonlight Visions"
 	desc = "Noc's stony touch lay upon my mind, bringing me wisdom."
+	icon_state = "intelligence"
 
 /datum/status_effect/buff/moonlight_visions/on_apply()
 	. = ..()
@@ -63,7 +65,7 @@
 /atom/movable/screen/alert/status_effect/buff/eora_peace
 	name = "Eora's Peace"
 	desc = "I feel my heart as light as feathers. All my worries have washed away."
-	icon_state = "buff"
+	icon_state = "eora_bless"
 
 /datum/status_effect/buff/eora_peace/on_apply()
 	. = ..()
@@ -91,6 +93,7 @@
 /atom/movable/screen/alert/status_effect/buff/lesser_wolf
 	name = "Lesser Wolf"
 	desc = "Dendor runs with me!"
+	icon_state = "bestialsense"
 
 /datum/status_effect/buff/lesser_wolf/on_apply()
 	. = ..()
@@ -114,6 +117,7 @@
 /atom/movable/screen/alert/status_effect/buff/pestra_favour
 	name = "Pestra's Favour"
 	desc = "The Leech-queen blesses me!"
+	icon_state = "buff"
 
 /datum/status_effect/buff/pestra_favour/on_apply()
 	. = ..()
@@ -136,6 +140,7 @@
 /atom/movable/screen/alert/status_effect/buff/masquerade
 	name = "Masquerade"
 	desc = "Xylix's mask covers my own."
+	icon_state = "buff"
 
 /datum/status_effect/buff/masquerade/on_apply()
 	. = ..()
@@ -157,6 +162,7 @@
 /atom/movable/screen/alert/status_effect/buff/last_stand
 	name = "Last Stand"
 	desc = "Ravox stands with me."
+	icon_state = "ravox"
 
 /datum/status_effect/buff/last_stand/on_apply()
 	. = ..()
@@ -180,6 +186,7 @@
 /atom/movable/screen/alert/status_effect/buff/make_time
 	name = "Make Time"
 	desc = "Necra turns Her gaze from me for a while."
+	icon_state = "necravow"
 
 /datum/status_effect/buff/make_time/tick()
 	owner.adjustOxyLoss(-10)

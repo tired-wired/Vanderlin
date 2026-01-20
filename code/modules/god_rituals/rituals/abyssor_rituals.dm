@@ -2,7 +2,6 @@
 /datum/god_ritual/maximize_leech
 	name = "Maximize Leech"
 	ritual_patron = /datum/patron/divine/abyssor
-	cooldown = 30 MINUTES
 	incantations = list(
 		"Abyssor, we remember You!" = 3 SECONDS,
 		"Send us a creature of Your domain." = 3 SECONDS,
@@ -12,10 +11,15 @@
 /datum/god_ritual/maximize_leech/on_completion(success)
 	. = ..()
 	if(success)
-		//caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, cooldown) this is for the real one
 		var/summon_spot = get_turf(sigil)
-		new /obj/item/natural/worms/leech(summon_spot)
-		sigil.visible_message("What? It's just a leech!?")
+		if(/obj/item/natural/worms/leech in summon_spot)
+			//delete the leech somehow
+			//caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, cooldown) //override default cooldown
+			//new [dire leech path here](summon_spot)
+			//sigil.visible_message("The leech wriggles and grows!")
+		else
+			new /obj/item/natural/worms/leech(summon_spot)
+			sigil.visible_message("What? It's just a leech!?")
 
 //BLOOD TRANSFUSION - Multitarget blood refill/stabilize
 /datum/god_ritual/blood_transfusion

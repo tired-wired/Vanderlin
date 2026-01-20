@@ -2,6 +2,9 @@
 /datum/god_ritual/valiant_sacrifice
 	name = "Valiant Sacrifice"
 	ritual_patron = /datum/patron/divine/ravox
+	items_required = list(
+		/obj/item/paper, //write down your injustice/grievance. might change this to like the abyssor leech one
+	)
 	incantations = list(
 		"Ravox, hear this soul's cry." = 3 SECONDS,
 		"An injustice must be made right." = 3 SECONDS,
@@ -20,6 +23,9 @@
 	name = "Last Stand"
 	ritual_patron = /datum/patron/divine/ravox
 	cooldown = 30 MINUTES
+	items_required = list(
+		//find suitable item
+	)
 	incantations = list(
 		"Ravox, we prepare for battle." = 3 SECONDS,
 		"Walk with this soul." = 3 SECONDS,

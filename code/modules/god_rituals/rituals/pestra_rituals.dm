@@ -15,7 +15,8 @@
 		if(!target)
 			return
 		to_chat(caster,span_noticesmall("Their flesh writhes, their wounds knit shut! Beautiful!!"))
-		target.emote("agony")
+		if(!HAS_TRAIT(target, TRAIT_NOPAIN))
+			target.emote("agony")
 		target.visible_message("[target] writhes in pain!", span_userdanger("You feel your skin crawling, your flesh moving as it shouldn't!"))
 		target.heal_overall_damage(100, 100)
 
@@ -23,6 +24,9 @@
 /datum/god_ritual/pestra_favour
 	name = "Pestra's Favour"
 	ritual_patron = /datum/patron/divine/pestra
+	items_required = list(
+		/obj/item/alch/herb/paris //there's an alchemy recipe for this as a numbing agent
+	)
 	incantations = list(
 		"Pestra, grant us Your gaze." = 3 SECONDS,
 		"Let this soul endure the pain a while less." = 3 SECONDS,
@@ -35,6 +39,6 @@
 		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
 		if(!target)
 			return
-		target.apply_status_effect(/datum/status_effect/buff/pestra_favour, 15 MINUTES)
+		target.apply_status_effect(/datum/status_effect/buff/pestra_favour)
 
 //grant the paintaker spell
