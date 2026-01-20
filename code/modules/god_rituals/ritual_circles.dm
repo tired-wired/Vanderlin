@@ -119,8 +119,8 @@
 /obj/structure/ritual_circle/abyssor
 	name = "rune of the storm"
 	desc = "This sigil is drawn best with fury in your blood."
-	//icon_state = "abyssor_chalky"
-	//base_icon_state = "abyssor"
+	icon_state = "abyssor_chalky"
+	base_icon_state = "abyssor"
 	required_patron = /datum/patron/divine/abyssor
 
 /obj/structure/ritual_circle/dendor
@@ -140,8 +140,8 @@
 /obj/structure/ritual_circle/ravox
 	name = "rune of the valiant"
 	desc = "The lines are sharp and straight. Did they trace them off a blade?"
-	//icon_state = "ravox_chalky"
-	//base_icon_state = "ravox"
+	icon_state = "ravox_chalky"
+	base_icon_state = "ravox"
 	required_patron = /datum/patron/divine/ravox
 
 /obj/structure/ritual_circle/eora
@@ -155,8 +155,8 @@
 /obj/structure/ritual_circle/xylix
 	name = "rune of the trickster"
 	desc = "This sigil is to be drawn with a laugh on your lips and freedom in your heart."
-	//icon_state = "xylix_chalky"
-	//base_icon_state = "xylix"
+	icon_state = "xylix_chalky"
+	base_icon_state = "xylix"
 	required_patron = /datum/patron/divine/xylix
 
 
@@ -185,8 +185,8 @@
 /obj/structure/ritual_circle/baotha
 	name = "rune of joy"
 	desc = ""
-	//icon_state = "baotha_chalky"
-	//base_icon_state = "baotha"
+	icon_state = "baotha_chalky"
+	base_icon_state = "baotha"
 	required_patron = /datum/patron/inhumen/baotha
 
 /obj/structure/ritual_circle/matthios
@@ -199,7 +199,7 @@
 /obj/structure/ritual_circle/graggar
 	name = "rune of the warlord"
 	desc = ""
-	//icon_state = "graggar_chalky"
-	//base_icon_state = "graggar"
+	icon_state = "graggar_chalky"
+	base_icon_state = "graggar"
 	required_patron = /datum/patron/inhumen/graggar
 

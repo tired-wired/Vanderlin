@@ -134,7 +134,6 @@
 	id = "masquerade"
 	status_type = STATUS_EFFECT_UNIQUE
 	alert_type = /atom/movable/screen/alert/status_effect/buff/masquerade
-	status_type = STATUS_EFFECT_UNIQUE
 	duration = 10 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/masquerade
