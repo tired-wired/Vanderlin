@@ -2,6 +2,7 @@
 /datum/god_ritual/blessing_recovery
 	name = "Blessing of Recovery"
 	ritual_patron = /datum/patron/divine/pestra
+	cooldown = 10 MINUTES
 	incantations = list(
 		"Pestra, heal this wounded one!" = 3 SECONDS,
 		"Help us aid them in recovery." = 3 SECONDS,
@@ -24,6 +25,7 @@
 /datum/god_ritual/pestra_favour
 	name = "Pestra's Favour"
 	ritual_patron = /datum/patron/divine/pestra
+	cooldown = 30 MINUTES
 	items_required = list(
 		/obj/item/alch/herb/paris //there's an alchemy recipe for this as a numbing agent
 	)

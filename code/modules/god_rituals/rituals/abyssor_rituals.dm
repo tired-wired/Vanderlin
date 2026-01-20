@@ -14,7 +14,7 @@
 		var/summon_spot = get_turf(sigil)
 		/* if(/obj/item/natural/worms/leech in summon_spot)
 			//delete the leech somehow
-			//caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, cooldown) //override default cooldown
+			//caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, 30 MINUTES) //override default cooldown
 			//new [dire leech path here](summon_spot)
 			//sigil.visible_message("The leech wriggles and grows!")
 

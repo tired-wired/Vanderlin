@@ -2,7 +2,7 @@
 /datum/god_ritual/purge_undead
 	name = "Purge Undead"
 	ritual_patron = /datum/patron/divine/necra
-	cooldown = 30 MINUTES
+	cooldown = 15 MINUTES
 	items_required = list(
 		//find suitable item
 	)

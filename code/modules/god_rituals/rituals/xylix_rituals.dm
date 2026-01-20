@@ -25,6 +25,7 @@
 /datum/god_ritual/masquerade
 	name = "Masquerade"
 	ritual_patron = /datum/patron/divine/xylix
+	cooldown = 10 MINUTES
 	incantations = list(
 		"Xylix, let's have some fun!" = 4 SECONDS,
 		"Let's take on the face of another one." = 4 SECONDS,

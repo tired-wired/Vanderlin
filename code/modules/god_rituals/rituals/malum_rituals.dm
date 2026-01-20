@@ -2,6 +2,7 @@
 /datum/god_ritual/malum_renewal
 	name = "Malum's Renewal"
 	ritual_patron = /datum/patron/divine/malum
+	cooldown = 10 MINUTES
 	incantations = list(
 		"MALUM!!" = 3 SECONDS,
 		"LET YOUR FORGE RENEW THIS OFFERING!!" = 3 SECONDS,
