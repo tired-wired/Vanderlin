@@ -16,8 +16,8 @@
 	. = ..()
 	if(success)
 		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, cooldown)
-		for(var/mob/living/carbon/victim in range(5,sigil))//1 tile larger than churn undead, but guaranteed to boom
-			if(victim.mob_biotypes && MOB_UNDEAD)
+		for(var/mob/living/carbon/victim in range(6,sigil))//2 tiles larger than churn undead, but guaranteed to boom
+			if(victim.mob_biotypes & MOB_UNDEAD)
 				victim.visible_message(span_warning("[victim] HAS BEEN CHURNED BY NECRA'S GRIP!"), span_userdanger("I'VE BEEN CHURNED BY NECRA'S GRIP!"))
 				explosion(get_turf(victim), light_impact_range = 1, flash_range = 1, smoke = FALSE)
 				victim.throw_at(get_ranged_target_turf(victim, get_dir(sigil, victim), 4), 4, 1, victim, spin = FALSE)
@@ -44,3 +44,4 @@
 		target.apply_status_effect(/datum/status_effect/buff/make_time)
 
 //slow time in the vicinity, look at monke sandevistan
+//Could we have one that does "speak with soul" but earthbound folks, for Necra? You'd have to put their body onto the rune.
