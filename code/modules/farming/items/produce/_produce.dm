@@ -3,7 +3,7 @@
 	dried_type = null
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
-	sellprice = 0
+	sellprice = I_BASIC
 	force = 0
 	throwforce = 0
 	faretype = FARE_POOR

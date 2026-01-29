@@ -256,6 +256,10 @@ GLOBAL_LIST_EMPTY(job_respawn_delays)
 #define M_HEAD		6
 #define M_GLASS		M_WOOD*2
 #define M_MAGIC		10 //magic summoning item
+#define M_LUX		500 //open to change, this is the previous value
+
+//food prices. I for Ingredient.
+#define I_BASIC 	3 //potatoes, cabbage, peasant food.
 
 //gemstone prices
 #define M_GEMERALD	44
