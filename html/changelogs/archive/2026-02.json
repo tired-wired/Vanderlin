@@ -123,5 +123,12 @@
                 "rscadd": "Outsiders making a meister account no longer reveal their role to the steward."
             }
         ]
+    },
+    "2026-02-08": {
+        "CheffieGithub": [
+            {
+                "bugfix": "Dodge no longer always succeeds if show_rolls is disabled"
+            }
+        ]
     }
 }
