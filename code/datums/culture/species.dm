@@ -149,3 +149,35 @@
 /datum/culture/species/kobold/icepack
 	name = "Icepack tribes"
 	description = "These kobolds evolved in Subterra, learning to be quick and harsher among the difficult wildlife. The Zizo-led drow often use them as miners, when they manage to actually catch the lizards. They're a bit more eccentric and suspicious of strangers compared to the other kobold races, owing to the vigilance demanded of their home."
+
+/datum/culture/species/medicator
+	name = "Swamps of Enigma"
+	description = "The polluted swamps of the Isle of Enigma, particularly around Rockhill. The birthplace of the medicator species.\
+	At least, before they developed sapience."
+	species = list(
+		SPEC_ID_MEDICATOR
+	)
+
+/datum/culture/species/triton
+	abstract_type = /datum/culture/species/triton
+	species = list(
+		SPEC_ID_TRITON
+	)
+
+//put some triton stuff here bug - shallow/reef tribes? deep tribes? abyssal tribes?
+
+/datum/culture/species/tiefling
+	abstract_type = /datum/culture/species/tiefling
+	species = list(
+		SPEC_ID_TIEFLING
+	)
+
+//put some tiefling stuff here bug
+
+/datum/culture/species/aasimar
+	abstract_type = /datum/culture/species/aasimar
+	species = list(
+		SPEC_ID_AASIMAR
+	)
+
+//might change this to be just one for celestial aasimar?
