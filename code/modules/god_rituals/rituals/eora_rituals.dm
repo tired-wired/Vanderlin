@@ -21,6 +21,7 @@
 /datum/god_ritual/gift_beauty
 	name = "Gift of Beauty"
 	ritual_patron = /datum/patron/divine/eora
+	cooldown = 1 MINUTE
 	incantations = list(
 		"Eora, bless us with your gifts!" = 3 SECONDS,
 		"Refresh us with new beauty." = 3 SECONDS,

@@ -22,7 +22,7 @@
 			target.dropItemToGround(friendship_necklace, TRUE, FALSE)
 
 //MASQUERADE - temporarily copy the appearance of someone
-/datum/god_ritual/masquerade
+/*/datum/god_ritual/masquerade
 	name = "Masquerade"
 	ritual_patron = /datum/patron/divine/xylix
 	cooldown = 10 MINUTES
@@ -37,4 +37,4 @@
 		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
 		if(!target)
 			return
-		target.apply_status_effect(/datum/status_effect/buff/masquerade)
+		target.apply_status_effect(/datum/status_effect/buff/masquerade)*/
