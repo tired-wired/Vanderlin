@@ -443,5 +443,24 @@
                 "rscadd": "Templaric Order lore blurb in the Primer (Aberra Approved)"
             }
         ]
+    },
+    "2026-02-16": {
+        "Rockslp": [
+            {
+                "rscadd": "Blacksmith"
+            },
+            {
+                "rscdel": "Removed weapon & armorsmith."
+            },
+            {
+                "balance": "Blacksmiths have a chance at legendary skills, 5%"
+            },
+            {
+                "map": "Armorsmith+weaponsmith spawns replaced with blacksmith spawns."
+            },
+            {
+                "code_imp": "Armorsmith & Weaponsmith code changed."
+            }
+        ]
     }
 }
