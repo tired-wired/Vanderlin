@@ -19,9 +19,7 @@
 	name = "Noc's Lullaby"
 	ritual_patron = /datum/patron/divine/noc
 	cooldown = 30 MINUTES
-	items_required = list(
-		/obj/item/mana_battery/mana_crystal/small = 1
-	)
+	items_required = list(/obj/item/mana_battery/mana_crystal/small)
 	incantations = list(
 		"Noc, bless this soul with dreams." = 3 SECONDS,
 		"Grant them Your holy rest." = 3 SECONDS,
