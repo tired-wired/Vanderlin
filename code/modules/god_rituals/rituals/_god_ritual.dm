@@ -56,9 +56,10 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 		qdel(src)
 	return success
 
-//TODO: make sure these stop if you can't speak or whatever
-
 /datum/god_ritual/proc/perform_ritual()
+	//check if you're muted
+
+	//check for item requirements
 	var/summon_spot = get_turf(sigil)
 	for(var/obj/item/requirement in items_required)
 		if(!(requirement in summon_spot))
@@ -66,6 +67,7 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 			return FALSE
 		else
 			continue
+	//all good, speak incantation
 	var/index = 0
 	for(var/incantation in incantations)
 		index++
@@ -90,10 +92,17 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 	if(success)
 		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, cooldown)
 	return
-/*
-/datum/god_ritual/proc/get_targets(success)
-	var/list/targets = affected_type in view(cast_radius, sigil)
+
+/*/datum/god_ritual/proc/get_targets(success)
+	//TODO: option to find different targets on failure state
+	var/list/targets = list()
+	for(var/target in view(cast_radius, sigil))
+		if(target == affected_type)
+			targets += target
 	if(ignore_caster)
 		targets -= caster
-	return targets
-*/
+	return targets*/
+
+/datum/god_ritual/proc/check_holy_resistance(target)
+	//check for holy resistance on the target
+	return FALSE
