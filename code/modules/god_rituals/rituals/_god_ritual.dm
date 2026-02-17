@@ -31,6 +31,7 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 
 	var/mob/living/caster
 	var/obj/structure/ritual_circle/sigil
+	var/obj/structure/ritual_shrine/shrine
 
 
 /datum/god_ritual/New(mob/living/_caster, obj/structure/ritual_circle/_sigil)
