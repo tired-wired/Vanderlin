@@ -1,5 +1,5 @@
 //MAXIMIZE LEECH - summons a dire leech. 30 minute cooldown, item requirement
-/datum/god_ritual/maximize_leech
+/*/datum/god_ritual/maximize_leech
 	name = "Maximize Leech"
 	ritual_patron = /datum/patron/divine/abyssor
 	incantations = list(
@@ -20,7 +20,7 @@
 
 		else*/
 		new /obj/item/natural/worms/leech(summon_spot) //reindent these later
-		sigil.visible_message("What? It's just a leech!?")
+		sigil.visible_message("What? It's just a leech!?")*/
 
 //BLOOD TRANSFUSION - Multitarget blood refill/stabilize
 /datum/god_ritual/blood_transfusion
