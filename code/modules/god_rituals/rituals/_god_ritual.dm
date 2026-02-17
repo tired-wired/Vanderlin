@@ -109,7 +109,7 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 	return FALSE
 
 //the following is referenced from monke main's heretic codes
-/datum/god_ritual/proc/cleanup_atoms(list/selected_atoms)
+/*/datum/god_ritual/proc/cleanup_atoms(list/selected_atoms)
 	SHOULD_CALL_PARENT(TRUE)
 
 	for(var/atom/sacrificed as anything in selected_atoms)
@@ -132,4 +132,4 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 			continue
 
 		selected_atoms -= sacrificed
-		qdel(sacrificed)
+		qdel(sacrificed)*/
