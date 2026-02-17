@@ -165,7 +165,7 @@
 			shoes = /obj/item/clothing/shoes/boots
 			pants = /obj/item/clothing/pants/trou/leather/mourning
 			armor = /obj/item/clothing/shirt/robe/necra
-			backpack_contents = list(/obj/item/inqarticles/tallowpot, /obj/item/reagent_containers/food/snacks/tallow/red) // Needed for coffin sanctification, they get enough for one, the rest they must source themselves.
+			backpack_contents = list(/obj/item/inqarticles/tallowpot, /obj/item/reagent_containers/food/snacks/tallow/red, /obj/item/needle, /obj/item/ritual_chalk) // Needed for coffin sanctification, they get enough for one, the rest they must source themselves.
 			if(equipped_human.age == AGE_OLD)
 				l_hand = /obj/item/weapon/mace/cane/necran
 			else

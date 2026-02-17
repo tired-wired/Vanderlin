@@ -1,5 +1,5 @@
 /obj/structure/ritual_shrine
-    name = "Ritual Shrine"
+	name = "Ritual Shrine"
 	desc = "A pristine ritual shrine, waiting for attunement."
 	//placeholder dmi and icon_state
 	icon = 'icons/roguetown/misc/rituals.dmi'
@@ -58,7 +58,7 @@
 
 //BASIC ATTUNEMENT ITEMS
 /obj/item/ritual_item
-	abstract_type =  = /obj/item/ritual_item
+	abstract_type = /obj/item/ritual_item
 	//placeholders
 	name = "ritual item"
 	icon_state = "chalk"
