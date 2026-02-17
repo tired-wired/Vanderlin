@@ -102,11 +102,11 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 		targets -= caster
 	return targets*/
 
-/datum/god_ritual/proc/check_holy_resistance(target)
+/*/datum/god_ritual/proc/check_holy_resistance(target)
 	//check for resistance on the target, defaults to holy unless overridden in specific ritual
 	if(target.can_block_magic(resistance_flag))
 		return TRUE
-	return FALSE
+	return FALSE*/
 
 //the following is referenced from monke main's heretic codes
 /*/datum/god_ritual/proc/cleanup_atoms(list/selected_atoms)

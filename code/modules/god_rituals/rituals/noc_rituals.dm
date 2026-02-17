@@ -12,8 +12,7 @@
 	. = ..()
 	if(success)
 		for(var/mob/living/target in range(1, sigil))
-			if(!(check_holy_resistance(target)))
-				target.apply_status_effect(/datum/status_effect/buff/moonlight_visions)
+			target.apply_status_effect(/datum/status_effect/buff/moonlight_visions)
 
 //NOC'S LULLABY - makes you tired again
 /datum/god_ritual/noc_lullaby
@@ -34,8 +33,6 @@
 	if(success)
 		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
 		if(!target)
-			return
-		if(check_holy_resistance(target))
 			return
 		to_chat(target, span_noticesmall("My eyelids grow heavy. Noc's dreams reach my mind."))
 		target.apply_status_effect(/datum/status_effect/debuff/dreamytime)
