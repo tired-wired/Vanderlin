@@ -3,7 +3,7 @@
 	name = "Purge Undead"
 	ritual_patron = /datum/patron/divine/necra
 	cooldown = 15 MINUTES
-	items_required = list(
+	required_atoms = list(
 		//find suitable item
 	)
 	incantations = list(

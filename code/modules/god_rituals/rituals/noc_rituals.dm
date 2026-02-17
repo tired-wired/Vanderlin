@@ -12,14 +12,17 @@
 	. = ..()
 	if(success)
 		for(var/mob/living/target in range(1, sigil))
-			target.apply_status_effect(/datum/status_effect/buff/moonlight_visions)
+			if(!(check_holy_resistance(target)))
+				target.apply_status_effect(/datum/status_effect/buff/moonlight_visions)
 
 //NOC'S LULLABY - makes you tired again
 /datum/god_ritual/noc_lullaby
 	name = "Noc's Lullaby"
 	ritual_patron = /datum/patron/divine/noc
 	cooldown = 30 MINUTES
-	items_required = list(/obj/item/mana_battery/mana_crystal/small)
+	required_atoms = list(
+		/obj/item/mana_battery/mana_crystal/small = 1,
+	)
 	incantations = list(
 		"Noc, bless this soul with dreams." = 3 SECONDS,
 		"Grant them Your holy rest." = 3 SECONDS,
@@ -31,6 +34,8 @@
 	if(success)
 		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
 		if(!target)
+			return
+		if(check_holy_resistance(target))
 			return
 		to_chat(target, span_noticesmall("My eyelids grow heavy. Noc's dreams reach my mind."))
 		target.apply_status_effect(/datum/status_effect/debuff/dreamytime)

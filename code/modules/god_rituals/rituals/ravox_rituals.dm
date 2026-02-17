@@ -2,7 +2,7 @@
 /datum/god_ritual/valiant_sacrifice
 	name = "Valiant Sacrifice"
 	ritual_patron = /datum/patron/divine/ravox
-	items_required = list(
+	required_atoms = list(
 		/obj/item/paper, //write down your injustice/grievance. might change this to like the abyssor leech one
 	)
 	incantations = list(
@@ -23,7 +23,7 @@
 	name = "Last Stand"
 	ritual_patron = /datum/patron/divine/ravox
 	cooldown = 30 MINUTES
-	items_required = list(
+	required_atoms = list(
 		//find suitable item
 	)
 	incantations = list(

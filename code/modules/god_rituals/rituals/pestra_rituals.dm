@@ -26,7 +26,7 @@
 	name = "Pestra's Favour"
 	ritual_patron = /datum/patron/divine/pestra
 	cooldown = 30 MINUTES
-	items_required = list(
+	required_atoms = list(
 		/obj/item/alch/herb/paris = 2 //there's an alchemy recipe for this as a numbing agent
 	)
 	incantations = list(

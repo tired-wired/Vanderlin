@@ -25,7 +25,7 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 	var/cast_radius = 0
 	var/ignore_caster = FALSE
 	var/cooldown = 5 MINUTES
-	var/list/items_required = list()
+	var/list/required_atoms = list()
 	// what types in the radius are targetted? leave null for override targetting.
 	var/affected_type = /mob/living
 
@@ -57,16 +57,15 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 	return success
 
 /datum/god_ritual/proc/perform_ritual()
-	//check if you're muted
-
-	//check for item requirements
-	var/summon_spot = get_turf(sigil)
-	for(var/obj/item/requirement in items_required)
+	//check for item requirements. UNFINISHED.
+	/*var/summon_spot = get_turf(sigil)
+	for(var/obj/item/path as anything in required_atoms)
+		var/amount_needed = required_atoms[path]
 		if(!(requirement in summon_spot))
-			to_chat(caster, span_noticesmall("I am missing [requirement.name]!"))
+			to_chat(caster, span_noticesmall("I am missing [amount_needed] [requirement.name]!"))
 			return FALSE
 		else
-			continue
+			continue*/
 	//all good, speak incantation
 	var/index = 0
 	for(var/incantation in incantations)
@@ -104,5 +103,33 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 	return targets*/
 
 /datum/god_ritual/proc/check_holy_resistance(target)
-	//check for holy resistance on the target
+	//check for resistance on the target, defaults to holy unless overridden in specific ritual
+	if(target.can_block_magic(resistance_flag))
+		return TRUE
 	return FALSE
+
+//the following is referenced from monke main's heretic codes
+/datum/god_ritual/proc/cleanup_atoms(list/selected_atoms)
+	SHOULD_CALL_PARENT(TRUE)
+
+	for(var/atom/sacrificed as anything in selected_atoms)
+		if(isliving(sacrificed))
+			continue
+
+		if(isstack(sacrificed))
+			var/obj/item/stack/sac_stack = sacrificed
+			var/how_much_to_use = 0
+			for(var/requirement in required_atoms)
+				// If it's not requirement type and type is not a list, skip over this check
+				if(!istype(sacrificed, requirement) && !islist(requirement))
+					continue
+				// If requirement *is* a list and the stack *is* in the list, skip over this check
+				if(islist(requirement) && !is_type_in_list(sacrificed, requirement))
+					continue
+				how_much_to_use = min(required_atoms[requirement], sac_stack.amount)
+				break
+			sac_stack.use(how_much_to_use)
+			continue
+
+		selected_atoms -= sacrificed
+		qdel(sacrificed)
