@@ -51,6 +51,8 @@
 	if(spawned.age == AGE_OLD)
 		spawned.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
 
+	spawned.mind?.teach_crafting_recipe(/datum/blueprint_recipe/structure/ritual_shrine)
+
 	spawned.virginity = TRUE
 	switch(spawned.patron?.type)
 		if(/datum/patron/divine/astrata)

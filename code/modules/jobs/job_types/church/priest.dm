@@ -71,6 +71,7 @@
 	add_verb(spawned, /mob/living/carbon/human/proc/churchcurse)
 	add_verb(spawned, /mob/living/carbon/human/proc/churchannouncement)
 	add_verb(spawned, list(/mob/living/carbon/human/proc/absolve_penance_verb, /mob/living/carbon/human/proc/assign_penance_verb))
+	spawned.mind?.teach_crafting_recipe(/datum/blueprint_recipe/structure/ritual_shrine)
 
 	spawned.virginity = TRUE
 

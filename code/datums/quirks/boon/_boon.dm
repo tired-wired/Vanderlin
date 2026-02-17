@@ -353,6 +353,7 @@
 		return
 
 	ADD_TRAIT(owner, TRAIT_RITUALIST, "[type]")
+	owner.mind?.teach_crafting_recipe(/datum/blueprint_recipe/structure/ritual_shrine)
 
 	to_chat(owner, span_notice("You remember your long hours poring over holy texts."))
 
@@ -360,3 +361,4 @@
 	if(!owner)
 		return
 	REMOVE_TRAIT(owner, TRAIT_RITUALIST, "[type]")
+	owner.mind?.forget_crafting_recipe(/datum/blueprint_recipe/structure/ritual_shrine)

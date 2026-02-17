@@ -55,6 +55,7 @@
 	spawned.mind?.teach_crafting_recipe(/datum/repeatable_crafting_recipe/dendor/sacrifice_stinging)
 	spawned.mind?.teach_crafting_recipe(/datum/repeatable_crafting_recipe/dendor/sacrifice_devouring)
 	spawned.mind?.teach_crafting_recipe(/datum/repeatable_crafting_recipe/dendor/sacrifice_lording)
+	spawned.mind?.teach_crafting_recipe(/datum/blueprint_recipe/structure/ritual_shrine)
 
 	var/holder = spawned.patron?.devotion_holder
 	if(holder)

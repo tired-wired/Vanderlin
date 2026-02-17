@@ -53,7 +53,7 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 		return FALSE
 	var/success = perform_ritual()
 	if(!QDELETED(sigil) && !QDELETED(caster))
-		on_completion(success/*, get_targets(success)*/)
+		on_completion(success, get_targets(success))
 		qdel(src)
 	return success
 
@@ -88,26 +88,20 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 				capitalize(replace_pronouns(replacetext(message[2], "%CASTER", caster.name), caster)),
 			)
 
-/datum/god_ritual/proc/on_completion(success/*, list/targets*/)
+/datum/god_ritual/proc/on_completion(success, list/targets)
 	if(success)
 		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, cooldown)
 	return
 
-/*/datum/god_ritual/proc/get_targets(success)
+/datum/god_ritual/proc/get_targets(success)
 	//TODO: option to find different targets on failure state
 	var/list/targets = list()
-	for(var/target in view(cast_radius, sigil))
-		if(target == affected_type)
+	for(var/mob/living/target in view(cast_radius, sigil))
+		if((target == affected_type) && !(target.can_block_magic(resistance_flag)))
 			targets += target
 	if(ignore_caster)
 		targets -= caster
-	return targets*/
-
-/*/datum/god_ritual/proc/check_holy_resistance(target)
-	//check for resistance on the target, defaults to holy unless overridden in specific ritual
-	if(target.can_block_magic(resistance_flag))
-		return TRUE
-	return FALSE*/
+	return targets
 
 //the following is referenced from monke main's heretic codes
 /*/datum/god_ritual/proc/cleanup_atoms(list/selected_atoms)

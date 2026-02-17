@@ -2502,6 +2502,7 @@
 #include "code\modules\crafting\blueprinting\blueprints\dendor.dm"
 #include "code\modules\crafting\blueprinting\blueprints\engineering.dm"
 #include "code\modules\crafting\blueprinting\blueprints\floors.dm"
+#include "code\modules\crafting\blueprinting\blueprints\holy.dm"
 #include "code\modules\crafting\blueprinting\blueprints\masonry.dm"
 #include "code\modules\crafting\blueprinting\blueprints\structure.dm"
 #include "code\modules\crafting\blueprinting\blueprints\wall.dm"

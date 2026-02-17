@@ -56,6 +56,7 @@
 
 /datum/job/undertaker/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
+	spawned.mind?.teach_crafting_recipe(/datum/blueprint_recipe/structure/ritual_shrine)
 	// Apply devotion holder
 	var/holder = spawned.patron?.devotion_holder
 	if (holder)
