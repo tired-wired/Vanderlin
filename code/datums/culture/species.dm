@@ -47,7 +47,7 @@
 
 /datum/culture/species/halfling
 	name = "Hearthhill"
-	description = "The halfling-dominated land of Hearthhill. \
+	description = "Known by humens to be mostly coin-counting-challenged halflings. \
 	They are proud of homely crafts, and often prefer bartering over coin. Violence is a foreign concept to most."
 	species = list(
 		SPEC_ID_HALFLING
