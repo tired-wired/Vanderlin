@@ -66,30 +66,58 @@
 	icon = 'icons/roguetown/misc/rituals.dmi'
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/ritual_item/astrata
+/obj/item/ritual_item/astrata_basic
+	name = "dried sunflower"
+	desc = "A sunflower, carefully pressed flat and dried in the sun."
 
-/obj/item/ritual_item/noc
+/obj/item/ritual_item/noc_basic
+	name = "infused manabloom"
+	desc = "A manabloom, carefully infused with mana."
 
-/obj/item/ritual_item/abyssor
+/obj/item/ritual_item/abyssor_basic
+	name = "bottled blood"
+	desc = "A small vial of your own blood, prepared in advance."
 
-/obj/item/ritual_item/dendor
+/obj/item/ritual_item/dendor_basic
+	name = "potted salvia"
+	desc = "A salvia flower, lovingly potted."
 
-/obj/item/ritual_item/malum
+/obj/item/ritual_item/malum_basic
+	name = ""
+	desc = ""
 
-/obj/item/ritual_item/ravox
+/obj/item/ritual_item/ravox_basic
+	name = ""
+	desc = ""
 
-/obj/item/ritual_item/eora
+/obj/item/ritual_item/eora_basic
+	name = "candied rosa"
+	desc = "A rosa flower, lovingly coated in sugar."
 
-/obj/item/ritual_item/xylix
+/obj/item/ritual_item/xylix_basic
+	name = "ten-sided die"
+	desc = "A blessed die, definitely not rigged."
 
-/obj/item/ritual_item/pestra
+/obj/item/ritual_item/pestra_basic
+	name = ""
+	desc = ""
 
-/obj/item/ritual_item/necra
+/obj/item/ritual_item/necra_basic
+	name = "engraved skull"
+	desc = "Whether this was humen or elven, no one can tell. But it has been treated with care."
 
-/obj/item/ritual_item/zizo
+/obj/item/ritual_item/zizo_basic
+	name = ""
+	desc = ""
 
-/obj/item/ritual_item/matthios
+/obj/item/ritual_item/matthios_basic
+	name = "miniature golden statue"
+	desc = "A pocket-sized statue of a grinning man. The rest of his face is obscured with a hood."
 
-/obj/item/ritual_item/graggar
+/obj/item/ritual_item/graggar_basic
+	name = "prepared heart"
+	desc = "A heart, torn from someone's chest."
 
-/obj/item/ritual_item/baotha
+/obj/item/ritual_item/baotha_basic
+	name = "purified spice"
+	desc = "Spice that has been specially treated for offerings."
