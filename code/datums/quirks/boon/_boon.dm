@@ -343,7 +343,7 @@
 		return
 	REMOVE_TRAIT(owner, TRAIT_BEAUTIFUL, "[type]")
 
-/datum/quirk/boon/ritualist
+/*/datum/quirk/boon/ritualist
 	name = "Trained Ritualist"
 	desc = "You have been trained in the ways of the Gods. You may perform rituals with the proper materials."
 	point_value = -5
@@ -359,4 +359,4 @@
 /datum/quirk/boon/ritualist/on_remove()
 	if(!owner)
 		return
-	REMOVE_TRAIT(owner, TRAIT_RITUALIST, "[type]")
+	REMOVE_TRAIT(owner, TRAIT_RITUALIST, "[type]")*/
