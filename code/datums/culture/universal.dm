@@ -57,3 +57,7 @@
 	name = "Ambiguous"
 	description = " Either you have no distinct dialect, or society is simply ignorant to your origin. \
 	You will not be recognized."
+
+/datum/culture/universal/ossland
+	name = "Ossland"
+	description = ""

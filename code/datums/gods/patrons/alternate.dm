@@ -19,3 +19,14 @@
 	)
 
 	allowed_races = list(SPEC_ID_DWARF_SUBTERRAN)
+
+/datum/patron/alternate/great_hunt
+	name = "The Great Hunt"
+	desc = ""
+	domain = ""
+	flaws = ""
+	worshippers = ""
+	sins = ""
+	boons = ""
+
+	confess_lines = list()
