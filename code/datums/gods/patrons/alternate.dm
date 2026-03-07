@@ -23,10 +23,15 @@
 /datum/patron/alternate/great_hunt
 	name = "The Great Hunt"
 	desc = ""
-	domain = ""
-	flaws = ""
-	worshippers = ""
-	sins = ""
+	domain = "The Hunt, Travelers, Nature"
+	flaws = "Intense, Morbid"
+	worshippers = "Hunters, the Northmen"
+	sins = "Wasting any of your kills, Smashing skullmets, Exploiting nature"
 	boons = ""
 
-	confess_lines = list()
+	confess_lines = list(
+		"I WILL BE REBORN!",
+	)
+
+/datum/patron/alternate/great_hunt/preference_accessible(datum/preferences/prefs)
+	return FALSE

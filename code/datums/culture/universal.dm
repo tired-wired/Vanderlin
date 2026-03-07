@@ -60,4 +60,5 @@
 
 /datum/culture/universal/ossland
 	name = "Ossland"
-	description = ""
+	description = "Known for their barbaric traditions and morbid faith, these folk are proud and strong. \
+	Never, NEVER touch their skull helms."

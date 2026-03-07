@@ -181,6 +181,15 @@ While it's not required reading, leadership roles may find this information usef
 	</details>
 
 	<details>
+		<summary><strong> OSSLAND </strong></summary>
+		<br>
+		<em> [SUBTITLES HERE]</em>
+		<br><br>
+		[LORE HERE]
+		<br><br>
+	</details>
+
+	<details>
 		<summary><strong> ELVEN ENCLAVES </strong></summary>
 		<br>
 		<em> Keepers of Psydonia, Retreats of the Ancient Age, Forgotten Guides of Death </em>
