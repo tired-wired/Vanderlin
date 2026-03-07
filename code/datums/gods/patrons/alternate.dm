@@ -22,7 +22,11 @@
 
 /datum/patron/alternate/great_hunt
 	name = "The Great Hunt"
-	desc = ""
+	desc = "In the cold reaches of Ossland, they worship the four aspects of the Great Hunt: \
+	Graggar, revered for the relation between predator and prey; \
+	Necra, revered for the death that awaits every living being; \
+	Dendor, revered for the wilds they live in and the beasts they hunt; \
+	Abyssor, revered for the safe passage of travelers and the unflinching weather that scours the north."
 	domain = "The Hunt, Travelers, Nature"
 	flaws = "Intense, Morbid"
 	worshippers = "Hunters, the Northmen"
@@ -31,6 +35,9 @@
 
 	confess_lines = list(
 		"I WILL BE REBORN!",
+		"TO HUNT IS TO TAKE YOUR PLACE IN THE CYCLE!",
+		"WE ALL DIE SOMEDAY!",
+		"LET ME BE HUNTED, NOT SLAUGHTERED LIKE THIS!"
 	)
 
 /datum/patron/alternate/great_hunt/preference_accessible(datum/preferences/prefs)
