@@ -26,11 +26,11 @@
 
 /datum/status_effect/buff/guiding_light/on_apply()
 	. = ..()
-	to_chat(owner, span_noticesmall("Astrata's light warms me, I see the way."))
+	to_chat(owner, span_notice("Astrata's light warms me, I see the way."))
 
 /datum/status_effect/buff/guiding_light/on_remove()
 	. = ..()
-	to_chat(owner, span_noticesmall("Astrata's light fades."))
+	to_chat(owner, span_notice("Astrata's light fades."))
 
 //noc
 /datum/status_effect/buff/moonlight_visions
@@ -47,7 +47,7 @@
 
 /datum/status_effect/buff/moonlight_visions/on_apply()
 	. = ..()
-	to_chat(owner, span_noticesmall("I see through the moonlight. Silvery threads dance in my vision."))
+	to_chat(owner, span_notice("I see through the moonlight. Silvery threads dance in my vision."))
 	ADD_TRAIT(owner, TRAIT_DARKVISION, MAGIC_TRAIT)
 
 /datum/status_effect/buff/moonlight_visions/on_remove()
@@ -143,12 +143,12 @@
 
 /datum/status_effect/buff/masquerade/on_apply()
 	. = ..()
-	to_chat(owner, span_noticesmall("Xylix laughs with me!"))
+	to_chat(owner, span_notice("Xylix laughs with me!"))
 	owner.add_spell(/datum/action/cooldown/spell/mimicry/ritual)
 
 /datum/status_effect/buff/masquerade/on_remove()
 	. = ..()
-	to_chat(owner, span_noticesmall("My mischief is over."))
+	to_chat(owner, span_notice("My mischief is over."))
 	owner.remove_spell(/datum/action/cooldown/spell/mimicry/ritual)
 
 //ravox

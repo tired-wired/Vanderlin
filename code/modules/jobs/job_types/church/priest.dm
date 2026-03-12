@@ -75,6 +75,7 @@
 		spawned.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
 
 	spawned.give_priest_verbs()
+	spawned.mind?.teach_crafting_recipe(/datum/blueprint_recipe/structure/ritual_shrine)
 
 	spawned.virginity = TRUE
 
@@ -98,7 +99,6 @@
 	backpack_contents = list(
 		/obj/item/needle = 1,
 		/obj/item/storage/belt/pouch/coins/rich = 1,
-		/obj/item/ritual_chalk
 	)
 	l_hand = /obj/item/weapon/polearm/woodstaff/aries
 

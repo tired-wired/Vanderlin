@@ -75,9 +75,6 @@
 	wrists = /obj/item/clothing/wrists/bracers/leather
 	beltl = /obj/item/weapon/knife/stone
 	backl = /obj/item/weapon/mace/goden/shillelagh
-	backpack_contents = list(
-		/obj/item/ritual_chalk,
-	)
 
 /*	.................   Base Blessing of Dendor   ................... */
 /obj/item/dendor_blessing

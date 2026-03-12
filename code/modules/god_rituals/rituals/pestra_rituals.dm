@@ -15,7 +15,7 @@
 		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
 		if(!target)
 			return
-		to_chat(caster,span_noticesmall("Their flesh writhes, their wounds knit shut! Beautiful!!"))
+		to_chat(caster,span_notice("Their flesh writhes, their wounds knit shut! Beautiful!!"))
 		if(!HAS_TRAIT(target, TRAIT_NOPAIN))
 			target.emote("agony")
 		target.visible_message("[target] writhes in pain!", span_userdanger("You feel your skin crawling, your flesh moving as it shouldn't!"))

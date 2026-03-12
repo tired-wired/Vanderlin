@@ -15,7 +15,7 @@
 	. = ..()
 	if(success)
 		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
-		target?.visible_message(span_noticesmall("[target] stands straighter and squares their shoulders."), span_noticesmall("Ravox acknowledges your earnest plea. Your soul braces itself."))
+		target?.visible_message(span_notice("[target] stands straighter and squares their shoulders."), span_notice("Ravox acknowledges your earnest plea. Your soul braces itself."))
 		target?.add_spell(/datum/action/cooldown/spell/undirected/list_target/ultimate_sacrifice)
 
 //LAST STAND - trade [something] to avoid hardcrit.

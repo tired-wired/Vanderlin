@@ -15,7 +15,6 @@
 /datum/god_ritual/purge_undead/on_completion(success)
 	. = ..()
 	if(success)
-		caster.apply_status_effect(/datum/status_effect/debuff/ritual_exhaustion, cooldown)
 		for(var/mob/living/carbon/victim in range(6,sigil))//2 tiles larger than churn undead, but guaranteed to boom
 			if(victim.mob_biotypes & MOB_UNDEAD)
 				victim.visible_message(span_warning("[victim] HAS BEEN CHURNED BY NECRA'S GRIP!"), span_userdanger("I'VE BEEN CHURNED BY NECRA'S GRIP!"))

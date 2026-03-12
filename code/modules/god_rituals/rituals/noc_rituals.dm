@@ -34,7 +34,7 @@
 		var/mob/living/carbon/target = locate(/mob/living/carbon) in get_turf(sigil)
 		if(!target)
 			return
-		to_chat(target, span_noticesmall("My eyelids grow heavy. Noc's dreams reach my mind."))
+		to_chat(target, span_notice("My eyelids grow heavy. Noc's dreams reach my mind."))
 		target.apply_status_effect(/datum/status_effect/debuff/dreamytime)
 		target.apply_status_effect(/datum/status_effect/debuff/sleepytime)
 

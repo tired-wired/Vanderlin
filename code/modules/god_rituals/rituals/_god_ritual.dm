@@ -3,9 +3,10 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 
 /proc/init_all_god_rituals()
 	var/list/all_god_rituals = list()
-	for(var/ritual in typesof(/datum/god_ritual))
-		var/datum/god_ritual/ritual_type = ritual
-		LAZYADDASSOCLIST(all_god_rituals, initial(ritual_type.ritual_patron), ritual)
+	for(var/datum/god_ritual/ritual as anything in typesof(/datum/god_ritual))
+		if(IS_ABSTRACT(ritual))
+			continue
+		LAZYADDASSOCLIST(all_god_rituals, ritual::ritual_patron, ritual)
 	return all_god_rituals
 
 /datum/god_ritual
@@ -63,7 +64,7 @@ GLOBAL_LIST_INIT(all_god_rituals, init_all_god_rituals())
 	for(var/obj/item/path as anything in required_atoms)
 		var/amount_needed = required_atoms[path]
 		if(!(requirement in summon_spot))
-			to_chat(caster, span_noticesmall("I am missing [amount_needed] [requirement.name]!"))
+			to_chat(caster, span_notice("I am missing [amount_needed] [requirement.name]!"))
 			return FALSE
 		else
 			continue*/

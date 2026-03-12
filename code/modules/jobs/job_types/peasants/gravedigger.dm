@@ -76,7 +76,6 @@
 	beltr = /obj/item/storage/belt/pouch/coins/poor
 	backr = /obj/item/weapon/shovel
 	backpack_contents = list(
-		/obj/item/ritual_chalk,
 		/obj/item/inqarticles/tallowpot,
 		/obj/item/reagent_containers/food/snacks/tallow/red
 	)

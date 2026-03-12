@@ -37,5 +37,5 @@
 		if(!target)
 			return
 		target.adjust_energy(target.max_energy)
-		target.visible_message(span_noticesmall("[target] shakes out their hands. Time to work."), span_noticesmall("I feel refreshed and ready to work."))
+		target.visible_message(span_notice("[target] shakes out their hands. Time to work."), span_notice("I feel refreshed and ready to work."))
 

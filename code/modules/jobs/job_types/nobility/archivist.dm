@@ -148,7 +148,7 @@
 	. = ..()
 
 	spawned.apply_status_effect(/datum/status_effect/buff/nocblessed)
-
+	spawned.mind?.teach_crafting_recipe(/datum/blueprint_recipe/structure/ritual_shrine)
 	if(spawned.age == AGE_OLD)
 		spawned.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 		spawned.adjust_stat_modifier(STATMOD_JOB, STATKEY_INT, 1)
@@ -165,5 +165,4 @@
 	backl = /obj/item/storage/backpack/satchel
 	backpack_contents = list(
 		/obj/item/storage/belt/pouch/coins/poor = 1,
-		/obj/item/ritual_chalk
 	)
