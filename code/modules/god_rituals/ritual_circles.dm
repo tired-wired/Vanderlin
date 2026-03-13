@@ -1,4 +1,4 @@
-
+//THIS FILE WILL BE REMOVED ONCE THE SHRINES REFACTOR IS DONE.
 /obj/item/ritual_chalk
 	name = "ritual chalk"
 	icon_state = "chalk"

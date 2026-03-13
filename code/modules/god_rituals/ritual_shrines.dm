@@ -35,6 +35,9 @@
 	if(!is_attuned)
 		user.visible_message(null, span_warning("This shrine is not yet attuned!"))
 		return
+	//we're attuned, do we actually HAVE rituals?
+	if(!length(god_rites))
+		return
 	//get your own shrine, nerd
 	if(active)
 		user.visible_message(null, span_warning("Someone is already using this shrine."))
@@ -46,8 +49,6 @@
 	//cooldown check.
 	if(user.has_status_effect(/datum/status_effect/debuff/ritual_exhaustion))
 		user.visible_message(null, span_warning("I've done a ritual too recently, I must rest."))
-		return
-	if(!length(god_rites))
 		return
 	var/choice = browser_input_list(user, "Rituals of [user.patron.name]", "THE GODS", god_rites)
 	if(!choice || QDELETED(src) || QDELETED(user) || active || !user.CanReach(src))
