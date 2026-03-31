@@ -23,14 +23,9 @@
 		/datum/attribute/skill/craft/tanning = 20
 	)
 
-
 /datum/job/forestwarden
-	title = "Forest Warden"
-	tutorial = "You were born in the forest. Alone, you've always felt home in the woods. \
-	In your tenure with the garrison, you've cleaved through the wildlife-- \
-	and for your service in the short-lived Goblin War, the king has granted you nobility. \
-	In turn, you've been entrusted to keep his lands clear of \
-	the foul creachers that taint his land. Alone, you will die in these woods."
+	title = "Warden of the Woods"
+	tutorial = "You were born to the forest - no thorn, tree, nor troll is unknown to you while you stand under these leaves. You alone have proven worthy to lead the Gallowband, and you alone are trusted to hold this weight. Honour the ancient oaths to protect these woods and bear your symbolic helmet with pride. The Hunt calls you, and one dae, you will die in these woods, leaving the mantle to another."
 	department_flag = GARRISON
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	faction = FACTION_TOWN
@@ -41,8 +36,8 @@
 	selection_color = "#0d6929"
 
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
-	allowed_races = RACES_PLAYER_NONDISCRIMINATED
-	blacklisted_species = list(SPEC_ID_HALFLING)
+	allowed_races = RACES_PLAYER_ALL
+	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD)
 
 	exp_type = list(EXP_TYPE_GARRISON)
 	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT, EXP_TYPE_LEADERSHIP)
@@ -54,6 +49,7 @@
 	spells = list(/datum/action/cooldown/spell/undirected/list_target/convert_role/guard/forest)
 	give_bank_account = 45
 	cmode_music = 'sound/music/cmode/garrison/CombatForestGarrison.ogg'
+	languages = list(/datum/language/gronnic)
 
 	job_bitflag = BITFLAG_GARRISON
 	honorary = "Warden"
@@ -69,9 +65,15 @@
 /datum/job/forestwarden/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	add_verb(spawned, /mob/proc/haltyell)
+	spawned.set_patron(/datum/patron/alternate/great_hunt/proven)
+
+	var/datum/species/species = spawned.dna?.species
+	if(species)
+		species.native_language = "Osslandic"
+		species.accent_language = species.get_accent(species.native_language)
 
 /datum/outfit/forestwarden
-	name = "Forest Warden"
+	name = "Warden of the Woods"
 	cloak = /obj/item/clothing/cloak/wardencloak
 	armor = /obj/item/clothing/armor/plate
 	shirt = /obj/item/clothing/armor/chainmail
