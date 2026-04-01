@@ -25,11 +25,11 @@
 
 
 /datum/job/forestenforcer
-	title = "Hersir"
+	title = JOB_FOREST_ENFORCER
 	tutorial = "You are the Warden's right hand. THIS IS BULLSHIT." //TODO: ADD THIS
-	department_flag = GARRISON
+	department_flag = GALLOWBAND
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
-	faction = FACTION_TOWN
+	faction = FACTION_GALLOWBAND
 	total_positions = 1
 	spawn_positions = 1
 	display_order = JDO_FORFORCER
@@ -71,7 +71,7 @@
 
 
 /datum/outfit/forestenforcer
-	name = "Hersir"
+	name = JOB_FOREST_ENFORCER
 	cloak = /obj/item/clothing/cloak/wardencloak
 	armor = /obj/item/clothing/armor/plate/iron/gronn
 	shirt = /obj/item/clothing/armor/chainmail/hauberk/iron

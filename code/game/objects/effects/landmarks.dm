@@ -206,11 +206,11 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/forestwarden
-	name = "Forest Warden"
+	name = JOB_FOREST_WARDEN
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/forestguard
-	name = "Forest Guard"
+	name = JOB_FOREST_GUARD
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/villager

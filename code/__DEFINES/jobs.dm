@@ -41,7 +41,8 @@
 	FACTION_ORCS, \
 	FACTION_BUMS, \
 	FACTION_VIKINGS, \
-	FACTION_MATTHIOS \
+	FACTION_MATTHIOS, \
+	FACTION_GALLOWBAND
 )
 
 #define FACTION_NONE		"None"
@@ -59,6 +60,7 @@
 #define FACTION_BUMS		"Bums"
 #define FACTION_MATTHIOS	"Matthios"
 #define FACTION_VIKINGS     "Vikings"
+#define FACTION_GALLOWBAND "Gallowband"
 
 #define NOBLEMEN		(1<<0)
 #define GARRISON		(1<<1)
@@ -186,3 +188,13 @@
 
 #define JOB_BOGWITCH "Bog Witch"
 #define JOB_BOGWITCH_APP "Bog Witch Apprentice"
+#define JOB_FOREST_WARDEN "Warden of the Woods"
+#define JOB_FOREST_ENFORCER "Hersir"
+#define JOB_FOREST_PREACHER "Something"
+#define JOB_FOREST_SUPPORT "Something Else"
+#define JOB_FOREST_GUARD "Forest Guard"
+#define JOB_FOREST_GUARD_RAVAGER "Forest Ravager"
+#define JOB_FOREST_GUARD_RANGER "Forest Ranger"
+#define JOB_FOREST_GUARD_REAVER "Forest Reaver"
+#define JOB_FOREST_GUARD_RUFFIAN "Forest Ruffian"
+#define JOB_FOREST_GUARD_RAT "Forest Rat"

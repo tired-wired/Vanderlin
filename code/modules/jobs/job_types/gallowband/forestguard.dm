@@ -1,5 +1,5 @@
 /datum/job/forestguard
-	title = "Forest Guard"
+	title = JOB_FOREST_GUARD
 	tutorial = "You've been keeping the streets clean of neer-do-wells and taffers for most of your time in the garrison.\
 	You've been through the wringer - alongside soldiers in the short-lived Goblin Wars. \
 	The Wars were rough, the few who survived came back changed. Perhaps you'd agree. \
@@ -8,10 +8,10 @@
 	A fellow soldier had been given the title of Forest Warden for their valorant efforts \
 	and they've plucked you from one dangerous position into another. \
 	At least with your battle-family by your side, you will never die alone."
-	department_flag = GARRISON
+	department_flag = GALLOWBAND
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_FORGUARD
-	faction = FACTION_TOWN
+	faction = FACTION_GALLOWBAND
 	total_positions = 4
 	spawn_positions = 4
 	bypass_lastclass = TRUE
@@ -85,7 +85,7 @@
 	)
 
 /datum/job/advclass/forestguard/infantry
-	title = "Forest Ravager"
+	title = JOB_FOREST_GUARD_RAVAGER
 	tutorial = "In the goblin wars- you alone were deployed to the front lines, caving skulls and chopping legs - saving your family-at-arms through your reckless diversions. With your bloodied axe and flail, every swing and crack was another hatch on your tally. Now that the War's over, even with your indomitable spirit and tireless zeal - let's see if that still rings true."
 	outfit = /datum/outfit/forestguard/infantry
 	category_tags = list(CTAG_FORGARRISON)
@@ -101,7 +101,7 @@
 	mind_traits = list(TRAIT_KNOWBANDITS)
 
 /datum/outfit/forestguard/infantry
-	name = "Forest Ravager"
+	name = JOB_FOREST_GUARD_RAVAGER
 	head = /obj/item/clothing/head/helmet/medium/decorated/skullmet
 	neck = /obj/item/clothing/neck/gorget
 	shirt = /obj/item/clothing/armor/chainmail/hauberk/iron
@@ -139,7 +139,7 @@
 	)
 
 /datum/job/advclass/forestguard/ranger
-	title = "Forest Ranger"
+	title = JOB_FOREST_GUARD_RANGER
 	tutorial = "In the Wars you were always one of the fastest, as well as one of the frailest in the platoon. Your trusty bow has served you well- of course, none you've set your sights on have found the tongue to disagree."
 	outfit = /datum/outfit/forestguard/ranger
 	category_tags = list(CTAG_FORGARRISON)
@@ -155,7 +155,7 @@
 	mind_traits = list(TRAIT_KNOWBANDITS)
 
 /datum/outfit/forestguard/ranger
-	name = "Forest Ranger"
+	name = JOB_FOREST_GUARD_RANGER
 	head = /obj/item/clothing/head/helmet/medium/decorated/skullmet
 	neck = /obj/item/clothing/neck/highcollier
 	shirt = /obj/item/clothing/armor/gambeson
@@ -192,7 +192,7 @@
 	)
 
 /datum/job/advclass/forestguard/reaver
-	title = "Forest Reaver"
+	title = JOB_FOREST_GUARD_REAVER
 	tutorial = "In the Wars you took an oath to never shy from a hit. Axe in hand, thirsting for blood, you simply enjoy the <i>chaos of battle...</i>"
 	outfit = /datum/outfit/forestguard/reaver
 	category_tags = list(CTAG_FORGARRISON)
@@ -210,7 +210,7 @@
 	mind_traits = list(TRAIT_KNOWBANDITS)
 
 /datum/outfit/forestguard/reaver
-	name = "Forest Reaver"
+	name = JOB_FOREST_GUARD_REAVER
 	head = /obj/item/clothing/head/helmet/medium/decorated/skullmet
 	neck = /obj/item/clothing/neck/gorget
 	shirt = /obj/item/clothing/armor/chainmail/hauberk/iron
@@ -253,7 +253,7 @@
 	)
 
 /datum/job/advclass/forestguard/ruffian
-	title = "Forest Ruffian"
+	title = JOB_FOREST_GUARD_RUFFIAN
 	tutorial = "For your terrible orphan pranks and antics in the city, you were rounded up by the city's Watch and put to work in the infamous forest garrison. \n\n A ruffian by circumstance, a proven listener of war stories - you might just become more than a troublemaker."
 	outfit = /datum/outfit/forestguard/ruffian
 	category_tags = list(CTAG_FORGARRISON)
@@ -303,7 +303,7 @@
 	)
 
 /datum/job/advclass/forestguard/rat
-	title = "Forest Rat"
+	title = JOB_FOREST_GUARD_RAT
 	tutorial = "Fed up with your antics in the city, you were rounded up by the city's Watch and put to work in the infamous forest garrison. \n\n Who knows, even despite your disadvantages, - you might just become more than a troublemaker."
 	outfit = /datum/outfit/forestguard/ruffian
 	category_tags = list(CTAG_FORGARRISON)
@@ -324,7 +324,7 @@
 	add_verb(spawned, /mob/proc/haltyellorphan)
 
 /datum/outfit/forestguard/ruffian
-	name = "Forest Ruffian"
+	name = JOB_FOREST_GUARD_RUFFIAN
 	head = /obj/item/clothing/head/helmet/medium/decorated/rousskullmet
 	neck = /obj/item/clothing/neck/highcollier
 	shirt = /obj/item/clothing/shirt/undershirt/colored/black

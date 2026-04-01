@@ -24,11 +24,11 @@
 	)
 
 /datum/job/forestwarden
-	title = "Warden of the Woods"
+	title = JOB_FOREST_WARDEN
 	tutorial = "You were born to the forest - no thorn, tree, nor troll is unknown to you while you stand under these leaves. You alone have proven worthy to lead the Gallowband, and you alone are trusted to hold this weight. Honour the ancient oaths to protect these woods and bear your symbolic helmet with pride. The Hunt calls you, and one dae, you will die in these woods, leaving the mantle to another."
-	department_flag = GARRISON
+	department_flag = GALLOWBAND
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
-	faction = FACTION_TOWN
+	faction = FACTION_GALLOWBAND
 	total_positions = 1
 	spawn_positions = 1
 	display_order = JDO_FORWARDEN
@@ -73,7 +73,7 @@
 		species.accent_language = species.get_accent(species.native_language)
 
 /datum/outfit/forestwarden
-	name = "Warden of the Woods"
+	name = JOB_FOREST_WARDEN
 	cloak = /obj/item/clothing/cloak/wardencloak
 	armor = /obj/item/clothing/armor/plate
 	shirt = /obj/item/clothing/armor/chainmail
