@@ -422,6 +422,7 @@ GLOBAL_LIST_EMPTY(roundstart_court_agents)
 	var/list/possible_positions = list()
 	possible_positions += GLOB.noble_positions
 	possible_positions += GLOB.garrison_positions
+	possible_positions += GLOB.gallowband_positions
 	possible_positions += GLOB.serf_positions
 	possible_positions += GLOB.company_positions
 	possible_positions += GLOB.peasant_positions

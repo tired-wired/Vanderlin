@@ -951,6 +951,7 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 			var/list/omegalist = list(
 				GLOB.noble_courthand_positions,
 				GLOB.garrison_positions,
+				GLOB.gallowband_positions,
 				GLOB.church_positions,
 				GLOB.peasant_positions,
 				GLOB.apprentices_positions,
@@ -990,6 +991,8 @@ GLOBAL_LIST_INIT(name_adjustments, list())
 						cat_name = "Nobles"
 					if(GARRISON)
 						cat_name = "Garrison"
+					if(GALLOWBAND)
+						cat_name = "Gallowband"
 					if(SERFS)
 						cat_name = "Yeomanry"
 					if(CHURCHMEN)

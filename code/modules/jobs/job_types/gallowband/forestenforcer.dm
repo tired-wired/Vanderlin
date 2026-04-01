@@ -1,9 +1,9 @@
 /datum/attribute_holder/sheet/job/forestenforcer
 	raw_attribute_list = list(
-		STAT_STRENGTH = 2,
+		STAT_STRENGTH = 3, //so they can get 12 str to wield their maul
 		STAT_ENDURANCE = 3,
 		STAT_CONSTITUTION = 3,
-		STAT_SPEED = -1,
+		STAT_SPEED = -2, //lowered to offset the str boost
 		/datum/attribute/skill/misc/swimming = 30,
 		/datum/attribute/skill/misc/climbing = 40,
 		/datum/attribute/skill/misc/athletics = 20,
@@ -26,7 +26,7 @@
 
 /datum/job/forestenforcer
 	title = "Hersir"
-	tutorial = "Test" //TODO: ADD THIS
+	tutorial = "You are the Warden's right hand. THIS IS BULLSHIT." //TODO: ADD THIS
 	department_flag = GARRISON
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	faction = FACTION_TOWN
@@ -84,7 +84,7 @@
 	belt = /obj/item/storage/belt/leather
 	beltr = /obj/item/storage/belt/pouch/coins/mid
 	backl = /obj/item/storage/backpack/satchel
-	backr = /obj/item/weapon/mace/goden/maul
+	r_hand = /obj/item/weapon/mace/goden/maul
 	backpack_contents = list(
 		/obj/item/weapon/knife/hunting = 1,
 		/obj/item/rope/chain = 1,

@@ -72,7 +72,7 @@
 #define INQUISITION 	(1<<9)
 
 #define UNDEAD			(1<<10)
-
+#define GALLOWBAND		(1<<11)
 
 #define JCOLOR_NOBLE "#9c40bf"
 #define JCOLOR_MERCHANT "#c2b449"
