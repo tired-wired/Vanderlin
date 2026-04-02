@@ -85,7 +85,7 @@
 	)
 
 /datum/job/advclass/forestguard/infantry
-	title = JOB_FOREST_GUARD_RAVAGER
+	title = JOB_FOREST_GUARD_THEGN_RAVAGER
 	tutorial = "In the goblin wars- you alone were deployed to the front lines, caving skulls and chopping legs - saving your family-at-arms through your reckless diversions. With your bloodied axe and flail, every swing and crack was another hatch on your tally. Now that the War's over, even with your indomitable spirit and tireless zeal - let's see if that still rings true."
 	outfit = /datum/outfit/forestguard/infantry
 	category_tags = list(CTAG_FORGARRISON)
@@ -101,7 +101,7 @@
 	mind_traits = list(TRAIT_KNOWBANDITS)
 
 /datum/outfit/forestguard/infantry
-	name = JOB_FOREST_GUARD_RAVAGER
+	name = JOB_FOREST_GUARD_THEGN_RAVAGER
 	head = /obj/item/clothing/head/helmet/medium/decorated/skullmet
 	neck = /obj/item/clothing/neck/gorget
 	shirt = /obj/item/clothing/armor/chainmail/hauberk/iron
@@ -139,7 +139,7 @@
 	)
 
 /datum/job/advclass/forestguard/ranger
-	title = JOB_FOREST_GUARD_RANGER
+	title = JOB_FOREST_GUARD_THEGN_RANGER
 	tutorial = "In the Wars you were always one of the fastest, as well as one of the frailest in the platoon. Your trusty bow has served you well- of course, none you've set your sights on have found the tongue to disagree."
 	outfit = /datum/outfit/forestguard/ranger
 	category_tags = list(CTAG_FORGARRISON)
@@ -155,7 +155,7 @@
 	mind_traits = list(TRAIT_KNOWBANDITS)
 
 /datum/outfit/forestguard/ranger
-	name = JOB_FOREST_GUARD_RANGER
+	name = JOB_FOREST_GUARD_THEGN_RANGER
 	head = /obj/item/clothing/head/helmet/medium/decorated/skullmet
 	neck = /obj/item/clothing/neck/highcollier
 	shirt = /obj/item/clothing/armor/gambeson
@@ -192,7 +192,7 @@
 	)
 
 /datum/job/advclass/forestguard/reaver
-	title = JOB_FOREST_GUARD_REAVER
+	title = JOB_FOREST_THEGN_REAVER
 	tutorial = "In the Wars you took an oath to never shy from a hit. Axe in hand, thirsting for blood, you simply enjoy the <i>chaos of battle...</i>"
 	outfit = /datum/outfit/forestguard/reaver
 	category_tags = list(CTAG_FORGARRISON)
@@ -210,7 +210,7 @@
 	mind_traits = list(TRAIT_KNOWBANDITS)
 
 /datum/outfit/forestguard/reaver
-	name = JOB_FOREST_GUARD_REAVER
+	name = JOB_FOREST_THEGN_REAVER
 	head = /obj/item/clothing/head/helmet/medium/decorated/skullmet
 	neck = /obj/item/clothing/neck/gorget
 	shirt = /obj/item/clothing/armor/chainmail/hauberk/iron
@@ -250,92 +250,6 @@
 		/datum/attribute/skill/misc/sneaking = 20,
 		/datum/attribute/skill/misc/stealing = 30,
 		/datum/attribute/skill/craft/tanning = 20
-	)
-
-/datum/job/advclass/forestguard/ruffian
-	title = JOB_FOREST_GUARD_RUFFIAN
-	tutorial = "For your terrible orphan pranks and antics in the city, you were rounded up by the city's Watch and put to work in the infamous forest garrison. \n\n A ruffian by circumstance, a proven listener of war stories - you might just become more than a troublemaker."
-	outfit = /datum/outfit/forestguard/ruffian
-	category_tags = list(CTAG_FORGARRISON)
-	allowed_ages = list(AGE_CHILD)
-	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD, SPEC_ID_KOBOLD_FORMIKRAG)
-
-	attribute_sheet = /datum/attribute_holder/sheet/job/forestguard/ruffian
-
-	traits = list(
-		TRAIT_FORAGER,
-		TRAIT_ORPHAN,
-		TRAIT_BRUSHWALK,
-	)
-	mind_traits = list(TRAIT_KNOWBANDITS)
-
-/datum/job/advclass/forestguard/ruffian/after_spawn(mob/living/carbon/human/spawned, client/player_client)
-	. = ..()
-	add_verb(spawned, /mob/proc/haltyellorphan)
-
-/datum/attribute_holder/sheet/job/forestguard/rat
-	attribute_variance = list(
-		STAT_STRENGTH = list(-1, 1),
-		STAT_INTELLIGENCE = list(-2, 2),
-		STAT_CONSTITUTION = list(-1, 1),
-		STAT_ENDURANCE = list(-1, 1),
-		STAT_FORTUNE = list(-4, 4),
-	)
-
-	raw_attribute_list = list(
-		STAT_PERCEPTION = 1,
-		/datum/attribute/skill/misc/swimming = 30,
-		/datum/attribute/skill/misc/climbing = 40,
-		/datum/attribute/skill/misc/athletics = 20,
-		/datum/attribute/skill/craft/crafting = 20,
-		/datum/attribute/skill/craft/carpentry = 10,
-		/datum/attribute/skill/misc/sewing = 20,
-		/datum/attribute/skill/labor/butchering = 20,
-		/datum/attribute/skill/combat/bows = 10,
-		/datum/attribute/skill/combat/crossbows = 10,
-		/datum/attribute/skill/combat/knives = 20,
-		/datum/attribute/skill/combat/axesmaces = 10,
-		/datum/attribute/skill/combat/wrestling = 10,
-		/datum/attribute/skill/craft/cooking = 20,
-		/datum/attribute/skill/misc/sneaking = 20,
-		/datum/attribute/skill/misc/stealing = 30,
-		/datum/attribute/skill/craft/tanning = 20
-	)
-
-/datum/job/advclass/forestguard/rat
-	title = JOB_FOREST_GUARD_RAT
-	tutorial = "Fed up with your antics in the city, you were rounded up by the city's Watch and put to work in the infamous forest garrison. \n\n Who knows, even despite your disadvantages, - you might just become more than a troublemaker."
-	outfit = /datum/outfit/forestguard/ruffian
-	category_tags = list(CTAG_FORGARRISON)
-	allowed_races = list(SPEC_ID_KOBOLD, SPEC_ID_KOBOLD_FORMIKRAG)
-
-	attribute_sheet = /datum/attribute_holder/sheet/job/forestguard/rat
-
-	traits = list(
-		TRAIT_FORAGER,
-		TRAIT_ORPHAN,
-		TRAIT_BRUSHWALK,
-	)
-	mind_traits = list(TRAIT_KNOWBANDITS)
-
-/datum/job/advclass/forestguard/rat/after_spawn(mob/living/carbon/human/spawned, client/player_client)
-	. = ..()
-
-	add_verb(spawned, /mob/proc/haltyellorphan)
-
-/datum/outfit/forestguard/ruffian
-	name = JOB_FOREST_GUARD_RUFFIAN
-	head = /obj/item/clothing/head/helmet/medium/decorated/rousskullmet
-	neck = /obj/item/clothing/neck/highcollier
-	shirt = /obj/item/clothing/shirt/undershirt/colored/black
-	beltl = /obj/item/weapon/knife/dagger
-	beltr = /obj/item/ammo_holder/quiver/arrows
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
-	armor = /obj/item/clothing/armor/leather
-	backpack_contents = list(
-		/obj/item/weapon/knife/hunting = 1,
-		/obj/item/cooking/pan = 1,
-		/obj/item/reagent_containers/food/snacks/egg = 1
 	)
 
 /mob/proc/haltyellorphan()

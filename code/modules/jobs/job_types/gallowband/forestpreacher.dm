@@ -26,13 +26,13 @@
 
 /datum/job/forestpreacher
 	title = JOB_FOREST_PREACHER
-	tutorial = "You are the Warden's right hand. THIS IS BULLSHIT." //TODO: ADD THIS
+	tutorial = "You are the lorekeeper of the Gallowband, master of histories and servant of the gods."
 	department_flag = GALLOWBAND
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	faction = FACTION_GALLOWBAND
 	total_positions = 1
 	spawn_positions = 1
-	display_order = JDO_FORFORCER
+	display_order = JDO_FORPREACH
 	bypass_lastclass = TRUE
 	selection_color = "#0d6929"
 

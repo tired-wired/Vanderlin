@@ -26,17 +26,18 @@
 
 /datum/job/forestsupport
 	title = JOB_FOREST_SUPPORT
-	tutorial = "You are the Warden's right hand. THIS IS BULLSHIT." //TODO: ADD THIS
+	f_title = JOB_FOREST_SUPPORT_FEM
+	tutorial = "You are a domestic aide of the Gallowband."
 	department_flag = GALLOWBAND
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	faction = FACTION_GALLOWBAND
-	total_positions = 1
-	spawn_positions = 1
-	display_order = JDO_FORFORCER
+	total_positions = 2
+	spawn_positions = 2
+	display_order = JDO_FORSUPP
 	bypass_lastclass = TRUE
 	selection_color = "#0d6929"
 
-	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
+	allowed_ages = ALL_AGES_LIST_CHILD
 	allowed_races = RACES_PLAYER_ALL
 	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD)
 
