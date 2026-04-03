@@ -1,4 +1,4 @@
-/datum/attribute_holder/sheet/job/forestsupport
+/datum/attribute_holder/sheet/job/forestsupport //TODO: change this
 	raw_attribute_list = list(
 		STAT_STRENGTH = 3, //so they can get 12 str to wield their maul
 		STAT_ENDURANCE = 3,
@@ -27,7 +27,7 @@
 /datum/job/forestsupport
 	title = JOB_FOREST_SUPPORT
 	f_title = JOB_FOREST_SUPPORT_FEM
-	tutorial = "You are a domestic aide of the Gallowband."
+	tutorial = "You are a domestic aide of the Gallowband." //TODO: expand this
 	department_flag = GALLOWBAND
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	faction = FACTION_GALLOWBAND
@@ -56,14 +56,12 @@
 	attribute_sheet = /datum/attribute_holder/sheet/job/forestsupport
 
 	traits = list(
-		TRAIT_HEAVYARMOR,
 		TRAIT_FORAGER
 	)
 
 /datum/job/forestsupport/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
-	add_verb(spawned, /mob/proc/haltyell)
-	spawned.set_patron(/datum/patron/alternate/great_hunt/proven)
+	add_verb(spawned, /mob/proc/haltyell) //TODO: make this the ruffian yell if a child
 
 	var/datum/species/species = spawned.dna?.species
 	if(species)
@@ -71,7 +69,7 @@
 		species.accent_language = species.get_accent(species.native_language)
 
 
-/datum/outfit/forestsupport
+/datum/outfit/forestsupport //TODO: change loadout
 	name = JOB_FOREST_SUPPORT
 	cloak = /obj/item/clothing/cloak/wardencloak
 	armor = /obj/item/clothing/armor/plate/iron/gronn

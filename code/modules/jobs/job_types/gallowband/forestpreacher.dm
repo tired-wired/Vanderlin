@@ -1,4 +1,4 @@
-/datum/attribute_holder/sheet/job/forestpreacher
+/datum/attribute_holder/sheet/job/forestpreacher // TODO: change this
 	raw_attribute_list = list(
 		STAT_STRENGTH = 3, //so they can get 12 str to wield their maul
 		STAT_ENDURANCE = 3,
@@ -26,7 +26,7 @@
 
 /datum/job/forestpreacher
 	title = JOB_FOREST_PREACHER
-	tutorial = "You are the lorekeeper of the Gallowband, master of histories and servant of the gods."
+	tutorial = "You are the lorekeeper of the Gallowband, master of histories and servant of the gods." //TODO: expand this
 	department_flag = GALLOWBAND
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	faction = FACTION_GALLOWBAND
@@ -36,7 +36,7 @@
 	bypass_lastclass = TRUE
 	selection_color = "#0d6929"
 
-	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
+	allowed_ages = list(AGE_OLD, AGE_IMMORTAL)
 	allowed_races = RACES_PLAYER_ALL
 	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD)
 
@@ -55,13 +55,11 @@
 	attribute_sheet = /datum/attribute_holder/sheet/job/forestpreacher
 
 	traits = list(
-		TRAIT_HEAVYARMOR,
 		TRAIT_FORAGER
 	)
 
 /datum/job/forestpreacher/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
-	add_verb(spawned, /mob/proc/haltyell)
 	spawned.set_patron(/datum/patron/alternate/great_hunt/proven)
 
 	var/datum/species/species = spawned.dna?.species
@@ -70,7 +68,7 @@
 		species.accent_language = species.get_accent(species.native_language)
 
 
-/datum/outfit/forestpreacher
+/datum/outfit/forestpreacher //TODO: change loadout
 	name = JOB_FOREST_PREACHER
 	cloak = /obj/item/clothing/cloak/wardencloak
 	armor = /obj/item/clothing/armor/plate/iron/gronn

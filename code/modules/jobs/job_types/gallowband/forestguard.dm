@@ -1,4 +1,4 @@
-/datum/job/forestguard
+/datum/job/forestguard //TODO: change all descriptions
 	title = JOB_FOREST_GUARD
 	tutorial = "You've been keeping the streets clean of neer-do-wells and taffers for most of your time in the garrison.\
 	You've been through the wringer - alongside soldiers in the short-lived Goblin Wars. \
@@ -17,9 +17,9 @@
 	bypass_lastclass = TRUE
 	selection_color = "#0d6929"
 
-	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL, AGE_CHILD)
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
 	allowed_races = RACES_PLAYER_ALL
-	blacklisted_species = list(SPEC_ID_HALFLING)
+	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD)
 	give_bank_account = 30
 	can_have_apprentices = FALSE
 	cmode_music = 'sound/music/cmode/garrison/CombatForestGarrison2.ogg'
@@ -38,6 +38,12 @@
 /datum/job/forestguard/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	add_verb(spawned, /mob/proc/haltyell)
+	spawned.set_patron(/datum/patron/alternate/great_hunt/proven)
+
+	var/datum/species/species = spawned.dna?.species
+	if(species)
+		species.native_language = "Osslandic"
+		species.accent_language = species.get_accent(species.native_language)
 
 /datum/outfit/forestguard
 	name = "Forest Guard Base"
