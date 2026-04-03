@@ -17,7 +17,7 @@
 	bypass_lastclass = TRUE
 	selection_color = "#0d6929"
 
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
+	allowed_ages = ALL_AGES_LIST
 	allowed_races = RACES_PLAYER_ALL
 	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD)
 	give_bank_account = 30
@@ -95,7 +95,7 @@
 	tutorial = "In the goblin wars- you alone were deployed to the front lines, caving skulls and chopping legs - saving your family-at-arms through your reckless diversions. With your bloodied axe and flail, every swing and crack was another hatch on your tally. Now that the War's over, even with your indomitable spirit and tireless zeal - let's see if that still rings true."
 	outfit = /datum/outfit/forestguard/infantry
 	category_tags = list(CTAG_FORGARRISON)
-	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
+	allowed_ages = ALL_AGES_LIST
 	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD, SPEC_ID_KOBOLD_FORMIKRAG)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/forestguard/infantry
@@ -149,7 +149,7 @@
 	tutorial = "In the Wars you were always one of the fastest, as well as one of the frailest in the platoon. Your trusty bow has served you well- of course, none you've set your sights on have found the tongue to disagree."
 	outfit = /datum/outfit/forestguard/ranger
 	category_tags = list(CTAG_FORGARRISON)
-	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
+	allowed_ages = ALL_AGES_LIST
 	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD, SPEC_ID_KOBOLD_FORMIKRAG)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/forestguard/ranger
@@ -202,7 +202,7 @@
 	tutorial = "In the Wars you took an oath to never shy from a hit. Axe in hand, thirsting for blood, you simply enjoy the <i>chaos of battle...</i>"
 	outfit = /datum/outfit/forestguard/reaver
 	category_tags = list(CTAG_FORGARRISON)
-	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
+	allowed_ages = ALL_AGES_LIST
 	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD, SPEC_ID_KOBOLD_FORMIKRAG)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/forestguard/reaver
@@ -262,3 +262,115 @@
 	set name = "HALT!"
 	set category = "Emotes.Noises"
 	emote("haltyellorphan")
+
+/datum/attribute_holder/sheet/job/forestguard/ossland_scout
+	raw_attribute_list = list( //TODO: change this
+		STAT_STRENGTH = 2,
+		STAT_ENDURANCE = 3,
+		STAT_CONSTITUTION = 3,
+		STAT_SPEED = -1,
+		/datum/attribute/skill/misc/swimming = 30,
+		/datum/attribute/skill/misc/climbing = 40,
+		/datum/attribute/skill/misc/athletics = 20,
+		/datum/attribute/skill/misc/reading = 10,
+		/datum/attribute/skill/misc/riding = 20,
+		/datum/attribute/skill/craft/crafting = 20,
+		/datum/attribute/skill/labor/lumberjacking = 10,
+		/datum/attribute/skill/craft/carpentry = 10,
+		/datum/attribute/skill/misc/sewing = 20,
+		/datum/attribute/skill/craft/tanning = 10,
+		/datum/attribute/skill/combat/axesmaces = 30,
+		/datum/attribute/skill/combat/whipsflails = 30,
+		/datum/attribute/skill/combat/swords = 30,
+		/datum/attribute/skill/combat/knives = 20,
+		/datum/attribute/skill/combat/shields = 30,
+		/datum/attribute/skill/combat/bows = 10,
+		/datum/attribute/skill/combat/wrestling = 30,
+		/datum/attribute/skill/combat/unarmed = 30
+	)
+
+/datum/job/advclass/forestguard/ossland_scout
+	title = JOB_FOREST_GUARD_HUSKARL_SCOUT
+	tutorial = "TODO: change this"
+	outfit = /datum/outfit/forestguard/ossland_scout
+	category_tags = list(CTAG_FORGARRISON)
+	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
+	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD, SPEC_ID_KOBOLD_FORMIKRAG)
+
+	attribute_sheet = /datum/attribute_holder/sheet/job/forestguard/infantry
+
+	traits = list(
+		TRAIT_MEDIUMARMOR,
+		TRAIT_FORAGER,
+	)
+	mind_traits = list(TRAIT_KNOWBANDITS)
+
+/datum/outfit/forestguard/ossland_scout
+	name = JOB_FOREST_GUARD_HUSKARL_SCOUT
+	head = /obj/item/clothing/head/helmet/bascinet/atgervi/gronn/ownel
+	shirt = /obj/item/clothing/armor/chainmail/hauberk/gronn
+	gloves = /obj/item/clothing/gloves/angle/gronnfur
+	pants = /obj/item/clothing/pants/trou/leather/gronn
+	armor = /obj/item/clothing/armor/leather/gronn
+	//gets either /obj/item/weapon/handclaw/gronn or /obj/item/weapon/handclaw
+	backpack_contents = list(
+		/obj/item/weapon/knife/hunting = 1,
+		/obj/item/rope/chain = 1,
+		/obj/item/storage/belt/pouch/coins/poor = 1
+	)
+
+/datum/attribute_holder/sheet/job/forestguard/ossland_fighter
+	raw_attribute_list = list(
+		STAT_STRENGTH = 2,
+		STAT_ENDURANCE = 3,
+		STAT_CONSTITUTION = 3,
+		STAT_SPEED = -1,
+		/datum/attribute/skill/misc/swimming = 30,
+		/datum/attribute/skill/misc/climbing = 40,
+		/datum/attribute/skill/misc/athletics = 20,
+		/datum/attribute/skill/misc/reading = 10,
+		/datum/attribute/skill/misc/riding = 20,
+		/datum/attribute/skill/craft/crafting = 20,
+		/datum/attribute/skill/labor/lumberjacking = 10,
+		/datum/attribute/skill/craft/carpentry = 10,
+		/datum/attribute/skill/misc/sewing = 20,
+		/datum/attribute/skill/craft/tanning = 10,
+		/datum/attribute/skill/combat/axesmaces = 30,
+		/datum/attribute/skill/combat/whipsflails = 30,
+		/datum/attribute/skill/combat/swords = 30,
+		/datum/attribute/skill/combat/knives = 20,
+		/datum/attribute/skill/combat/shields = 30,
+		/datum/attribute/skill/combat/bows = 10,
+		/datum/attribute/skill/combat/wrestling = 30,
+		/datum/attribute/skill/combat/unarmed = 30
+	)
+
+/datum/job/advclass/forestguard/ossland_fighter
+	title = JOB_FOREST_GUARD_HUSKARL_FIGHTER
+	tutorial = "TODO: change this"
+	outfit = /datum/outfit/forestguard/infantry
+	category_tags = list(CTAG_FORGARRISON)
+	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
+	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD, SPEC_ID_KOBOLD_FORMIKRAG)
+
+	attribute_sheet = /datum/attribute_holder/sheet/job/forestguard/infantry
+
+	traits = list(
+		TRAIT_MEDIUMARMOR,
+		TRAIT_FORAGER,
+	)
+	mind_traits = list(TRAIT_KNOWBANDITS)
+
+/datum/outfit/forestguard/ossland_fighter
+	name = JOB_FOREST_GUARD_HUSKARL_FIGHTER
+	head = /obj/item/clothing/head/helmet/bascinet/atgervi/gronn
+	shirt = /obj/item/clothing/armor/chainmail/hauberk/gronn
+	gloves = /obj/item/clothing/gloves/chain/gronn
+	beltl = /obj/item/weapon/sword/short/gronn
+	pants = /obj/item/clothing/pants/trou/leather/splint/gronn
+	armor = /obj/item/clothing/armor/leather/gronn
+	backpack_contents = list(
+		/obj/item/weapon/knife/hunting = 1,
+		/obj/item/rope/chain = 1,
+		/obj/item/storage/belt/pouch/coins/poor = 1
+	)

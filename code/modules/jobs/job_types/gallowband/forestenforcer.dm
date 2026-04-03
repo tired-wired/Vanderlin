@@ -26,7 +26,7 @@
 
 /datum/job/forestenforcer
 	title = JOB_FOREST_ENFORCER
-	tutorial = "You are the Warden's right hand. THIS IS BULLSHIT." //TODO: ADD THIS
+	tutorial = "You are the Warden's right hand, having hunted by their side for decades. Keep the younger upstarts in line. Ensure they follow the ways of the Hunt. One day, you will die, bones buried beside your Warden, and your strength will go to the next to pick up your maul."
 	department_flag = GALLOWBAND
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	faction = FACTION_GALLOWBAND
@@ -72,9 +72,9 @@
 
 /datum/outfit/forestenforcer
 	name = JOB_FOREST_ENFORCER
-	cloak = /obj/item/clothing/cloak/wardencloak
+	cloak = /obj/item/clothing/cloak/savage
 	armor = /obj/item/clothing/armor/plate/iron/gronn
-	shirt = /obj/item/clothing/armor/chainmail/hauberk/iron
+	shirt = /obj/item/clothing/armor/chainmail/hauberk/gronn
 	pants = /obj/item/clothing/pants/platelegs/iron/gronn
 	shoes = /obj/item/clothing/shoes/boots/armor/gronn
 	wrists = /obj/item/clothing/wrists/bracers/leather

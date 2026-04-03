@@ -61,6 +61,13 @@
 /datum/job/forestpreacher/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	spawned.set_patron(/datum/patron/alternate/great_hunt/proven)
+	spawned.apply_status_effect(/datum/status_effect/buff/bone_ward)
+
+	var/holder = spawned.patron?.devotion_holder
+	if(holder)
+		var/datum/devotion/devotion = new holder()
+		devotion.make_acolyte()
+		devotion.grant_to(spawned)
 
 	var/datum/species/species = spawned.dna?.species
 	if(species)
@@ -68,21 +75,19 @@
 		species.accent_language = species.get_accent(species.native_language)
 
 
-/datum/outfit/forestpreacher //TODO: change loadout
+/datum/outfit/forestpreacher
 	name = JOB_FOREST_PREACHER
-	cloak = /obj/item/clothing/cloak/wardencloak
-	armor = /obj/item/clothing/armor/plate/iron/gronn
-	shirt = /obj/item/clothing/armor/chainmail/hauberk/iron
-	pants = /obj/item/clothing/pants/platelegs/iron/gronn
-	shoes = /obj/item/clothing/shoes/boots/armor/gronn
+	armor = /obj/item/clothing/armor/leather/atgervi
+	neck = /obj/item/clothing/neck/psycross/great_hunt
+	pants = /obj/item/clothing/pants/trou/leather/gronn
+	shoes = /obj/item/clothing/shoes/boots
 	wrists = /obj/item/clothing/wrists/bracers/leather
-	head = /obj/item/clothing/head/helmet/heavy/ironplate/gronn
-	gloves = /obj/item/clothing/gloves/plate/iron/gronn
-	neck = /obj/item/clothing/neck/bevor
+	head = /obj/item/clothing/head/helmet/leather/shaman_hood
+	gloves = /obj/item/clothing/gloves/plate/atgervi
 	belt = /obj/item/storage/belt/leather
 	beltr = /obj/item/storage/belt/pouch/coins/mid
 	backl = /obj/item/storage/backpack/satchel
-	r_hand = /obj/item/weapon/mace/goden/maul
+	r_hand = /obj/item/weapon/polearm/woodstaff
 	backpack_contents = list(
 		/obj/item/weapon/knife/hunting = 1,
 		/obj/item/rope/chain = 1,

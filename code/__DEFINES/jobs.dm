@@ -198,6 +198,8 @@
 #define JOB_FOREST_SUPPORT_FEM "Vinnukona"
 #define JOB_FOREST_GUARD "Gallowband"
 #define JOB_FOREST_GUARD_HUSKARL "Gallowband Huskarl"
+#define JOB_FOREST_GUARD_HUSKARL_SCOUT "Gallowband Huskarl Scout"
+#define JOB_FOREST_GUARD_HUSKARL_FIGHTER "Gallowband Huskarl Fighter"
 #define JOB_FOREST_GUARD_THEGN "Gallowband Thegn"
 #define JOB_FOREST_THEGN_REAVER "Gallowband Thegn Reaver"
 #define JOB_FOREST_GUARD_THEGN_RAVAGER "Gallowband Thegn Ravager"

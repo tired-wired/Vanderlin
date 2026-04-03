@@ -55,6 +55,8 @@ GLOBAL_PROTECT(garrison_no_rebellion)
 GLOBAL_LIST_INIT(gallowband_positions, list(
 	/datum/job/forestwarden::title,
 	/datum/job/forestenforcer::title,
+	/datum/job/forestpreacher::title,
+	/datum/job/forestsupport::title,
 	/datum/job/forestguard::title,
 	/datum/job/bogwitch::title,
 	/datum/job/bog_apprentice::title,
