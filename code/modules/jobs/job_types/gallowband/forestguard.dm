@@ -70,6 +70,7 @@
 		/datum/attribute/skill/misc/riding = 20,
 		/datum/attribute/skill/craft/crafting = 20,
 		/datum/attribute/skill/labor/lumberjacking = 10,
+		/datum/attribute/skill/labor/butchering = 20,
 		/datum/attribute/skill/craft/carpentry = 10,
 		/datum/attribute/skill/misc/sewing = 20,
 		/datum/attribute/skill/craft/tanning = 10,
@@ -127,6 +128,7 @@
 		/datum/attribute/skill/misc/riding = 20,
 		/datum/attribute/skill/craft/crafting = 20,
 		/datum/attribute/skill/labor/lumberjacking = 10,
+		/datum/attribute/skill/labor/butchering = 20,
 		/datum/attribute/skill/craft/carpentry = 10,
 		/datum/attribute/skill/misc/sewing = 20,
 		/datum/attribute/skill/craft/tanning = 10,
@@ -181,6 +183,7 @@
 		/datum/attribute/skill/misc/riding = 20,
 		/datum/attribute/skill/craft/crafting = 20,
 		/datum/attribute/skill/labor/lumberjacking = 10,
+		/datum/attribute/skill/labor/butchering = 20,
 		/datum/attribute/skill/craft/carpentry = 10,
 		/datum/attribute/skill/misc/sewing = 20,
 		/datum/attribute/skill/craft/tanning = 10,
@@ -223,58 +226,28 @@
 		/obj/item/storage/belt/pouch/coins/poor = 1
 	)
 
-/datum/attribute_holder/sheet/job/forestguard/ruffian
-	attribute_variance = list(
-		STAT_STRENGTH = list(-1, 1),
-		STAT_INTELLIGENCE = list(-2, 2),
-		STAT_CONSTITUTION = list(-1, 1),
-		STAT_ENDURANCE = list(-1, 1),
-		STAT_FORTUNE = list(-4, 4),
-	)
-	raw_attribute_list = list(
-		STAT_PERCEPTION = 1,
-		/datum/attribute/skill/misc/swimming = 30,
-		/datum/attribute/skill/misc/climbing = 40,
-		/datum/attribute/skill/misc/athletics = 20,
-		/datum/attribute/skill/craft/crafting = 20,
-		/datum/attribute/skill/craft/carpentry = 10,
-		/datum/attribute/skill/misc/sewing = 20,
-		/datum/attribute/skill/labor/butchering = 20,
-		/datum/attribute/skill/combat/bows = 10,
-		/datum/attribute/skill/combat/crossbows = 10,
-		/datum/attribute/skill/combat/knives = 20,
-		/datum/attribute/skill/combat/axesmaces = 10,
-		/datum/attribute/skill/combat/wrestling = 10,
-		/datum/attribute/skill/craft/cooking = 20,
-		/datum/attribute/skill/misc/sneaking = 20,
-		/datum/attribute/skill/misc/stealing = 30,
-		/datum/attribute/skill/craft/tanning = 20
-	)
-
 /mob/proc/haltyellorphan()
 	set name = "HALT!"
 	set category = "Emotes.Noises"
 	emote("haltyellorphan")
 
 /datum/attribute_holder/sheet/job/forestguard/ossland_scout
-	raw_attribute_list = list( //TODO: change this
+	raw_attribute_list = list(
 		STAT_STRENGTH = 2,
-		STAT_ENDURANCE = 3,
-		STAT_CONSTITUTION = 3,
-		STAT_SPEED = -1,
-		/datum/attribute/skill/misc/swimming = 30,
-		/datum/attribute/skill/misc/climbing = 40,
+		STAT_ENDURANCE = -1,
+		STAT_CONSTITUTION = 1,
+		STAT_SPEED = 2,
+		/datum/attribute/skill/misc/swimming = 20,
+		/datum/attribute/skill/misc/climbing = 30,
 		/datum/attribute/skill/misc/athletics = 20,
 		/datum/attribute/skill/misc/reading = 10,
 		/datum/attribute/skill/misc/riding = 20,
 		/datum/attribute/skill/craft/crafting = 20,
-		/datum/attribute/skill/labor/lumberjacking = 10,
+		/datum/attribute/skill/labor/lumberjacking = 20,
+		/datum/attribute/skill/labor/butchering = 20,
 		/datum/attribute/skill/craft/carpentry = 10,
 		/datum/attribute/skill/misc/sewing = 20,
 		/datum/attribute/skill/craft/tanning = 10,
-		/datum/attribute/skill/combat/axesmaces = 30,
-		/datum/attribute/skill/combat/whipsflails = 30,
-		/datum/attribute/skill/combat/swords = 30,
 		/datum/attribute/skill/combat/knives = 20,
 		/datum/attribute/skill/combat/shields = 30,
 		/datum/attribute/skill/combat/bows = 10,
@@ -316,26 +289,25 @@
 	raw_attribute_list = list(
 		STAT_STRENGTH = 2,
 		STAT_ENDURANCE = 3,
-		STAT_CONSTITUTION = 3,
+		STAT_CONSTITUTION = 2,
 		STAT_SPEED = -1,
-		/datum/attribute/skill/misc/swimming = 30,
-		/datum/attribute/skill/misc/climbing = 40,
+		/datum/attribute/skill/misc/swimming = 20,
+		/datum/attribute/skill/misc/climbing = 30,
 		/datum/attribute/skill/misc/athletics = 20,
 		/datum/attribute/skill/misc/reading = 10,
 		/datum/attribute/skill/misc/riding = 20,
 		/datum/attribute/skill/craft/crafting = 20,
-		/datum/attribute/skill/labor/lumberjacking = 10,
+		/datum/attribute/skill/labor/lumberjacking = 20,
+		/datum/attribute/skill/labor/butchering = 20,
 		/datum/attribute/skill/craft/carpentry = 10,
 		/datum/attribute/skill/misc/sewing = 20,
 		/datum/attribute/skill/craft/tanning = 10,
-		/datum/attribute/skill/combat/axesmaces = 30,
-		/datum/attribute/skill/combat/whipsflails = 30,
 		/datum/attribute/skill/combat/swords = 30,
 		/datum/attribute/skill/combat/knives = 20,
 		/datum/attribute/skill/combat/shields = 30,
 		/datum/attribute/skill/combat/bows = 10,
 		/datum/attribute/skill/combat/wrestling = 30,
-		/datum/attribute/skill/combat/unarmed = 30
+		/datum/attribute/skill/combat/unarmed = 20
 	)
 
 /datum/job/advclass/forestguard/ossland_fighter
