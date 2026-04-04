@@ -26,7 +26,7 @@
 
 /datum/job/forestpreacher
 	title = JOB_FOREST_PREACHER
-	tutorial = "You are the lorekeeper of the Gallowband, master of histories and servant of the gods." //TODO: expand this
+	tutorial = "Once you walked these woods as its Warden, until your bones ached too much to pick up your axe. Now you guide the next generation of hunters to follow in your footsteps. Advise them well. Accept your devotion's rewards with open eyes and arms."
 	department_flag = GALLOWBAND
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	faction = FACTION_GALLOWBAND
@@ -40,10 +40,10 @@
 	allowed_races = RACES_PLAYER_ALL
 	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD)
 
-	exp_type = list(EXP_TYPE_GARRISON)
-	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT, EXP_TYPE_LEADERSHIP)
+	exp_type = list(EXP_TYPE_CHURCH)
+	exp_types_granted = list(EXP_TYPE_LEADERSHIP, EXP_TYPE_CHURCH)
 	exp_requirements = list(
-		EXP_TYPE_GARRISON = 900
+		EXP_TYPE_CHURCH = 600
 	)
 
 	outfit = /datum/outfit/forestpreacher
@@ -92,4 +92,5 @@
 		/obj/item/weapon/knife/hunting = 1,
 		/obj/item/rope/chain = 1,
 		/obj/item/key/forrestgarrison = 1,
+		/obj/item/needle = 1,
 	)

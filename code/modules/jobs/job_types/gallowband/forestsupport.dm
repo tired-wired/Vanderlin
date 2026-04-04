@@ -40,15 +40,11 @@
 	allowed_ages = ALL_AGES_LIST_CHILD
 	allowed_races = RACES_PLAYER_ALL
 	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD)
+	allowed_patrons = list(/datum/patron/alternate/great_hunt)
 
-	exp_type = list(EXP_TYPE_GARRISON)
-	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT, EXP_TYPE_LEADERSHIP)
-	exp_requirements = list(
-		EXP_TYPE_GARRISON = 900
-	)
 
 	outfit = /datum/outfit/forestsupport
-	give_bank_account = 40
+	give_bank_account = 20
 	cmode_music = 'sound/music/cmode/garrison/CombatForestGarrison.ogg'
 
 	job_bitflag = BITFLAG_GARRISON
@@ -59,9 +55,20 @@
 		TRAIT_FORAGER
 	)
 
+/datum/outfit/forestsupport/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
+	. = ..()
+	//gronn pants don't have a child sprite, so I'll do this to make sure kids get pants.
+	if(equipped_human.age == AGE_CHILD)
+		pants = /obj/item/clothing/pants/trou/leather
+	else
+		pants = /obj/item/clothing/pants/trou/leather/gronn
+
 /datum/job/forestsupport/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
-	add_verb(spawned, /mob/proc/haltyell) //TODO: make this the ruffian yell if a child
+	if(spawned.age == AGE_CHILD)
+		add_verb(spawned, /mob/proc/haltyellorphan)
+	else
+		add_verb(spawned, /mob/proc/haltyell)
 
 	var/datum/species/species = spawned.dna?.species
 	if(species)
@@ -69,23 +76,19 @@
 		species.accent_language = species.get_accent(species.native_language)
 
 
-/datum/outfit/forestsupport //TODO: change loadout
+/datum/outfit/forestsupport
 	name = JOB_FOREST_SUPPORT
-	cloak = /obj/item/clothing/cloak/wardencloak
-	armor = /obj/item/clothing/armor/plate/iron/gronn
-	shirt = /obj/item/clothing/armor/chainmail/hauberk/iron
-	pants = /obj/item/clothing/pants/platelegs/iron/gronn
-	shoes = /obj/item/clothing/shoes/boots/armor/gronn
+	shirt = /obj/item/clothing/shirt/tunic/colored/black
+	shoes = /obj/item/clothing/shoes/boots
 	wrists = /obj/item/clothing/wrists/bracers/leather
-	head = /obj/item/clothing/head/helmet/heavy/ironplate/gronn
-	gloves = /obj/item/clothing/gloves/plate/iron/gronn
-	neck = /obj/item/clothing/neck/bevor
+	head = /obj/item/clothing/head/basichood
+	gloves = /obj/item/clothing/gloves/angle/gronn
 	belt = /obj/item/storage/belt/leather
-	beltr = /obj/item/storage/belt/pouch/coins/mid
+	beltr = /obj/item/storage/belt/pouch/coins/poor
 	backl = /obj/item/storage/backpack/satchel
-	r_hand = /obj/item/weapon/mace/goden/maul
 	backpack_contents = list(
 		/obj/item/weapon/knife/hunting = 1,
-		/obj/item/rope/chain = 1,
 		/obj/item/key/forrestgarrison = 1,
+		/obj/item/needle = 1,
+		/obj/item/weapon/hammer/wood = 1,
 	)
