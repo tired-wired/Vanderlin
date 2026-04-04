@@ -10,22 +10,18 @@
 	charge_required = FALSE
 	cooldown_time = 3 SECONDS
 	spell_cost = 0
+	check_flags = NONE
 
-	//tracking if we're already in stasis
+	//tracking if we're already in basic stasis
 	var/stasis = FALSE
-	var/deep_stasis = FALSE
 
 
 /datum/action/cooldown/spell/undirected/eternal_vigilance/cast(mob/living/carbon/human/cast_on)
 	. = ..()
 	if(stasis)
-		//we're ALREADY in stasis, time to wake up
-		REMOVE_TRAIT(cast_on, TRAIT_IMMOBILIZED, "species ability")
+		//we're ALREADY in basic stasis, time to wake up
 		stasis = FALSE
-		cast_on.remove_status_effect(/datum/status_effect/stasis)
-		if(deep_stasis)
-			deep_stasis = FALSE
-			//wake up!!
+		cast_on.remove_status_effect(/datum/status_effect/aasimar_stasis)
 	else
 		//try to enter stasis
 		if(cast_on.eyesclosed)
@@ -35,14 +31,10 @@
 					//we're too uncomfortable for deep stasis
 					to_chat(src, span_boldwarning("I can't enter stasis...the [thing] bothers me..."))
 					break
-			//we made it through the items check, fall asleep standing
-			ADD_TRAIT(cast_on, TRAIT_IMMOBILIZED, "species ability")
-			stasis = TRUE
-			deep_stasis = TRUE
-			cast_on.apply_status_effect(/datum/status_effect/stasis)
-			//TODO: make them eepy
+				else
+					//we made it through the items check, go into deep stasis. Set duration.
+					cast_on.apply_status_effect(/datum/status_effect/aasimar_stasis/deep)
 		else
 			//time for regular stasis
-			ADD_TRAIT(cast_on, TRAIT_IMMOBILIZED, "species ability")
-			cast_on.apply_status_effect(/datum/status_effect/stasis)
+			cast_on.apply_status_effect(/datum/status_effect/aasimar_stasis)
 			stasis = TRUE
