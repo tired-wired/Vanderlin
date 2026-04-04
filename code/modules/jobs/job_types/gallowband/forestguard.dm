@@ -305,7 +305,7 @@
 	gloves = /obj/item/clothing/gloves/angle/gronnfur
 	pants = /obj/item/clothing/pants/trou/leather/gronn
 	armor = /obj/item/clothing/armor/leather/gronn
-	//gets either /obj/item/weapon/handclaw/gronn or /obj/item/weapon/handclaw
+	beltl = /obj/item/weapon/handclaw/gronn
 	backpack_contents = list(
 		/obj/item/weapon/knife/hunting = 1,
 		/obj/item/rope/chain = 1,
