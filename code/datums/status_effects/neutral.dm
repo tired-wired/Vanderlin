@@ -48,7 +48,7 @@
 	owner.adjust_energy((owner.max_energy * 0.02))
 	if(!(owner.blood_volume == BLOOD_VOLUME_MAXIMUM))
 		owner.blood_volume = min(owner.blood_volume + 2, BLOOD_VOLUME_NORMAL)
-	owner.heal_overall_damage(2, 2, BODYPART_ORGANIC, TRUE)
+	owner.heal_overall_damage(1, 1, BODYPART_ORGANIC, TRUE)
 
 //ENDROGUE
 
