@@ -29,10 +29,10 @@
 			for(var/obj/item/clothing/thing in equipped_items)
 				if(thing.clothing_flags & CANT_SLEEP_IN)
 					//we're too uncomfortable for deep stasis
-					to_chat(src, span_boldwarning("I can't enter stasis...the [thing] bothers me..."))
+					to_chat(cast_on, span_boldwarning("I can't enter stasis...the [thing] bothers me..."))
 					break
 				else
-					//we made it through the items check, go into deep stasis. Set duration.
+					//we made it through the items check, go into deep stasis for a set duration.
 					cast_on.apply_status_effect(/datum/status_effect/aasimar_stasis/deep)
 		else
 			//time for regular stasis
