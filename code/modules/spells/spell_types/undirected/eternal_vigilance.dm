@@ -14,6 +14,7 @@
 
 	//tracking if we're already in basic stasis
 	var/stasis = FALSE
+	var/can_sleep = TRUE
 
 
 /datum/action/cooldown/spell/undirected/eternal_vigilance/cast(mob/living/carbon/human/cast_on)
@@ -30,10 +31,11 @@
 				if(thing.clothing_flags & CANT_SLEEP_IN)
 					//we're too uncomfortable for deep stasis
 					to_chat(cast_on, span_boldwarning("I can't enter stasis...[thing] bothers me..."))
+					can_sleep = FALSE
 					break
-				else
-					//we made it through the items check, go into deep stasis for a set duration.
-					cast_on.apply_status_effect(/datum/status_effect/aasimar_stasis/deep)
+			//we made it through the items check, go into deep stasis for a set duration.
+			if(can_sleep)
+				cast_on.apply_status_effect(/datum/status_effect/aasimar_stasis/deep)
 		else
 			//time for regular stasis
 			cast_on.apply_status_effect(/datum/status_effect/aasimar_stasis)
