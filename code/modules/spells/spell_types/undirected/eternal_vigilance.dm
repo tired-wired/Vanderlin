@@ -19,6 +19,7 @@
 
 /datum/action/cooldown/spell/undirected/eternal_vigilance/cast(mob/living/carbon/human/cast_on)
 	. = ..()
+	can_sleep = TRUE
 	if(stasis)
 		//we're ALREADY in basic stasis, time to wake up
 		stasis = FALSE
