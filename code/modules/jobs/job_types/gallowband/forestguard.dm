@@ -263,7 +263,7 @@
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
 	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD, SPEC_ID_KOBOLD_FORMIKRAG)
 
-	attribute_sheet = /datum/attribute_holder/sheet/job/forestguard/infantry
+	attribute_sheet = /datum/attribute_holder/sheet/job/forestguard/ossland_scout
 
 	traits = list(
 		TRAIT_MEDIUMARMOR,
@@ -313,12 +313,12 @@
 /datum/job/advclass/forestguard/ossland_fighter
 	title = JOB_FOREST_GUARD_HUSKARL_FIGHTER
 	tutorial = "The younger of your band do not remember the Goblin Wars as closely as you. Uphold your warband's oath to the crown. Let no orc, goblin, or beast slay those who aren't ready to go to the Skull. Your blade stands between them and being severed from the cycle."
-	outfit = /datum/outfit/forestguard/infantry
+	outfit = /datum/outfit/forestguard/ossland_fighter
 	category_tags = list(CTAG_FORGARRISON)
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
 	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD, SPEC_ID_KOBOLD_FORMIKRAG)
 
-	attribute_sheet = /datum/attribute_holder/sheet/job/forestguard/infantry
+	attribute_sheet = /datum/attribute_holder/sheet/job/forestguard/ossland_fighter
 
 	traits = list(
 		TRAIT_MEDIUMARMOR,
