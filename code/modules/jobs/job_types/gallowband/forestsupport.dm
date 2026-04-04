@@ -1,26 +1,22 @@
-/datum/attribute_holder/sheet/job/forestsupport //TODO: change this
+/datum/attribute_holder/sheet/job/forestsupport
 	raw_attribute_list = list(
-		STAT_STRENGTH = 3, //so they can get 12 str to wield their maul
-		STAT_ENDURANCE = 3,
-		STAT_CONSTITUTION = 3,
-		STAT_SPEED = -2, //lowered to offset the str boost
-		/datum/attribute/skill/misc/swimming = 30,
-		/datum/attribute/skill/misc/climbing = 40,
-		/datum/attribute/skill/misc/athletics = 20,
-		/datum/attribute/skill/misc/reading = 10,
-		/datum/attribute/skill/misc/riding = 20,
-		/datum/attribute/skill/craft/crafting = 20,
-		/datum/attribute/skill/labor/lumberjacking = 10,
-		/datum/attribute/skill/craft/carpentry = 10,
-		/datum/attribute/skill/misc/sewing = 20,
+		STAT_STRENGTH = 1,
+		STAT_CONSTITUTION = 2,
+		STAT_ENDURANCE = -1,
+		STAT_SPEED = 1,
+		/datum/attribute/skill/combat/wrestling = 10,
+		/datum/attribute/skill/combat/unarmed = 10,
+		/datum/attribute/skill/craft/crafting = 30,
+		/datum/attribute/skill/craft/cooking = 20,
+		/datum/attribute/skill/craft/carpentry = 30,
 		/datum/attribute/skill/craft/tanning = 10,
-		/datum/attribute/skill/combat/axesmaces = 40,
-		/datum/attribute/skill/combat/swords = 30,
-		/datum/attribute/skill/combat/knives = 20,
-		/datum/attribute/skill/combat/shields = 30,
-		/datum/attribute/skill/combat/bows = 10,
-		/datum/attribute/skill/combat/wrestling = 30,
-		/datum/attribute/skill/combat/unarmed = 30
+		/datum/attribute/skill/misc/swimming = 20,
+		/datum/attribute/skill/misc/climbing = 30,
+		/datum/attribute/skill/misc/sewing = 10,
+		/datum/attribute/skill/misc/reading = 10,
+		/datum/attribute/skill/misc/athletics = 10,
+		/datum/attribute/skill/labor/lumberjacking = 30,
+		/datum/attribute/skill/labor/butchering = 10,
 	)
 
 
@@ -81,7 +77,7 @@
 	shirt = /obj/item/clothing/shirt/tunic/colored/black
 	shoes = /obj/item/clothing/shoes/boots
 	wrists = /obj/item/clothing/wrists/bracers/leather
-	head = /obj/item/clothing/head/basichood
+	head = /obj/item/clothing/head/roguehood
 	gloves = /obj/item/clothing/gloves/angle/gronn
 	belt = /obj/item/storage/belt/leather
 	beltr = /obj/item/storage/belt/pouch/coins/poor

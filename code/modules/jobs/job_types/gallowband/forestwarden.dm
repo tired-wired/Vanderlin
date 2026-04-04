@@ -20,7 +20,8 @@
 		/datum/attribute/skill/labor/lumberjacking = 10,
 		/datum/attribute/skill/craft/carpentry = 10,
 		/datum/attribute/skill/misc/sewing = 10,
-		/datum/attribute/skill/craft/tanning = 20
+		/datum/attribute/skill/craft/tanning = 20,
+		/datum/attribute/skill/labor/butchering = 20,
 	)
 
 /datum/job/forestwarden

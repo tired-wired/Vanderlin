@@ -11,6 +11,7 @@
 		/datum/attribute/skill/misc/riding = 20,
 		/datum/attribute/skill/craft/crafting = 20,
 		/datum/attribute/skill/labor/lumberjacking = 10,
+		/datum/attribute/skill/labor/butchering = 20,
 		/datum/attribute/skill/craft/carpentry = 10,
 		/datum/attribute/skill/misc/sewing = 20,
 		/datum/attribute/skill/craft/tanning = 10,
