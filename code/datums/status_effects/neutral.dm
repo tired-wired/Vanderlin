@@ -12,6 +12,10 @@
 	desc = "I am knocked off balance!"
 	icon_state = "off_balanced"
 
+/datum/status_effect/stasis
+	id = "aasimar_stasis"
+	examine_text = span_notice("SUBJECTPRONOUN is as still as a statue.")
+
 //ENDROGUE
 
 /datum/status_effect/sigil_mark //allows the affected target to always trigger sigils while mindless
