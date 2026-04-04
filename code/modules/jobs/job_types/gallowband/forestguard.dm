@@ -1,13 +1,6 @@
 /datum/job/forestguard //TODO: change all descriptions
 	title = JOB_FOREST_GUARD
-	tutorial = "You've been keeping the streets clean of neer-do-wells and taffers for most of your time in the garrison.\
-	You've been through the wringer - alongside soldiers in the short-lived Goblin Wars. \
-	The Wars were rough, the few who survived came back changed. Perhaps you'd agree. \
-	\
-	\n\n\
-	A fellow soldier had been given the title of Forest Warden for their valorant efforts \
-	and they've plucked you from one dangerous position into another. \
-	At least with your battle-family by your side, you will never die alone."
+	tutorial = "Decades ago, your ancestors were a mercenary band that earned their keep here. Now you inherit their oaths. Protect the forests from beasts and aid travelers. They will never stay for long, but at least with your battle-family by your side, you will never die alone."
 	department_flag = GALLOWBAND
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_FORGUARD
@@ -92,7 +85,7 @@
 
 /datum/job/advclass/forestguard/infantry
 	title = JOB_FOREST_GUARD_THEGN_RAVAGER
-	tutorial = "In the goblin wars- you alone were deployed to the front lines, caving skulls and chopping legs - saving your family-at-arms through your reckless diversions. With your bloodied axe and flail, every swing and crack was another hatch on your tally. Now that the War's over, even with your indomitable spirit and tireless zeal - let's see if that still rings true."
+	tutorial = "In the many battles, you alone were deployed to the front lines, caving skulls and chopping legs - saving your family-at-arms through your reckless diversions. With your bloodied axe and flail, every swing and crack was another hatch on your tally. Now the forest is calmer, for the moment. Keep up your indomitable spirit and tireless zeal. Let no orc or goblin past."
 	outfit = /datum/outfit/forestguard/infantry
 	category_tags = list(CTAG_FORGARRISON)
 	allowed_ages = ALL_AGES_LIST
@@ -146,7 +139,7 @@
 
 /datum/job/advclass/forestguard/ranger
 	title = JOB_FOREST_GUARD_THEGN_RANGER
-	tutorial = "In the Wars you were always one of the fastest, as well as one of the frailest in the platoon. Your trusty bow has served you well- of course, none you've set your sights on have found the tongue to disagree."
+	tutorial = "In the many battles, you were always one of the fastest, as well as one of the frailest in the platoon. Your trusty bow has served you well- of course, none you've set your sights on have found the tongue to disagree."
 	outfit = /datum/outfit/forestguard/ranger
 	category_tags = list(CTAG_FORGARRISON)
 	allowed_ages = ALL_AGES_LIST
@@ -199,7 +192,7 @@
 
 /datum/job/advclass/forestguard/reaver
 	title = JOB_FOREST_THEGN_REAVER
-	tutorial = "In the Wars you took an oath to never shy from a hit. Axe in hand, thirsting for blood, you simply enjoy the <i>chaos of battle...</i>"
+	tutorial = "In your youth you took an oath to never shy from a hit. Axe in hand, thirsting for blood, you simply enjoy the <i>chaos of battle...</i>"
 	outfit = /datum/outfit/forestguard/reaver
 	category_tags = list(CTAG_FORGARRISON)
 	allowed_ages = ALL_AGES_LIST
@@ -291,7 +284,7 @@
 
 /datum/job/advclass/forestguard/ossland_scout
 	title = JOB_FOREST_GUARD_HUSKARL_SCOUT
-	tutorial = "TODO: change this"
+	tutorial = "The younger of your band do not remember the Goblin Wars as deeply as you. Keep up your vigilance. Pass down your knowledge to those less experienced in the Hunt. When the Graggarspawn tide rises again, you'll be the first to know."
 	outfit = /datum/outfit/forestguard/ossland_scout
 	category_tags = list(CTAG_FORGARRISON)
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
@@ -347,7 +340,7 @@
 
 /datum/job/advclass/forestguard/ossland_fighter
 	title = JOB_FOREST_GUARD_HUSKARL_FIGHTER
-	tutorial = "TODO: change this"
+	tutorial = "The younger of your band do not remember the Goblin Wars as closely as you. Uphold your warband's oath to the crown. Let no orc, goblin, or beast slay those who aren't ready to go to the Skull. Your blade stands between them and being severed from the cycle."
 	outfit = /datum/outfit/forestguard/infantry
 	category_tags = list(CTAG_FORGARRISON)
 	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
