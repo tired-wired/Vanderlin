@@ -283,8 +283,8 @@
 #define JOB_FOREST_GUARD_HUSKARL_FIGHTER "Gallowband Huskarl Fighter"
 #define JOB_FOREST_GUARD_THEGN "Gallowband Thegn"
 #define JOB_FOREST_THEGN_REAVER "Gallowband Thegn Reaver"
-#define JOB_FOREST_GUARD_THEGN_RAVAGER "Gallowband Thegn Ravager"
-#define JOB_FOREST_GUARD_THEGN_RANGER "Gallowband Thegn Ranger"
+#define JOB_FOREST_THEGN_RAVAGER "Gallowband Thegn Ravager"
+#define JOB_FOREST_THEGN_RANGER "Gallowband Thegn Ranger"
 
 
 #define JOB_PRAFEKT "Herr Prafekt"
