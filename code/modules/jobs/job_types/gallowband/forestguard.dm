@@ -86,7 +86,7 @@
 	)
 
 /datum/job/advclass/forestguard/infantry
-	title = JOB_FOREST_THEGN_RAVAGER
+	title = JOB_FOREST_GUARD_THEGN_RAVAGER
 	tutorial = "In the many battles, you alone were deployed to the front lines, caving skulls and chopping legs - saving your family-at-arms through your reckless diversions. With your bloodied axe and flail, every swing and crack was another hatch on your tally. Now the forest is calmer, for the moment. Keep up your indomitable spirit and tireless zeal. Let no orc or goblin past."
 	outfit = /datum/outfit/forestguard/infantry
 	category_tags = list(CTAG_FORGARRISON)
@@ -102,7 +102,7 @@
 	mind_traits = list(TRAIT_KNOWBANDITS)
 
 /datum/outfit/forestguard/infantry
-	name = JOB_FOREST_THEGN_RAVAGER
+	name = JOB_FOREST_GUARD_THEGN_RAVAGER
 	head = /obj/item/clothing/head/helmet/medium/decorated/skullmet
 	neck = /obj/item/clothing/neck/gorget
 	shirt = /obj/item/clothing/armor/chainmail/hauberk/iron
@@ -141,7 +141,7 @@
 	)
 
 /datum/job/advclass/forestguard/ranger
-	title = JOB_FOREST_THEGN_RANGER
+	title = JOB_FOREST_GUARD_THEGN_RANGER
 	tutorial = "In the many battles, you were always one of the fastest, as well as one of the frailest in the platoon. Your trusty bow has served you well- of course, none you've set your sights on have found the tongue to disagree."
 	outfit = /datum/outfit/forestguard/ranger
 	category_tags = list(CTAG_FORGARRISON)
@@ -157,7 +157,7 @@
 	mind_traits = list(TRAIT_KNOWBANDITS)
 
 /datum/outfit/forestguard/ranger
-	name = JOB_FOREST_THEGN_RANGER
+	name = JOB_FOREST_GUARD_THEGN_RANGER
 	head = /obj/item/clothing/head/helmet/medium/decorated/skullmet
 	neck = /obj/item/clothing/neck/highcollier
 	shirt = /obj/item/clothing/armor/gambeson
@@ -195,7 +195,7 @@
 	)
 
 /datum/job/advclass/forestguard/reaver
-	title = JOB_FOREST_THEGN_REAVER
+	title = JOB_FOREST_GUARD_THEGN_REAVER
 	tutorial = "In your youth you took an oath to never shy from a hit. Axe in hand, thirsting for blood, you simply enjoy the <i>chaos of battle...</i>"
 	outfit = /datum/outfit/forestguard/reaver
 	category_tags = list(CTAG_FORGARRISON)
@@ -213,7 +213,7 @@
 	mind_traits = list(TRAIT_KNOWBANDITS)
 
 /datum/outfit/forestguard/reaver
-	name = JOB_FOREST_THEGN_REAVER
+	name = JOB_FOREST_GUARD_THEGN_REAVER
 	head = /obj/item/clothing/head/helmet/medium/decorated/skullmet
 	neck = /obj/item/clothing/neck/gorget
 	shirt = /obj/item/clothing/armor/chainmail/hauberk/iron
