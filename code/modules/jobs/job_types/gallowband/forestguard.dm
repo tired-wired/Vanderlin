@@ -163,7 +163,7 @@
 	beltl = /obj/item/weapon/knife/cleaver/combat
 	beltr = /obj/item/ammo_holder/quiver/arrows
 	armor = /obj/item/clothing/armor/leather/advanced/forrester
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/long
+	backr = /obj/item/gun/ballistic/bow/long
 	backpack_contents = list(
 		/obj/item/weapon/knife/hunting = 1,
 		/obj/item/rope/chain = 1,
