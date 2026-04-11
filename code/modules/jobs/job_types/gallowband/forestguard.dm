@@ -12,7 +12,7 @@
 
 	allowed_ages = ALL_AGES_LIST
 	allowed_races = RACES_PLAYER_ALL
-	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD)
+	blacklisted_species = list(SPEC_ID_HALFLING, SPEC_ID_KOBOLD, SPEC_ID_KOBOLD_FORMIKRAG)
 	give_bank_account = 30
 	can_have_apprentices = FALSE
 	cmode_music = 'sound/music/cmode/garrison/CombatForestGarrison2.ogg'
@@ -56,6 +56,7 @@
 
 /datum/job/advclass/forestguard
 	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
+	banned_patrons = list()
 
 /datum/attribute_holder/sheet/job/forestguard/infantry
 	raw_attribute_list = list(
