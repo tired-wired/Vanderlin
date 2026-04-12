@@ -62,6 +62,9 @@
 		TRAIT_NOBLE_POWER,
 		TRAIT_FORAGER
 	)
+	verbs = list(
+		/mob/proc/haltyell
+	)
 
 /datum/job/forestwarden/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()

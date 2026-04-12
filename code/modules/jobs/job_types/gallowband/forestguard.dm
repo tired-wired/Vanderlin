@@ -27,6 +27,9 @@
 	exp_requirements = list(
 		EXP_TYPE_GARRISON = 600
 	)
+	verbs = list(
+		/mob/proc/haltyell
+	)
 
 /datum/job/forestguard/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
@@ -271,6 +274,9 @@
 		TRAIT_FORAGER,
 	)
 	mind_traits = list(TRAIT_KNOWBANDITS)
+	verbs = list(
+		/mob/proc/haltyellorphan
+	)
 
 /datum/outfit/forestguard/ossland_scout
 	name = JOB_FOREST_GUARD_HUSKARL_SCOUT
@@ -326,6 +332,9 @@
 		TRAIT_FORAGER,
 	)
 	mind_traits = list(TRAIT_KNOWBANDITS)
+	verbs = list(
+		/mob/proc/haltyell
+	)
 
 /datum/outfit/forestguard/ossland_fighter
 	name = JOB_FOREST_GUARD_HUSKARL_FIGHTER
