@@ -51,6 +51,8 @@
 		TRAIT_FORAGER
 	)
 
+	languages = list(/datum/language/gronnic)
+
 /datum/outfit/forestsupport/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
 	. = ..()
 	//gronn pants don't have a child sprite, so I'll do this to make sure kids get pants.

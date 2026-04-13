@@ -56,6 +56,8 @@
 		TRAIT_FORAGER
 	)
 
+	languages = list(/datum/language/gronnic)
+
 /datum/job/forestpreacher/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	spawned.set_patron(/datum/patron/alternate/great_hunt/proven)

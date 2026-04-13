@@ -60,6 +60,8 @@
 		TRAIT_FORAGER
 	)
 
+	languages = list(/datum/language/gronnic)
+
 /datum/job/forestenforcer/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	add_verb(spawned, /mob/proc/haltyell)

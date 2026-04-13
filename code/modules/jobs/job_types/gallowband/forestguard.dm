@@ -31,6 +31,8 @@
 		/mob/proc/haltyell
 	)
 
+	languages = list(/datum/language/gronnic)
+
 /datum/job/forestguard/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	add_verb(spawned, /mob/proc/haltyell)
