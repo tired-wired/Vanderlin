@@ -346,6 +346,7 @@
 	beltl = /obj/item/weapon/sword/short/gronn
 	pants = /obj/item/clothing/pants/trou/leather/splint/gronn
 	armor = /obj/item/clothing/armor/leather/gronn
+	backr = /obj/item/weapon/shield/wood
 	backpack_contents = list(
 		/obj/item/weapon/knife/hunting = 1,
 		/obj/item/rope/chain = 1,
