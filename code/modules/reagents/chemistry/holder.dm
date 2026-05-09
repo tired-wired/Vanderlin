@@ -305,12 +305,16 @@
 	var/list/cached_reagents = reagent_list
 	if (!target)
 		return
-	if (!target.reagents || src.total_volume<=0 || !src.get_reagent_amount(reagent))
-		return
+	var/datum/reagents/R
+	if(!istype(target, /datum/reagents))
+		if (!target.reagents || src.total_volume<=0 || !src.get_reagent_amount(reagent))
+			return
+		R = target.reagents
+	else
+		R = target
 	if(amount < 0)
 		return
 
-	var/datum/reagents/R = target.reagents
 	if(src.get_reagent_amount(reagent)<amount)
 		amount = src.get_reagent_amount(reagent)
 	amount = min(amount, R.maximum_volume-R.total_volume)
@@ -329,7 +333,7 @@
 	R.handle_reactions()
 	return amount
 
-/datum/reagents/proc/metabolize(mob/living/carbon/C, can_overdose = FALSE, liverless = FALSE)
+/datum/reagents/proc/metabolize(mob/living/carbon/C, can_overdose = FALSE, liverless = FALSE, efficiency = 100)
 	var/list/cached_reagents = reagent_list
 	var/list/cached_addictions = addiction_list
 	if(C)
@@ -368,7 +372,9 @@
 						for(var/datum/reagent/A as anything in cached_addictions)
 							if(istype(R, A))
 								A.addiction_stage = -15 // you're satisfied for a good while.
-				need_mob_update += R.on_mob_life(C)
+				if(!R.liver_chemical)
+					efficiency = 100
+				need_mob_update += R.on_mob_life(C, efficiency * 0.01)
 
 	if(can_overdose)
 		if(addiction_tick == 6)

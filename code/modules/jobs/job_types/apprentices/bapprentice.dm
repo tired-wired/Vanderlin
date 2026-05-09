@@ -15,7 +15,7 @@
 	)
 
 /datum/job/bapprentice
-	title = "Smithy Apprentice"
+	title = JOB_SMITHY_APP
 	tutorial = "Long hours and back-breaking work wouldnt even describe a quarter of what you do in a day for your Master. \
 	Its exhausting, filthy and you dont get much freetime: \
 	but someday youll get your own smithy, and youll have TWICE as many apprentices as your master does."
@@ -44,9 +44,10 @@
 	)
 
 	skill_multipliers = list(/datum/attribute/skill/craft/blacksmithing = 1.25, /datum/attribute/skill/craft/armorsmithing = 1.25, /datum/attribute/skill/craft/weaponsmithing = 1.25)
+	book_type = /obj/item/recipe_book/blacksmithing
 
 /datum/outfit/bapprentice
-	name = "Smithy Apprentice"
+	name = JOB_SMITHY_APP
 	belt = /obj/item/storage/belt/leather/rope
 	beltr = /obj/item/key/blacksmith
 	backr = /obj/item/storage/backpack/satchel

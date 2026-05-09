@@ -43,8 +43,8 @@
 #define PRIEST_CURSE "Curse"
 
 /datum/job/priest
-	title = "Priest"
-	f_title = "Priestess"
+	title = JOB_PRIEST
+	f_title = JOB_PRIEST_FEM
 	tutorial = "You are a devoted follower of Astrata. \
 	The divine is all that matters in an immoral world. \
 	The Sun Queen and her pantheon rule over all, and you will preach their wisdom to Vanderlin. \
@@ -95,10 +95,16 @@
 		devotion.make_priest()
 		devotion.grant_to(spawned)
 
+/datum/job/priest/remove_job(mob/living/carbon/human/spawned)
+	. = ..()
+	if(.)
+		spawned.remove_priest_verbs()
+
+
 /datum/outfit/priest
-	name = "Priest"
+	name = JOB_PRIEST
 	neck = /obj/item/clothing/neck/psycross/silver/divine/astrata
-	head = /obj/item/clothing/head/priestmask
+	head = /obj/item/clothing/head/roguehood/priest
 	shirt = /obj/item/clothing/shirt/undershirt/priest
 	pants = /obj/item/clothing/pants/tights/colored/black
 	shoes = /obj/item/clothing/shoes/shortboots
@@ -163,25 +169,25 @@
 		if(HL.mind)
 			if(is_lord_job(HL.mind.assigned_role) || is_consort_job(HL.mind.assigned_role))
 				HL.mind.set_assigned_role(SSjob.GetJobType(/datum/job/villager))
-		if(HL.job == "Monarch")
+		if(HL.job == JOB_MONARCH)
 			HL.job = "Ex-Monarch"
 			lord_job?.remove_spells(HL)
 			HL.honorary = "Former [lord_job.honorary]"
-		if(HL.job == "Consort")
+		if(HL.job == JOB_CONSORT)
 			HL.job = "Ex-Consort"
 			consort_job?.remove_spells(HL)
 
-	var/new_title = (coronated.gender == MALE) ? SSmapping.config.monarch_title : SSmapping.config.monarch_title_f
+	var/new_monarch_title = (coronated.gender == MALE) ? SSmapping.config.monarch_title : SSmapping.config.monarch_title_f
 	coronated.mind.set_assigned_role(/datum/job/lord)
 	lord_job?.assign_honorary_titles(coronated)
-	lord_job?.get_informed_title(coronated, TRUE, new_title)
-	coronated.job = "Monarch"
+	lord_job?.get_informed_title(coronated, FALSE, TRUE, new_monarch_title)
+	coronated.job = JOB_MONARCH
 	lord_job?.add_spells(coronated)
 	SSticker.rulermob = coronated
 	GLOB.badomens -= OMEN_NOLORD
 	say("By the authority of the Gods, I pronounce you Ruler of all [SSmapping.config.map_name]!")
 	priority_announce("[real_name] the [mind.assigned_role.get_informed_title(src)] has named [coronated.real_name] the inheritor of [SSmapping.config.map_name]!", \
-	title = "Long Live [lord_job.get_informed_title(coronated)] [coronated.real_name]!", sound = 'sound/misc/bell.ogg')
+	title = "Long Live [lord_job.get_informed_title()] [coronated.real_name]!", sound = 'sound/misc/bell.ogg')
 
 /mob/living/carbon/human/proc/churchexcommunicate()
 	set name = "Excommunicate"

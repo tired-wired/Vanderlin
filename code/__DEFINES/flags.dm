@@ -117,7 +117,8 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 /// Like flying but when submerged in water
 #define SWIMMING (1<<5)
 
-#define MOVETYPE_NOT_TOUCHING_GROUND (FLOATING | FLYING | SWIMMING)
+#define MOVETYPES_NOT_TOUCHING_GROUND (FLOATING | FLYING)
+#define MOVETYPES_FLOATING_ANIMATION (FLOATING | FLYING | SWIMMING)
 
 //Fire and Acid stuff, for resistance_flags
 #define LAVA_PROOF		(1<<0)
@@ -167,4 +168,3 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 
 /// Checks the visibility between two other objects.
 #define CAN_THEY_SEE(target, source) ((source in viewers(7, target)) || in_range(target, source))
-

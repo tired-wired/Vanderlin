@@ -16,13 +16,13 @@
 	var/hydration_factor = 0
 	var/quality = 0	//affects mood, typically higher for mixed drinks with more complex recipes
 
-/datum/reagent/consumable/on_mob_life(mob/living/carbon/M)
+/datum/reagent/consumable/on_mob_life(mob/living/carbon/M, efficiency)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(!HAS_TRAIT(H, TRAIT_NOHUNGER))
 			var/actual_metabolized = min(volume, metabolization_rate)
-			H.adjust_nutrition(nutriment_factor * actual_metabolized)
-			H.adjust_hydration(hydration_factor * actual_metabolized)
+			H.adjust_nutrition(nutriment_factor * actual_metabolized * efficiency)
+			H.adjust_hydration(hydration_factor * actual_metabolized  * efficiency)
 	return ..()
 
 /datum/reagent/consumable/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
@@ -88,9 +88,9 @@
 	var/brute_heal = 0
 	var/burn_heal = 0
 
-/datum/reagent/consumable/nutriment/on_mob_life(mob/living/carbon/M)
+/datum/reagent/consumable/nutriment/on_mob_life(mob/living/carbon/M, efficiency)
 	if(prob(50))
-		M.heal_bodypart_damage(brute_heal,burn_heal, 0)
+		M.heal_bodypart_damage(brute_heal * efficiency,burn_heal * efficiency, 0)
 		. = 1
 	..()
 
@@ -141,10 +141,26 @@
 	brute_heal = 1
 	burn_heal = 1
 
-/datum/reagent/consumable/nutriment/vitamin/on_mob_life(mob/living/carbon/M)
+
+/datum/reagent/consumable/nutriment/vitamin/on_mob_life(mob/living/carbon/M, efficiency)
 	if(M.satiety < 600)
-		M.satiety += 30
+		M.satiety += 30 * efficiency
 	. = ..()
+
+/datum/reagent/consumable/nutriment/bone_marrow
+	name = "Bone Marrow"
+	description = "Marrow straight from the source."
+
+	brute_heal = 1
+	burn_heal = 1
+
+/datum/reagent/consumable/nutriment/bone_marrow/on_mob_metabolize(mob/living/L)
+	. = ..()
+	L.add_chem_effect(CE_BLOODRESTORE, 4, "[type]")
+
+/datum/reagent/consumable/nutriment/bone_marrow/on_mob_end_metabolize(mob/living/L)
+	. = ..()
+	L.remove_chem_effect(CE_BLOODRESTORE, "[type]")
 
 /datum/reagent/consumable/sugar
 	name = "Sugar"
@@ -172,8 +188,8 @@
 	color = "#835c5c"
 
 /datum/reagent/consumable/sodiumchloride
-	name = "Table Salt"
-	description = "A salt made of sodium chloride. Commonly used to season food."
+	name = "Sea Salt"
+	description = "Commonly used to season food."
 	reagent_state = SOLID
 	color = "#FFFFFF" // rgb: 255,255,255
 	taste_description = "salt"
@@ -200,25 +216,25 @@
 	metabolization_rate = 0.2 * REAGENTS_METABOLISM
 	taste_description = "mushroom"
 
-/datum/reagent/drug/mushroomhallucinogen/on_mob_life(mob/living/carbon/M)
+/datum/reagent/drug/mushroomhallucinogen/on_mob_life(mob/living/carbon/M, efficiency)
 	if(!M.slurring)
 		M.slurring = 1
 	switch(current_cycle)
 		if(1 to 5)
-			M.set_dizzy(10 SECONDS)
-			M.set_drugginess(30 SECONDS)
+			M.set_dizzy(10 SECONDS * efficiency)
+			M.set_drugginess(30 SECONDS * efficiency)
 			if(prob(10))
 				M.emote(pick("twitch","giggle"))
 		if(5 to 10)
-			M.adjust_jitter(10 SECONDS)
-			M.set_dizzy(20 SECONDS)
-			M.set_drugginess(35 SECONDS)
+			M.adjust_jitter(10 SECONDS * efficiency)
+			M.set_dizzy(20 SECONDS * efficiency)
+			M.set_drugginess(35 SECONDS * efficiency)
 			if(prob(20))
 				M.emote(pick("twitch","giggle"))
 		if (10 to INFINITY)
-			M.adjust_jitter(20 SECONDS)
-			M.set_dizzy(30 SECONDS)
-			M.set_drugginess(40 SECONDS)
+			M.adjust_jitter(20 SECONDS * efficiency)
+			M.set_dizzy(30 SECONDS * efficiency)
+			M.set_drugginess(40 SECONDS * efficiency)
 			if(prob(30))
 				M.emote(pick("twitch","giggle"))
 	..()
@@ -238,11 +254,11 @@
 	metabolization_rate = 1 * REAGENTS_METABOLISM
 	taste_description = "sweetness"
 
-/datum/reagent/consumable/honey/on_mob_life(mob/living/carbon/M)
+/datum/reagent/consumable/honey/on_mob_life(mob/living/carbon/M, efficiency)
 	M.reagents.add_reagent(/datum/reagent/consumable/sugar,3)
 	if(prob(55))
-		M.adjustBruteLoss(-1*REM, 0)
-		M.adjustFireLoss(-1*REM, 0)
-		M.adjustOxyLoss(-1*REM, 0)
-		M.adjustToxLoss(-1*REM, 0)
+		M.adjustBruteLoss(-1*REM * efficiency, 0)
+		M.adjustFireLoss(-1*REM * efficiency, 0)
+		M.adjustOxyLoss(-1*REM * efficiency, 0)
+		M.adjustToxLoss(-1*REM * efficiency, 0)
 	..()

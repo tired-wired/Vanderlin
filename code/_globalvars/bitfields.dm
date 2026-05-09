@@ -4,7 +4,6 @@ GLOBAL_LIST_INIT(bitfields, generate_bitfields())
 /datum/bitfield
 	/// The variable name that contains the bitfield
 	var/variable
-
 	/// An associative list of the readable flag and its true value
 	var/list/flags
 
@@ -15,6 +14,17 @@ GLOBAL_LIST_INIT(bitfields, generate_bitfields())
 		var/datum/bitfield/bitfield = new _bitfield
 		bitfields[bitfield.variable] = bitfield.flags
 	return bitfields
+
+/// Returns an associative list of bitflag name -> number for all valid bitflags in the passed in field
+/proc/get_valid_bitflags(var_name)
+	return GLOB.bitfields[var_name] || list()
+
+/proc/get_random_bitflag(var_name)
+	var/list/flags = get_valid_bitflags(var_name)
+	if(!length(flags))
+		return
+	var/name = pick(flags)
+	return flags[name]
 
 // Definitions are ordered alphabetically and so are the inner lists
 // Please keep it that way
@@ -140,6 +150,7 @@ DEFINE_BITFIELD(item_flags, list(
 	"BEING_REMOVED" = BEING_REMOVED,
 	"DROPDEL" = DROPDEL,
 	"FORCE_STRING_OVERRIDE" = FORCE_STRING_OVERRIDE,
+	"HAND_ITEM" = HAND_ITEM,
 	"IN_INVENTORY" = IN_INVENTORY,
 	"IN_STORAGE" = IN_STORAGE,
 	"NEEDS_PERMIT" = NEEDS_PERMIT,

@@ -279,6 +279,7 @@
 
 	M.lastattacker = user.real_name
 	M.lastattackerckey = user.ckey
+	M.lastattacker_weakref = WEAKREF(user)
 	if(M.mind)
 		M.mind.attackedme[user.real_name] = world.time
 	if(!force)
@@ -298,8 +299,6 @@
 		return
 	if(!user.CanReach(M,src))
 		return
-	if(user.get_active_held_item() != src)
-		return
 	if(user.incapacitated(IGNORE_GRAB))
 		return
 	if((M.body_position != LYING_DOWN))
@@ -310,6 +309,7 @@
 	if(istype(user.rmb_intent, /datum/rmb_intent/swift))
 		user.adjust_stamina(10)
 	var/turf/turf_before = get_turf(M)
+	SEND_SIGNAL(user, COMSIG_MOB_ITEM_ATTACK_POST_SWINGDELAY, M, user, src)
 	if(M.checkdefense(user.used_intent, user))
 		if(M.d_intent == INTENT_PARRY)
 			if(!M.get_active_held_item() && !M.get_inactive_held_item()) //we parried with a bracer, redirect damage
@@ -372,7 +372,6 @@
 
 	log_combat(user, M, "attacked", src.name, "(INTENT: [uppertext(user.used_intent.name)]) (DAMTYPE: [uppertext(damtype)])")
 	add_fingerprint(user)
-
 
 /// The equivalent of [/obj/item/proc/attack] but for alternate attacks, AKA right clicking
 /obj/item/proc/attack_secondary(mob/living/victim, mob/living/user, list/modifiers)
@@ -690,6 +689,8 @@
 		nodmg = TRUE
 		next_attack_msg += span_warning("Armor stops the damage.")
 	apply_damage(newforce, I.damtype, hitlim, armor)
+	if(newforce)
+		SEND_SIGNAL(I, COMSIG_ITEM_POST_ATTACK_SIMPLE, src, user, newforce)
 	I.remove_bintegrity(1)
 	if(I.damtype == BRUTE && !nodmg)
 		if(HAS_TRAIT(src, TRAIT_SIMPLE_WOUNDS))

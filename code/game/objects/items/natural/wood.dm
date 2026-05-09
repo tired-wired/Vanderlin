@@ -137,6 +137,8 @@
 	grid_height = 64
 	grid_width = 64
 	item_weight = 1.4 KILOGRAMS
+	grind_results = list(/datum/reagent/tree_sap = 10)
+
 
 /obj/item/grown/log/tree/small/apply_components()
 	return
@@ -160,6 +162,7 @@
 	lumber_amount = 0
 	lumber = null
 	item_weight = 121 GRAMS
+	grind_results = null
 
 /obj/item/grown/log/tree/stick/apply_components()
 	return
@@ -235,6 +238,7 @@
 	lumber_amount = 0
 	tool_behaviour = TOOL_IMPROVISED_RETRACTOR
 	item_weight = 95 GRAMS
+	grind_results = null
 
 /obj/item/grown/log/tree/stake/apply_components()
 	return
@@ -293,3 +297,4 @@
 	grid_height = 64
 	grid_width = 64
 	item_weight = 100 GRAMS
+	grind_results = null
