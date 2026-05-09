@@ -410,7 +410,7 @@
 	if(water_volume < MINIMUM_WATER_VOLUME)
 		dry_up()
 		return
-	color = sanitize_hexcolor(water_reagent.color)
+	color = sanitize_hexcolor(water_reagent::color)
 	fill_up()
 
 /turf/open/water/proc/fill_up()
@@ -940,6 +940,7 @@
 	force_open_above = TRUE
 
 /datum/reagent/water/salty
+	name = "Salt Water"
 	taste_description = "salt"
 	color = "#3e7459"
 

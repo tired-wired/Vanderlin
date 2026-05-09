@@ -37,6 +37,8 @@
 	var/short_cooktime = FALSE
 	/// Long cooktime, when low cooking skill
 	var/long_cooktime = FALSE
+	///can we soak?
+	var/soaker = TRUE
 
 	/// Can be labelled by parchment
 	var/can_label_container = FALSE
@@ -154,9 +156,9 @@
 
 /obj/item/reagent_containers/attackby_secondary(obj/item/I, mob/living/user, list/modifiers)
 	. = ..()
-	if(GetComponent(/datum/component/storage))
+	if(GetComponent(/datum/component/storage) || !soaker)
 		return
-	if(!is_open_container() || !reagents || !reagents.total_volume)
+	if(!is_open_container() || !reagents || !reagents.total_volume && soaker)
 		to_chat(user, span_warning("\The [src] needs to be open and have reagents to soak something in."))
 		return
 	if(soaking_item)
@@ -198,7 +200,7 @@
 
 /obj/item/reagent_containers/attackby(obj/item/I, mob/living/user, list/modifiers)
 	. = ..()
-	if(is_open_container() && reagents && reagents.total_volume > 0 && !GetComponent(/datum/component/storage))
+	if(is_open_container() && reagents && reagents.total_volume > 0 && !GetComponent(/datum/component/storage) && soaker)
 		if(!istype(I, /obj/item/reagent_containers) && !istype(I, /obj/item/paper))
 			var/splash_amount = reagents.total_volume * 0.05
 			if(splash_amount < 1)

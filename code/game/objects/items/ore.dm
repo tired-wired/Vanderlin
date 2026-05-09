@@ -113,6 +113,7 @@
 	grind_results = list(/datum/reagent/mercury = 15)
 	sellprice = 5
 	item_weight = 4.2 KILOGRAMS
+	indexed = TRUE
 
 /obj/item/ore/coal/charcoal
 	name = "charcoal"

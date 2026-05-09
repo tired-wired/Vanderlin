@@ -2540,7 +2540,7 @@
 /obj/effect/landmark/hammer/dev_text{
 	name = "Cool dragon fight"
 	},
-/obj/effect/decal/cleanable/roguerune/arcyne/summoning/max,
+/obj/effect/decal/cleanable/ritual_rune/arcyne/summoning/max,
 /turf/open/floor/naturalstone,
 /area/under/mountains/anvil/lower)
 "ama" = (
@@ -5510,9 +5510,9 @@
 	pixel_x = -7;
 	name = " defunct Magical Artillery device"
 	},
-/obj/effect/decal/cleanable/roguerune/arcyne/summoning/mid,
-/obj/effect/decal/cleanable/roguerune/arcyne/wallgreater,
-/obj/effect/decal/cleanable/roguerune/arcyne/summoning/adv,
+/obj/effect/decal/cleanable/ritual_rune/arcyne/summoning/mid,
+/obj/effect/decal/cleanable/ritual_rune/arcyne/wallgreater,
+/obj/effect/decal/cleanable/ritual_rune/arcyne/summoning/adv,
 /turf/open/floor/cobble,
 /area/indoors/mountains/anvil/keep)
 "azX" = (
@@ -6323,7 +6323,7 @@
 /turf/open/floor/metal/barograte,
 /area/indoors/town/clocktower)
 "aDz" = (
-/obj/effect/decal/cleanable/roguerune/arcyne/leylines,
+/obj/effect/decal/cleanable/ritual_rune/arcyne/leylines,
 /obj/item/weapon/hammer/sledgehammer/war/malum,
 /turf/open/floor/naturalstone,
 /area/under/mountains/anvil/lower)
@@ -7037,7 +7037,7 @@
 /turf/open/floor/herringbone,
 /area/indoors/mountains/anvil/upperkeep)
 "aHj" = (
-/obj/effect/decal/cleanable/roguerune/arcyne/summoning/mid,
+/obj/effect/decal/cleanable/ritual_rune/arcyne/summoning/mid,
 /turf/open/floor/naturalstone,
 /area/under/mountains/anvil/lower)
 "aHk" = (
@@ -7796,7 +7796,7 @@
 /turf/open/floor/snow/patchy,
 /area/outdoors/mountains/anvil/snowyforest)
 "aKT" = (
-/obj/effect/decal/cleanable/roguerune/arcyne/empowerment{
+/obj/effect/decal/cleanable/ritual_rune/arcyne/empowerment{
 	pixel_y = -47
 	},
 /turf/open/floor/naturalstone,
@@ -8105,8 +8105,8 @@
 /turf/open/floor/carpet/royalblack,
 /area/indoors/town/church/inquisition)
 "aMp" = (
-/obj/effect/decal/cleanable/roguerune/arcyne/summoning/adv,
-/obj/effect/decal/cleanable/roguerune/arcyne/attunement,
+/obj/effect/decal/cleanable/ritual_rune/arcyne/summoning/adv,
+/obj/effect/decal/cleanable/ritual_rune/arcyne/attunement,
 /obj/item/riddleofsteel,
 /mob/living/simple_animal/hostile/retaliate/voiddragon/red,
 /turf/open/floor/plasteel/maniac,
@@ -11113,7 +11113,7 @@
 /turf/open/floor/concrete,
 /area/under/mountains/anvil/upper)
 "bKV" = (
-/obj/effect/decal/cleanable/roguerune/arcyne/enchantment,
+/obj/effect/decal/cleanable/ritual_rune/arcyne/summoning/mid,
 /turf/open/floor/cobble,
 /area/indoors/mountains/anvil/upperkeep)
 "bRz" = (
@@ -11890,7 +11890,7 @@
 /obj/structure/fluff/railing/tall/stone{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/roguerune/arcyne/knowledge,
+/obj/effect/decal/cleanable/ritual_rune/arcyne/knowledge,
 /turf/open/floor/cobblerock,
 /area/indoors/mountains/anvil/upperkeep)
 "fRO" = (
@@ -12800,7 +12800,7 @@
 /turf/open/floor/blocks/newstone/alt,
 /area/indoors/mountains/anvil/upperkeep)
 "lkK" = (
-/obj/effect/decal/cleanable/roguerune/arcyne/leylines,
+/obj/effect/decal/cleanable/ritual_rune/arcyne/leylines,
 /obj/machinery/essence/enchantment_altar,
 /obj/effect/decal/cleanable/debris/stone,
 /turf/open/floor/cobble,

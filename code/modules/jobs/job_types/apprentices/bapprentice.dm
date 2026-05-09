@@ -44,6 +44,7 @@
 	)
 
 	skill_multipliers = list(/datum/attribute/skill/craft/blacksmithing = 1.25, /datum/attribute/skill/craft/armorsmithing = 1.25, /datum/attribute/skill/craft/weaponsmithing = 1.25)
+	book_type = /obj/item/recipe_book/blacksmithing
 
 /datum/outfit/bapprentice
 	name = JOB_SMITHY_APP

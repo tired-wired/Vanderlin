@@ -15,6 +15,8 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	var/lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
 	///Icon file for right inhand overlays
 	var/righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	///basically avoiding adding an atom var this is the we are indexed by the recipe book call
+	var/indexed = FALSE
 
 	///Icon file for mob worn overlays.
 	///no var for state because it should *always* be the same as icon_state
@@ -752,7 +754,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	if(throwing)
 		throwing.finalize(FALSE)
 	if(loc == user && outside_storage)
-		if(!allow_attack_hand_drop(user) || !user.temporarilyRemoveItemFromInventory(src))
+		if(!allow_attack_hand_drop(user) || !user.temporarilyRemoveItemFromInventory(src, source = user))
 			return
 
 	. = FALSE
@@ -1026,7 +1028,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 		)
 	if(is_human_victim)
 		var/mob/living/carbon/human/U = M
-		U.apply_damage(7, BRUTE, affecting)
+		U.apply_damage(7, BRUTE, affecting, damage_type = BCLASS_STAB)
 
 	else
 		M.take_bodypart_damage(7)
@@ -1392,7 +1394,17 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	return !HAS_TRAIT(src, TRAIT_NODROP)
 
 /obj/item/proc/doStrip(mob/stripper, mob/owner)
-	return owner.dropItemToGround(src)
+	return owner.dropItemToGround(src, source = stripper)
+
+///Called by the carbon throw_item() proc. Returns null if the item negates the throw, or a reference to the thing to suffer the throw else.
+/obj/item/proc/on_thrown(mob/living/carbon/user, atom/target)
+	if((item_flags & ABSTRACT) || HAS_TRAIT(src, TRAIT_NODROP))
+		return
+	user.dropItemToGround(src, silent = TRUE)
+	if(throwforce && (HAS_TRAIT(user, TRAIT_PACIFISM)) || HAS_TRAIT(user, TRAIT_NO_THROWING))
+		to_chat(user, span_notice("You set [src] down gently on the ground."))
+		return
+	return src
 
 /obj/item/update_appearance(updates)
 	. = ..()
@@ -1447,6 +1459,8 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	impactee.apply_damage(impact_damage, BRUTE, target_zone, impactee.run_armor_check(target_zone, "blunt"))
 
 /obj/item/proc/on_consume(mob/living/eater)
+	SHOULD_CALL_PARENT(TRUE)
+	SEND_SIGNAL(src, COMSIG_ITEM_EATEN, eater)
 	return
 
 /obj/item/proc/on_anti_consume(mob/living/eater)
@@ -1611,3 +1625,74 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 
 	if(!silent)
 		balloon_alert_to_viewers(span_warning("[name]<br>breaks!"))
+
+
+/obj/item/return_recipe_data()
+	var/has_grind = length(grind_results)
+	var/has_juice = length(juice_results)
+	var/list/milled_from_paths = GLOB.snack_mill_reverse[type]
+	var/list/sliced_from_paths = GLOB.snack_slice_reverse[type]
+
+	if(!has_grind&& !has_juice && !length(milled_from_paths) && !length(sliced_from_paths))
+		return null
+
+	var/list/data = list()
+	data["type"] = "snack_processing"
+	data["name"] = name
+	data["category"] = "Processing"
+	data["_output_path"] = "[type]"
+	data["output_name"] = name
+	data["output_icon"] = "[icon]"
+	data["output_state"] = "[icon_state]"
+
+	if(has_grind)
+		var/list/grind = list()
+		for(var/datum/reagent/path as anything in grind_results)
+			grind += list(list("name" = initial(path.name), "amount" = grind_results[path]))
+		data["grind_results"] = grind
+
+	if(has_juice)
+		var/list/juice = list()
+		var/list/combined_path = juice_results
+		for(var/datum/reagent/path as anything in combined_path)
+			juice += list(list("name" = initial(path.name), "amount" = combined_path[path]))
+		data["juice_results"] = juice
+
+	if(length(sliced_from_paths))
+		var/list/sliced_from = list()
+		for(var/atom/src_path as anything in sliced_from_paths)
+			sliced_from += list(list(
+				"name" = initial(src_path.name),
+				"icon" = "[initial(src_path.icon)]",
+				"icon_state" = "[initial(src_path.icon_state)]",
+				"_path" = "[src_path]",
+			))
+		data["sliced_from"] = sliced_from
+
+	if(length(milled_from_paths))
+		var/list/milled_from = list()
+		for(var/atom/src_path as anything in milled_from_paths)
+			milled_from += list(list(
+				"name" = initial(src_path.name),
+				"icon" = "[initial(src_path.icon)]",
+				"icon_state" = "[initial(src_path.icon_state)]",
+				"_path" = "[src_path]",
+			))
+		data["milled_from"] = milled_from
+
+	if(length(obtained_from))
+		var/list/sources = list()
+		for(var/list/entry as anything in obtained_from)
+			if(!islist(entry) || length(entry) < 2) continue
+			var/label = entry[1]
+			var/atom/src_path = entry[2]
+			sources += list(list(
+				"label" = label,
+				"_path" = "[src_path]",
+				"name" = initial(src_path.name),
+				"icon" = "[initial(src_path.icon)]",
+				"icon_state" = "[initial(src_path.icon_state)]",
+			))
+		data["sources"] = sources
+
+	return data

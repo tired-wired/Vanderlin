@@ -25437,6 +25437,9 @@
 	pixel_x = -7;
 	pixel_y = 17
 	},
+/obj/structure/chem_separator{
+	pixel_y = 17
+	},
 /turf/open/floor/blocks/stonered/tiny,
 /area/indoors/town/clinic_large/apothecary)
 "mbG" = (
@@ -31325,7 +31328,7 @@
 /turf/open/floor/ruinedwood/darker,
 /area/outdoors/town/roofs)
 "oKx" = (
-/obj/effect/decal/cleanable/roguerune/arcyne/summoning/mid,
+/obj/effect/decal/cleanable/ritual_rune/arcyne/summoning/mid,
 /turf/open/floor/cobblerock,
 /area/indoors/town/keep/magician)
 "oKG" = (
