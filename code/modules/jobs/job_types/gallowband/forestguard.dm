@@ -43,6 +43,27 @@
 		species.native_language = "Osslandic"
 		species.accent_language = species.get_accent(species.native_language)
 
+/datum/job/forestguard/set_spawn_and_total_positions(count)
+	// Calculate the new spawn positions
+	var/new_spawn = gallowband_slot_formula(count)
+
+	// Sync everything
+	spawn_positions = new_spawn
+	total_positions_so_far = new_spawn
+	total_positions = new_spawn
+
+	return spawn_positions
+
+/datum/job/forestguard/get_total_positions()
+	var/slots = gallowband_slot_formula(get_total_town_members())
+
+	if(slots <= total_positions_so_far)
+		slots = total_positions_so_far
+	else
+		total_positions_so_far = slots
+
+	return slots
+
 /datum/outfit/forestguard
 	name = "Forest Guard Base"
 	pants = /obj/item/clothing/pants/trou/leather

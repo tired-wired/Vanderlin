@@ -53,6 +53,27 @@
 
 	languages = list(/datum/language/gronnic)
 
+/datum/job/forestsupport/set_spawn_and_total_positions(count)
+	// Calculate the new spawn positions
+	var/new_spawn = gallowslave_slot_formula(count)
+
+	// Sync everything
+	spawn_positions = new_spawn
+	total_positions_so_far = new_spawn
+	total_positions = new_spawn
+
+	return spawn_positions
+
+/datum/job/forestsupport/get_total_positions()
+	var/slots = gallowslave_slot_formula(get_total_town_members())
+
+	if(slots <= total_positions_so_far)
+		slots = total_positions_so_far
+	else
+		total_positions_so_far = slots
+
+	return slots
+
 /datum/outfit/forestsupport/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
 	. = ..()
 	//gronn pants don't have a child sprite, so I'll do this to make sure kids get pants.
